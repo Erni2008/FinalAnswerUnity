@@ -32,6 +32,16 @@ namespace FinalAnswer.UI
         public RectTransform Rect => (RectTransform)transform;
         public Text Label => label;
 
+        /// <summary>The blank grunge plate (player-count art) with a label — used for every in-game host action.</summary>
+        public static ArtButton Plate(Transform parent, string text, Action onClick, int fontSize = 40)
+        {
+            var art = ArtCatalog.Active;
+            return Create(parent, "Plate", art.Crop("Art/CreateRoom/Buttons/button_up", 293, 198, 1191, 483),
+                    art.Crop("Art/CreateRoom/Buttons/button_hover", 161, 273, 1208, 452),
+                    art.Crop("Art/CreateRoom/Buttons/button_pressed", 167, 263, 1198, 456), false, onClick).Scales(.02f, .015f)
+                .WithLabel(text, art.Font("Fonts/RubikWetPaint-Regular"), fontSize, new Color(.95f, .9f, .84f), Color.white, new Color(1, .48f, .32f), new Color(.95f, .9f, .84f));
+        }
+
         public static ArtButton Create(Transform parent, string name, Sprite up, Sprite hover, Sprite pressed, bool crossfade, Action onClick)
         {
             var rect = UiKit.Rect(name, parent);

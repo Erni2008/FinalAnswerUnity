@@ -47,8 +47,8 @@ namespace FinalAnswer.App
             Step(1.5f, "02_create_room", null, () => manager.GenerateFor(new RoomSettings { Name = "Тестовая комната", MaxPlayers = 4, GameMode = "standard" }));
             Step(1.5f, "03_generation_code", () => manager.HasDraft, manager.ConfirmCode);
             Step(1f, null, () => manager.State == AppState.Lobby, () => developer.AddBots(3));
-            Step(5.5f, "04_cage_lobby", () => manager.Room.Snapshots.Current?.OnlinePlayerCount == 3, manager.StartQuiz);
-            Step(2.6f, "05_match_start", () => manager.Room.Snapshots.Current?.Phase == QuizPhases.Starting, null);
+            Step(5.5f, "04_cage_lobby", () => manager.Room.Snapshots.Current?.OnlinePlayerCount == 3, () => { manager.IntroOverride = true; manager.StartQuiz(); });
+            Step(14f, "05_intro", () => manager.IntroPlaying, manager.SkipIntro);
             Step(1.2f, "06_quiz_typing", () => manager.State == AppState.InModule, null);
             Step(4f, "07_quiz_answering", () => manager.Room.Snapshots.Current?.Phase == QuizPhases.Answering, null);
             Step(13.5f, "08_quiz_clock_urgent", () => manager.Room.Snapshots.Current?.Phase == QuizPhases.Answering, null);

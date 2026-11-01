@@ -82,7 +82,7 @@ namespace FinalAnswer.EditorTools
         }
 
         const string CatalogPath = "Assets/FinalAnswerShell/Settings/ArtCatalog.asset";
-        static readonly string[] CatalogFolders = { "Art", "Audio", "Fonts", "Localization", "UI/Shaders" };
+        static readonly string[] CatalogFolders = { "Art", "Audio", "Fonts", "Localization", "Data", "UI/Shaders" };
 
         /// <summary>Serialized references for every shell asset; keys = path under Assets/FinalAnswer without extension (TextAssets keep it).</summary>
         public static FinalAnswer.UI.ArtCatalog BuildCatalog()

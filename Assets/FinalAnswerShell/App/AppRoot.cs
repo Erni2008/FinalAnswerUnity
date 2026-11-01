@@ -22,6 +22,7 @@ namespace FinalAnswer.App
         DeveloperTools developer;
         VisualTour tour;
         ShellAudio audio;
+        HostVoice hostVoice;
         LocalServerProcessHost localServer;
 
         void Awake()
@@ -56,6 +57,7 @@ namespace FinalAnswer.App
             var texts = new Localization(art.Text("Localization/messages_en.txt").text, art.Text("Localization/messages_ru.txt").text);
             Localization.Current = texts;
             audio = new ShellAudio(gameObject, art);
+            hostVoice = new HostVoice(gameObject, art);
             settings.ApplyTo(audio, texts);
 
             var clock = new StopwatchClock();
@@ -76,6 +78,7 @@ namespace FinalAnswer.App
             developer?.Tick(delta);
             tour?.Tick(delta);
             audio?.Update(delta);
+            hostVoice?.Update();
         }
 
         void OnApplicationQuit() => Shutdown();

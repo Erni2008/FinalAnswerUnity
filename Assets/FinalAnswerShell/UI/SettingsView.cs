@@ -11,6 +11,7 @@ namespace FinalAnswer.UI
         const string Prefix = "fa.v1.";
         public string Language = "ru";
         public bool ReducedMotion;
+        public bool PlayIntro = true;
         public float Master = 1, Sfx = 1, Ui = 1, Cages = 1, Environment = 1;
         public string ServerUrl = "http://127.0.0.1:8080";
 
@@ -20,6 +21,7 @@ namespace FinalAnswer.UI
             {
                 Language = PlayerPrefs.GetString(Prefix + "language", "ru"),
                 ReducedMotion = PlayerPrefs.GetInt(Prefix + "reducedMotion", 0) == 1,
+                PlayIntro = PlayerPrefs.GetInt(Prefix + "playIntro", 1) == 1,
                 Master = PlayerPrefs.GetFloat(Prefix + "master", 1),
                 Sfx = PlayerPrefs.GetFloat(Prefix + "sfx", 1),
                 Ui = PlayerPrefs.GetFloat(Prefix + "ui", 1),
@@ -34,6 +36,7 @@ namespace FinalAnswer.UI
         {
             PlayerPrefs.SetString(Prefix + "language", Language);
             PlayerPrefs.SetInt(Prefix + "reducedMotion", ReducedMotion ? 1 : 0);
+            PlayerPrefs.SetInt(Prefix + "playIntro", PlayIntro ? 1 : 0);
             PlayerPrefs.SetFloat(Prefix + "master", Master);
             PlayerPrefs.SetFloat(Prefix + "sfx", Sfx);
             PlayerPrefs.SetFloat(Prefix + "ui", Ui);
@@ -66,7 +69,7 @@ namespace FinalAnswer.UI
         {
             Root = UiKit.Stretch(UiKit.Rect("Settings", parent));
             Root.gameObject.AddComponent<Image>().color = new Color(.008f, .003f, .008f, .78f);
-            var panel = UiKit.Panel(Root, "Panel", new Vector2(980, 900), spacing: 14);
+            var panel = UiKit.Panel(Root, "Panel", new Vector2(980, 980), spacing: 14);
             panel.GetComponent<Image>().color = new Color(.075f, .035f, .04f, .97f);
             Label(panel, font, settings.Language == "ru" ? "НАСТРОЙКИ" : "SETTINGS", 46, 70, TextAnchor.MiddleCenter);
 
@@ -74,6 +77,8 @@ namespace FinalAnswer.UI
             language.Changed += i => { settings.Language = i == 0 ? "ru" : "en"; changed(); };
             var motion = new Stepper(UiKit.Field(panel, "Меньше движения"), 0, 1, settings.ReducedMotion ? 1 : 0, i => i == 1 ? "ВКЛ" : "ВЫКЛ", wrap: true);
             motion.Changed += i => { settings.ReducedMotion = i == 1; changed(); };
+            var intro = new Stepper(UiKit.Field(panel, "Интро перед игрой"), 0, 1, settings.PlayIntro ? 1 : 0, i => i == 1 ? "ВКЛ" : "ВЫКЛ", wrap: true);
+            intro.Changed += i => { settings.PlayIntro = i == 1; changed(); };
             Volume(panel, "Общая громкость", settings.Master, v => { settings.Master = v; changed(); });
             Volume(panel, "Эффекты", settings.Sfx, v => { settings.Sfx = v; changed(); });
             Volume(panel, "Интерфейс", settings.Ui, v => { settings.Ui = v; changed(); });

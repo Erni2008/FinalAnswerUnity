@@ -38,6 +38,8 @@ namespace FinalAnswer.App
         GenerationCodeView codeView;
         CageLobbyView lobby;
         SettingsView settingsView;
+        IntroPlayer intro;
+        IntroSchedule introSchedule;
         IGameModule module;
         bool firstMenu = true;
 
@@ -88,6 +90,7 @@ namespace FinalAnswer.App
             room.Tick();
             module?.Tick(delta, room.ServerNow);
             lobby?.SetServerNow(room.ServerNow);
+            TickIntro(delta);
             KeepDraftAlive(delta);
             PollServer(delta);
         }
@@ -360,10 +363,19 @@ namespace FinalAnswer.App
             {
                 if (state != AppState.Lobby || lobby == null) ShowLobby();
                 else lobby.Apply(snapshot, room.ServerNow);
+                SyncIntro(snapshot);
                 return;
             }
+            SyncIntroOff();
             if (module == null || module.Kind != wanted) EnterModule(wanted, snapshot);
             else module.ApplySnapshot(snapshot);
+        }
+
+        void SyncIntroOff()
+        {
+            if (intro == null) return;
+            intro.Dispose();
+            intro = null;
         }
 
         void EnterModule(ModuleKind kind, RoomSnapshot snapshot)
@@ -374,13 +386,67 @@ namespace FinalAnswer.App
             {
                 case ModuleKind.Quiz: module = new QuizModule(screens); break;
                 case ModuleKind.CursedBoxes: module = new CursedBoxesModule(screens); break;
+                case ModuleKind.Impostor: module = new Impostor.ImpostorModule(screens); break;
                 default: module = new PendingModule(screens, kind); break;
             }
             module.Enter(new ModuleContext(room, clock), snapshot);
             Log?.Invoke("module → " + kind);
         }
 
-        public void StartQuiz() => SendStart(MessageTypes.StartGame, room.RoomPayload());
+        /// <summary>Overrides the intro preference for this session (developer sandbox).</summary>
+        public bool? IntroOverride { get; set; }
+
+        public void StartQuiz()
+        {
+            var payload = room.RoomPayload();
+            // Java sends the intro id with START_GAME; the server then gates the first question on INTRO_READY/SKIP_INTRO.
+            if (IntroOverride ?? settings.PlayIntro) payload["introId"] = Schedule.IntroId;
+            SendStart(MessageTypes.StartGame, payload);
+        }
+
+        /// <summary>Developer tour / tools: press SKIP INTRO.</summary>
+        public void SkipIntro() => intro?.Skip();
+
+        public bool IntroPlaying => intro != null && !intro.Finished;
+
+        IntroSchedule Schedule => introSchedule ?? (introSchedule = IntroPlayer.LoadSchedule(art));
+
+        void SyncIntro(RoomSnapshot snapshot)
+        {
+            var data = snapshot.Quiz?.Intro;
+            var active = data != null && snapshot.Phase == QuizPhases.Starting && lobby != null;
+            if (!active)
+            {
+                if (intro != null) { intro.Dispose(); intro = null; if (lobby != null) audio?.Room(true); }
+                lobby?.SetCinematic(false);
+                return;
+            }
+            var gameId = snapshot.Quiz.GameId;
+            if (intro == null || intro.GameId != gameId)
+            {
+                intro?.Dispose();
+                var introId = data.Value<string>("introId");
+                intro = new IntroPlayer(screens, art, Schedule, gameId, data.Value<long>("elapsedMillis") / 1000f, type =>
+                {
+                    var payload = room.RoomPayload();
+                    payload["gameId"] = gameId;
+                    payload["introId"] = introId;
+                    room.Send(type, payload);
+                });
+                Log?.Invoke("intro started (" + Schedule.Lines.Count + " lines, " + Schedule.Duration.ToString("0.0") + " s)");
+            }
+            lobby.SetCinematic(true);
+        }
+
+        void TickIntro(float delta)
+        {
+            if (intro == null) return;
+            intro.Update(delta);
+            audio?.Room(intro.AmbienceWanted);
+            var keyboard = UnityEngine.InputSystem.Keyboard.current;
+            if (keyboard != null && (keyboard.escapeKey.wasPressedThisFrame || keyboard.spaceKey.wasPressedThisFrame || keyboard.enterKey.wasPressedThisFrame)) intro.Skip();
+            if (keyboard != null && keyboard.pKey.wasPressedThisFrame) intro.Pause(!intro.Paused);
+        }
 
         public void StartCursed() => SendStart(MessageTypes.StartCursedBoxes, LobbyPayload());
 
@@ -508,6 +574,7 @@ namespace FinalAnswer.App
         {
             module?.Exit();
             module = null;
+            SyncIntroOff();
             lobby?.Dispose();
             menu = null;
             createRoom = null;

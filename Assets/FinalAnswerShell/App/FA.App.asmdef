@@ -11,7 +11,8 @@
     "FA.CursedBoxes",
     "FA.PendingModules",
     "UnityEngine.UI",
-    "Unity.InputSystem"
+    "Unity.InputSystem",
+    "FA.Impostor"
   ],
   "noEngineReferences": false,
   "autoReferenced": true,

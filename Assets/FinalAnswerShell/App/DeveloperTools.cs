@@ -44,6 +44,7 @@ namespace FinalAnswer.App
         SandboxGame? pendingStart;
         float startDelay;
         string sandboxRoom = "";
+        bool playIntro;
 
         public DeveloperTools(GameManager manager, IRoomApi api, IMonotonicClock clock, ShellAudio audio, RectTransform overlay)
         {
@@ -64,6 +65,7 @@ namespace FinalAnswer.App
                 if (keyboard.f3Key.wasPressedThisFrame) ToggleDebug();
             }
             foreach (var bot in bots) bot.Tick();
+            PeriodicShots(delta);
             AutoStart(delta);
             if (debugPanel != null && debugPanel.gameObject.activeSelf) RenderDebug();
         }
@@ -88,7 +90,7 @@ namespace FinalAnswer.App
             if (sandboxPanel != null) { UiKit.Dispose(sandboxPanel.gameObject); sandboxPanel = null; return; }
             sandboxPanel = UiKit.Stretch(UiKit.Rect("DevSandbox", overlay));
             sandboxPanel.gameObject.AddComponent<Image>().color = new Color(0, 0, 0, .7f);
-            var panel = UiKit.Panel(sandboxPanel, "Panel", new Vector2(1100, 880), spacing: 12);
+            var panel = UiKit.Panel(sandboxPanel, "Panel", new Vector2(1100, 950), spacing: 12);
             var title = UiKit.Label(panel, "РЕЖИМ РАЗРАБОТЧИКА · СОЛО-ТЕСТ", 40, Theme.Accent, TextAnchor.MiddleCenter, FontStyle.Bold);
             UiKit.Size(title.gameObject, height: 60);
             var hint = UiKit.Label(panel, "Сервер Java поднимется сам, комнату заполнят боты-телефоны, игра запустится. Вы управляете только хостом.",
@@ -109,6 +111,8 @@ namespace FinalAnswer.App
             answers.Changed += i => answerMode = (BotAnswerMode)i;
             var questions = new Stepper(UiKit.Field(panel, "Вопросов"), 1, 12, questionCount);
             questions.Changed += v => questionCount = v;
+            var introStep = new Stepper(UiKit.Field(panel, "Интро перед викториной"), 0, 1, playIntro ? 1 : 0, i => i == 1 ? "ВКЛ (74 с)" : "ВЫКЛ", wrap: true);
+            introStep.Changed += i => playIntro = i == 1;
             var mode = new Stepper(UiKit.Field(panel, "Режим комнаты"), 0, GameModes.All.Count - 1, modeIndex, i => GameModes.All[i].Title, wrap: true);
             mode.Changed += i => modeIndex = i;
 
@@ -131,6 +135,30 @@ namespace FinalAnswer.App
                 bots.Add(bot);
                 bot.Join(error => Write("bot join failed: " + error));
             }
+        }
+
+        string shotDir;
+        float shotEvery, shotTimer;
+        int shotIndex;
+
+        /// <summary>`-fa-shots &lt;dir&gt; [-fa-shot-every seconds]`: periodic screenshots of this window (bug reports, QA).</summary>
+        void PeriodicShots(float delta)
+        {
+            if (shotDir == null)
+            {
+                var args = Environment.GetCommandLineArgs();
+                var i = Array.IndexOf(args, "-fa-shots");
+                shotDir = i >= 0 && i + 1 < args.Length ? args[i + 1] : "";
+                var e = Array.IndexOf(args, "-fa-shot-every");
+                shotEvery = e >= 0 && e + 1 < args.Length && float.TryParse(args[e + 1], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var v) ? v : 5;
+                if (shotDir.Length > 0) System.IO.Directory.CreateDirectory(shotDir);
+            }
+            if (shotDir.Length == 0) return;
+            shotTimer += delta;
+            if (shotTimer < shotEvery) return;
+            shotTimer = 0;
+            var phase = manager.Room.Snapshots.Current?.CursedBoxes?.Value<string>("phase") ?? manager.Room.Snapshots.Current?.Impostor?.Value<string>("phase") ?? manager.Room.Snapshots.Current?.Phase ?? "menu";
+            ScreenCapture.CaptureScreenshot(System.IO.Path.Combine(shotDir, (++shotIndex).ToString("000") + "_" + phase + ".png"));
         }
 
         /// <summary>`-fa-solo quiz|cursed|impostor|lastcommand|lobby [-fa-bots N]`: launch the sandbox at startup.</summary>
@@ -176,6 +204,7 @@ namespace FinalAnswer.App
                 api.CreateRoom(url, settings.ToForm(), created =>
                 {
                     sandboxRoom = created.RoomCode;
+                    manager.IntroOverride = playIntro;
                     Write("sandbox room " + created.RoomCode + " · " + botCount + " bots · " + game);
                     manager.ActivateRoom(url, created);
                     for (var i = 0; i < botCount; i++)
@@ -241,7 +270,7 @@ namespace FinalAnswer.App
             Row("SYNC", () => manager.Room.RequestSync(), "ОБРЫВ ХОСТА", () => manager.Room.SimulateConnectionLoss());
             Row("БОТЫ: ОБРЫВ", () => { foreach (var b in bots) b.DropConnection(); }, "БОТЫ: ВЕРНУТЬ", () => { foreach (var b in bots) b.Reconnect(); });
             Row("БОТ ВЫХОДИТ", () => { if (bots.Count > 0) { bots[bots.Count - 1].Leave(); bots.RemoveAt(bots.Count - 1); } }, "ОТВЕТЫ БОТОВ", CycleAnswers);
-            Row("ЗВУКИ: ТЕСТ", PlayAllCues, "MUTE", () => { audio.Muted = !audio.Muted; Write("audio muted = " + audio.Muted); });
+            Row("ЗВУК ▶ (ВСЕ)", PlayAllCues, "MUTE", () => { audio.Muted = !audio.Muted; Write("audio muted = " + audio.Muted); });
         }
 
         void Row(string a, Action actionA, string b, Action actionB)
@@ -259,11 +288,35 @@ namespace FinalAnswer.App
         }
 
         int cueIndex;
+        List<string> soundList;
+        AudioSource preview;
+
+        /// <summary>Steps through every shipped clip (UI, cages, quiz, Cursed Boxes, Impostor, intro) and every host line.</summary>
         void PlayAllCues()
         {
-            var cue = (ShellAudio.Cue)(cueIndex++ % Enum.GetValues(typeof(ShellAudio.Cue)).Length);
-            audio.Play(cue, 1, 0);
-            Write("audio cue " + cue);
+            if (soundList == null)
+            {
+                soundList = new List<string>();
+                foreach (var entry in ArtCatalog.Active.Entries)
+                    if (entry.asset is AudioClip && !entry.key.StartsWith("Audio/Host/")) soundList.Add("clip:" + entry.key);
+                if (HostVoice.Current != null) foreach (var line in HostVoice.Current.All) soundList.Add("voice:" + line);
+            }
+            if (soundList.Count == 0) return;
+            var item = soundList[cueIndex++ % soundList.Count];
+            if (item.StartsWith("voice:"))
+            {
+                var parts = item.Substring(6).Split(':');
+                HostVoice.Current.Play(parts[0], parts[1]);
+            }
+            else
+            {
+                if (preview == null) preview = new GameObject("SoundPreview").AddComponent<AudioSource>();
+                preview.Stop();
+                preview.clip = ArtCatalog.Active.Clip(item.Substring(5));
+                preview.volume = audio.Muted ? 0 : audio.Master;
+                preview.Play();
+            }
+            Write("♪ " + cueIndex + "/" + soundList.Count + "  " + item);
         }
 
         void RenderDebug()

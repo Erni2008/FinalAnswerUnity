@@ -272,7 +272,8 @@ namespace FinalAnswer.UI
         readonly Button play, impostor, cursed, lastCommand;
         readonly Image blackout;
         readonly ConnectionPanel phone;
-        readonly List<GameObject> hideDuringTransition = new List<GameObject>();
+        readonly List<GameObject> chrome = new List<GameObject>();
+        bool cinematic;
         string roomCode = "";
         bool reducedMotion, starting, pendingStart;
         float pendingSeconds;
@@ -312,12 +313,25 @@ namespace FinalAnswer.UI
             Button(design, body, "МЕНЮ", 1210, 73, 250, 60, menu);
             Button(design, body, texts.Get("lobby.leave"), 1490, 73, 250, 60, leave);
 
+            foreach (var item in new Component[] { code, roomName, playerCount, connectedCount, status, play, impostor, cursed, lastCommand })
+                chrome.Add(item.gameObject);
+            chrome.Add(phone.Root.gameObject);
+            for (var i = design.childCount - 2; i < design.childCount; i++) chrome.Add(design.GetChild(i).gameObject); // MENU, LEAVE
+
             blackout = UiKit.Picture(design, "Blackout", null, 0, 0, 1920, 1080);
             blackout.color = new Color(0, 0, 0, 0);
             roundTitle = Label(design, art.Font("Fonts/RubikWetPaint-Regular"), 48, "DCC9AE", 220, 440, 1480, 160);
             roundTitle.gameObject.SetActive(false);
             audio?.Room(true);
             Root.gameObject.AddComponent<Ticker>().Tick = Animate;
+        }
+
+        /// <summary>Intro mode (BasementIntro.cinematicUi): only the basement and its cages remain visible.</summary>
+        public void SetCinematic(bool value)
+        {
+            if (cinematic == value) return;
+            cinematic = value;
+            foreach (var item in chrome) item.SetActive(!value);
         }
 
         public void StartRequested() { pendingStart = true; pendingSeconds = 0; }
@@ -385,18 +399,19 @@ namespace FinalAnswer.UI
         void Animate(float delta)
         {
             if (pendingStart && (pendingSeconds += delta) > 10) StartRejected();
-            var age = starting ? Mathf.Max(0, (serverNow - transitionStartedAt) / 1000f) : 0;
+            // The intro replaces the start transition (BasementIntro.resetTransition): no swing, blackout or title.
+            var age = starting && !cinematic ? Mathf.Max(0, (serverNow - transitionStartedAt) / 1000f) : 0;
             for (var i = 0; i < cages.Length; i++)
             {
                 cages[i].SetDeparture(age, reducedMotion);
                 cages[i].Update(delta, reducedMotion, audio);
                 audio?.CageMotion(i, cages[i].PlayerId != null, cages[i].Rotation, delta, cages[i].Pan);
             }
-            var fade = starting ? CageTimeline.Darkness(age) : 0;
+            var fade = starting && !cinematic ? CageTimeline.Darkness(age) : 0;
             blackout.color = new Color(0, 0, 0, fade);
-            roundTitle.gameObject.SetActive(starting && age > 2.25f);
+            roundTitle.gameObject.SetActive(starting && !cinematic && age > 2.25f);
             roundTitle.color = new Color(roundTitle.color.r, roundTitle.color.g, roundTitle.color.b, Mathf.Clamp01((age - 2.25f) / .6f));
-            phone.Root.gameObject.SetActive(!starting);
+            phone.Root.gameObject.SetActive(!starting && !cinematic);
         }
 
         public void Dispose() => audio?.Room(false);

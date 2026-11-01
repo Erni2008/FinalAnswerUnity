@@ -59,6 +59,56 @@ MonoBehaviour:
     asset: {fileID: 2800000, guid: a743d08017e4e4874be2bc90cfd0a06f, type: 3}
   - key: Art/CreateRoom/options_main
     asset: {fileID: 2800000, guid: 6569e7390484d4acdb63050d25ee8561, type: 3}
+  - key: Art/CursedBoxes/Characters/doktor_shot
+    asset: {fileID: 2800000, guid: 173e70e9f8a324a2d8a152a71bf7b8d6, type: 3}
+  - key: Art/CursedBoxes/Characters/drakula-shot
+    asset: {fileID: 2800000, guid: 4761cfc507b07471abc7ccf286f6211b, type: 3}
+  - key: Art/CursedBoxes/Characters/pumpkin_dead
+    asset: {fileID: 2800000, guid: c90c7c1c0f55245f5a09139d766165aa, type: 3}
+  - key: Art/CursedBoxes/Characters/pupeetee_shot
+    asset: {fileID: 2800000, guid: e25c9f925375c42cbb99b7f7efbae708, type: 3}
+  - key: Art/CursedBoxes/Characters/skeleton_shot
+    asset: {fileID: 2800000, guid: 43ad220d136e64e26b70e7540d6ccb23, type: 3}
+  - key: Art/CursedBoxes/Characters/voddoo_shoot
+    asset: {fileID: 2800000, guid: 86e1e767b46cc4607a36e254e3b66708, type: 3}
+  - key: Art/CursedBoxes/Characters/zombie_shot
+    asset: {fileID: 2800000, guid: 62f437e71a7144b09a35f086e10b12f4, type: 3}
+  - key: Art/CursedBoxes/Effects/cursed_glow
+    asset: {fileID: 2800000, guid: db4118a311b4048cf951a7095d507ab6, type: 3}
+  - key: Art/CursedBoxes/Effects/cursed_smoke
+    asset: {fileID: 2800000, guid: 523b1c47928474099aa11ac84ddb2cd6, type: 3}
+  - key: Art/CursedBoxes/Effects/gun_smoke
+    asset: {fileID: 2800000, guid: 3184ad8a910fa419784e648d52b846bb, type: 3}
+  - key: Art/CursedBoxes/Effects/muzzle_flash
+    asset: {fileID: 2800000, guid: 882fb73cc19d94336adbb9832a4de6fd, type: 3}
+  - key: Art/CursedBoxes/Survivors/dracula
+    asset: {fileID: 2800000, guid: d9edd345880154b6db09b56c1fe6b53f, type: 3}
+  - key: Art/CursedBoxes/Survivors/ghost
+    asset: {fileID: 2800000, guid: 9e7e813caf8d04c0598392d9d63f5048, type: 3}
+  - key: Art/CursedBoxes/Survivors/plague_doctor
+    asset: {fileID: 2800000, guid: 66bd2d21626e74cf290cdff6ee56f4de, type: 3}
+  - key: Art/CursedBoxes/Survivors/pumpkin
+    asset: {fileID: 2800000, guid: 34036ff57625e4d209efc99c67c457b5, type: 3}
+  - key: Art/CursedBoxes/Survivors/skeleton
+    asset: {fileID: 2800000, guid: 5361a4377b1154a6c8bb819d7f8b8b5b, type: 3}
+  - key: Art/CursedBoxes/background
+    asset: {fileID: 2800000, guid: 20a37a702c2474814a1d8fbae26bd671, type: 3}
+  - key: Art/CursedBoxes/crate-destroyed
+    asset: {fileID: 2800000, guid: 6c992b24bd24145d4b07b143b999a5fd, type: 3}
+  - key: Art/CursedBoxes/crate-intact
+    asset: {fileID: 2800000, guid: e7e70aefec33147079c25c46ba43a246, type: 3}
+  - key: Art/CursedBoxes/debris_a
+    asset: {fileID: 2800000, guid: 85cb2d214169540a29bbb03206498288, type: 3}
+  - key: Art/CursedBoxes/debris_b
+    asset: {fileID: 2800000, guid: f127e264b90df4a9b9898eecda997c7c, type: 3}
+  - key: Art/CursedBoxes/ghost_damaged
+    asset: {fileID: 2800000, guid: 5f7b659d8f3b0475e81cc19d50490e5f, type: 3}
+  - key: Art/CursedBoxes/ghost_hit
+    asset: {fileID: 2800000, guid: fea63a7a4a1d84084a1666e6d0f3df46, type: 3}
+  - key: Art/CursedBoxes/ghost_idle
+    asset: {fileID: 2800000, guid: cf43869057ace497a9065acb19f0a9b6, type: 3}
+  - key: Art/CursedBoxes/shelf
+    asset: {fileID: 2800000, guid: 057807838800144ab8f0ddb7a9f25df8, type: 3}
   - key: Art/GenerationCode/Buttons/back
     asset: {fileID: 2800000, guid: c5b1ff55441284d6a9557338bb7942ff, type: 3}
   - key: Art/GenerationCode/Buttons/back_hover
@@ -81,6 +131,20 @@ MonoBehaviour:
     asset: {fileID: 2800000, guid: f2185bd1e5eb24df1add49a9daf8bdb1, type: 3}
   - key: Art/GenerationCode/stage3
     asset: {fileID: 2800000, guid: f89300c09877448b697715374f7df339, type: 3}
+  - key: Art/Impostor/arrow_clock1
+    asset: {fileID: 2800000, guid: 78b9f6435f1d1431581ccac2ac157216, type: 3}
+  - key: Art/Impostor/clockmini
+    asset: {fileID: 2800000, guid: a8bc5427e92d4469e97aa01ee8857c67, type: 3}
+  - key: Art/Impostor/impostor_avatar_frame
+    asset: {fileID: 2800000, guid: 518b0bbcc52894963b9fef02593d0d36, type: 3}
+  - key: Art/Impostor/papper_player_front
+    asset: {fileID: 2800000, guid: b2d817451f2254b2086da0b6cbb445a2, type: 3}
+  - key: Art/Impostor/stamp
+    asset: {fileID: 2800000, guid: c448ff290751f4862a38046d477aa4a7, type: 3}
+  - key: Art/Impostor/suspect_papper
+    asset: {fileID: 2800000, guid: 551c62654d41b4af8bc65964d5f4b7e1, type: 3}
+  - key: Art/Impostor/table
+    asset: {fileID: 2800000, guid: 40b6a0daf08384cca9e174441982dc98, type: 3}
   - key: Art/Lobby/Cages/cage_bars
     asset: {fileID: 2800000, guid: fc37fa532970546b695775212958b0a2, type: 3}
   - key: Art/Lobby/Cages/cage_key
@@ -379,8 +443,154 @@ MonoBehaviour:
     asset: {fileID: 8300000, guid: ae7449e49b52349bfb68a85830731f4b, type: 3}
   - key: Audio/Cages/gate_closes
     asset: {fileID: 8300000, guid: b83e2ce52e834419792dd228eed118d5, type: 3}
+  - key: Audio/CursedBoxes/appearance
+    asset: {fileID: 8300000, guid: 8103b048a601e460eb603c57d602ea70, type: 3}
+  - key: Audio/CursedBoxes/appearance2
+    asset: {fileID: 8300000, guid: e52f02f35409e4ed381caae49ce71dc3, type: 3}
+  - key: Audio/CursedBoxes/appearance3
+    asset: {fileID: 8300000, guid: ce9f8c086b7424864a2c3853be55a65f, type: 3}
+  - key: Audio/CursedBoxes/appearance4
+    asset: {fileID: 8300000, guid: 74d471016031f4548b8c43f51a13bedb, type: 3}
+  - key: Audio/CursedBoxes/box_destroy_done
+    asset: {fileID: 8300000, guid: db34bf8fa6de94c94b7a9794aeb7c9dc, type: 3}
+  - key: Audio/CursedBoxes/heart_beating_done
+    asset: {fileID: 8300000, guid: d146b9c99ebf84f5d94392191ef6e17c, type: 3}
+  - key: Audio/CursedBoxes/horror_appearance
+    asset: {fileID: 8300000, guid: 3fb204e16bfaf417887421439d7f6654, type: 3}
+  - key: Audio/CursedBoxes/horror_appearance2
+    asset: {fileID: 8300000, guid: 3cbbd03e48c0e40a7946efa20f157b45, type: 3}
+  - key: Audio/CursedBoxes/reload_done
+    asset: {fileID: 8300000, guid: acf91e1647cf1491b81d30c9051db057, type: 3}
+  - key: Audio/CursedBoxes/reload_done_bullets
+    asset: {fileID: 8300000, guid: a20a4bd4ec419485782785b282a03222, type: 3}
+  - key: Audio/CursedBoxes/reveal_done
+    asset: {fileID: 8300000, guid: 80c4c0e66cef5491a992a989a773f013, type: 3}
+  - key: Audio/CursedBoxes/reveal_sound2
+    asset: {fileID: 8300000, guid: e776bdc9ddc85468692ddd280be67cf1, type: 3}
+  - key: Audio/CursedBoxes/shell_drop
+    asset: {fileID: 8300000, guid: 9a2ff730992564b53898b3c593ae3acc, type: 3}
+  - key: Audio/CursedBoxes/shooted_box2
+    asset: {fileID: 8300000, guid: feda65c1e019943cf916f6dff8ccf5ee, type: 3}
+  - key: Audio/CursedBoxes/shotgun_shoot_done
+    asset: {fileID: 8300000, guid: a749214c79f184c49bfede7980d95ad2, type: 3}
   - key: Audio/Environment/creepy_basement
     asset: {fileID: 8300000, guid: df196f8d0e0d4465898f963b040fb43e, type: 3}
+  - key: Audio/Host/events/PRESS_BLUE_f58f620baaf1
+    asset: {fileID: 8300000, guid: 0be7a0e058fef419a85ed18aa831242b, type: 3}
+  - key: Audio/Host/events/PRESS_GREEN_e77c0fa43838
+    asset: {fileID: 8300000, guid: 51300b9f8f002430ba0fa48471463554, type: 3}
+  - key: Audio/Host/events/PRESS_RED_3a14213442b9
+    asset: {fileID: 8300000, guid: 2d1767bcc35e24ab5ac0f55e6853cd9a, type: 3}
+  - key: Audio/Host/events/PRESS_YELLOW_9875d80b4b27
+    asset: {fileID: 8300000, guid: 6a7ca57e2e8174db995df21e1af59c52, type: 3}
+  - key: Audio/Host/events/correct_answer_f8f1dc119454
+    asset: {fileID: 8300000, guid: 2d79225cf4dc441669eea267662f476f, type: 3}
+  - key: Audio/Host/events/cursed_boxes_intro_c2c7aafafe22
+    asset: {fileID: 8300000, guid: 80249b40deb184675852b70e4cd472ae, type: 3}
+  - key: Audio/Host/events/impostor_discussion_abaea70ded6f
+    asset: {fileID: 8300000, guid: 54b3ec841b96549d4a6d0663adcaf6fa, type: 3}
+  - key: Audio/Host/events/impostor_final_voting_cd3156757b9c
+    asset: {fileID: 8300000, guid: b3e5e31b306804dfa80622535a50d1ef, type: 3}
+  - key: Audio/Host/events/impostor_intro_00b077390742
+    asset: {fileID: 8300000, guid: 1ef59563cb6f8483f92794d705dde0cf, type: 3}
+  - key: Audio/Host/events/impostor_intro_0398d8b90d65
+    asset: {fileID: 8300000, guid: 6b6cc44b1917646df92e80d2a3271def, type: 3}
+  - key: Audio/Host/events/impostor_intro_c05744fee536
+    asset: {fileID: 8300000, guid: 2fdbb0a4c685843c19d32d36e0387aeb, type: 3}
+  - key: Audio/Host/events/impostor_outcome_caught_b7e3d09d526d
+    asset: {fileID: 8300000, guid: 99f2d491c27e94ade9f1caf36a239e0d, type: 3}
+  - key: Audio/Host/events/impostor_outcome_escaped_a7d2c82b91d8
+    asset: {fileID: 8300000, guid: 2508f66bd73d04df89f8e462c7dd2e21, type: 3}
+  - key: Audio/Host/events/impostor_round_1_cc84afec2f6e
+    asset: {fileID: 8300000, guid: e954a0e60fbcf4faba98478932208fdb, type: 3}
+  - key: Audio/Host/events/impostor_round_2_d6360889b727
+    asset: {fileID: 8300000, guid: c08b92c44646644af8fd67f0af105753, type: 3}
+  - key: Audio/Host/events/impostor_round_3_1f3ef5059215
+    asset: {fileID: 8300000, guid: 56f67f5da06cd4da6af52b62be474cf1, type: 3}
+  - key: Audio/Host/events/impostor_round_deadline_4ccf8776af6a
+    asset: {fileID: 8300000, guid: 88251569af80840348882761d09dc693, type: 3}
+  - key: Audio/Host/events/impostor_suspicion_229d19d499d4
+    asset: {fileID: 8300000, guid: 4b4ee5bc1f90b400d9bbb4eff75f0b3b, type: 3}
+  - key: Audio/Host/events/impostor_vote_first_42343c0357ef
+    asset: {fileID: 8300000, guid: 506b3f5893fa34d6f963b996d0d875ef, type: 3}
+  - key: Audio/Host/events/impostor_vote_intro_1_4053a174764d
+    asset: {fileID: 8300000, guid: 434b474e79a334c269e22d0db41129e9, type: 3}
+  - key: Audio/Host/events/impostor_vote_intro_2_90cd4dc5940a
+    asset: {fileID: 8300000, guid: f3f76fba580fe46a0b6ff57dfb5d2e92, type: 3}
+  - key: Audio/Host/events/impostor_vote_no_votes_ccbfa33940ab
+    asset: {fileID: 8300000, guid: fd697ba9d5d79414fbf2cd0ee0f8e117, type: 3}
+  - key: Audio/Host/events/impostor_vote_reveal_intro_32ef8e4d8330
+    asset: {fileID: 8300000, guid: b2d94eccf88114b36b49853636ab7d25, type: 3}
+  - key: Audio/Host/events/impostor_vote_second_2594496ecbfb
+    asset: {fileID: 8300000, guid: dcca4a258099e45dc84182ef18826e7c, type: 3}
+  - key: Audio/Host/events/impostor_vote_tie_918288aad564
+    asset: {fileID: 8300000, guid: 7acdd21f7d6e3427c98848537a8b77b8, type: 3}
+  - key: Audio/Host/events/results_8b9981a46c97
+    asset: {fileID: 8300000, guid: 4c635397d640c42e199b4bf9d2fc3aca, type: 3}
+  - key: Audio/Host/events/round_start_c929786acd81
+    asset: {fileID: 8300000, guid: c2441dac2b9e64c11a8e69ea39b32b89, type: 3}
+  - key: Audio/Host/events/voting_start_30fe3fea41eb
+    asset: {fileID: 8300000, guid: c9fc37e065a4f4a38a12358634d3a60a, type: 3}
+  - key: Audio/Host/events/winner_5f9cebc85400
+    asset: {fileID: 8300000, guid: 6e9e1206e31aa450fa1bc5c5910b6992, type: 3}
+  - key: Audio/Host/events/wrong_answer_a0926fd58d10
+    asset: {fileID: 8300000, guid: 0daf219818e044647925c2ad39cb72eb, type: 3}
+  - key: Audio/Host/intro/intro_01_01_611a7442ab73
+    asset: {fileID: 8300000, guid: 40160f9666d0247a3b834eb22f4bdc90, type: 3}
+  - key: Audio/Host/intro/intro_01_02_80f46c1af79a
+    asset: {fileID: 8300000, guid: 76ecfb811d55c45b88ddad77e0b1fae3, type: 3}
+  - key: Audio/Host/intro/intro_01_03_6e6205d337dd
+    asset: {fileID: 8300000, guid: d5832239ea6b04365ad2ef3f3e080b7e, type: 3}
+  - key: Audio/Host/intro/intro_01_04_c2865f497a47
+    asset: {fileID: 8300000, guid: 501858fc7409d436db5ef02a53ffaa91, type: 3}
+  - key: Audio/Host/intro/intro_01_05_cb480fd1961d
+    asset: {fileID: 8300000, guid: 05251797a8e0c448d8b86f7a97d63ef2, type: 3}
+  - key: Audio/Host/intro/intro_02_01_2f7801891adb
+    asset: {fileID: 8300000, guid: 7bc1d03e16f69451abc68bdefd07fd27, type: 3}
+  - key: Audio/Host/intro/intro_02_01_54e6fa51762b
+    asset: {fileID: 8300000, guid: 6329f5bd8d89b485286caf0a45299f17, type: 3}
+  - key: Audio/Host/intro/intro_02_01_f8a3bc2bdd27
+    asset: {fileID: 8300000, guid: c5d99464173ac4cc5958362706fdeaa0, type: 3}
+  - key: Audio/Host/intro/intro_02_01b_7d1f3b9aee89
+    asset: {fileID: 8300000, guid: 88c109ef646cb42a49b56e439b6feeb8, type: 3}
+  - key: Audio/Host/intro/intro_02_01b_d84dcc98e0c3
+    asset: {fileID: 8300000, guid: fc2c1f07e79544429ab897d5243848b6, type: 3}
+  - key: Audio/Host/intro/intro_02_02_2f9e6454445e
+    asset: {fileID: 8300000, guid: ac8f2af3a67044642aeb516a007ab49c, type: 3}
+  - key: Audio/Host/intro/intro_02_03_819502333c3d
+    asset: {fileID: 8300000, guid: 48f432a9a3fef4712879e8c42d68ffcf, type: 3}
+  - key: Audio/Host/intro/intro_02_04_bba477b8445f
+    asset: {fileID: 8300000, guid: 351f5f54418e34a5a83dc295720daee0, type: 3}
+  - key: Audio/Host/intro/intro_02_05_c2b144bf8b67
+    asset: {fileID: 8300000, guid: d0c959915fdfd4337863c14d57ff7bf7, type: 3}
+  - key: Audio/Host/intro/intro_03_01_be1f36f47ec3
+    asset: {fileID: 8300000, guid: a1b44e466b2fa4fe68c2182d4ebd8a53, type: 3}
+  - key: Audio/Host/intro/intro_03_02_baf0392929e7
+    asset: {fileID: 8300000, guid: 998cda82ac028496c931d779a3848337, type: 3}
+  - key: Audio/Host/intro/intro_03_03_085fafecbae6
+    asset: {fileID: 8300000, guid: 78c02e4f691d9404c8c94fd1c61d8e19, type: 3}
+  - key: Audio/Host/intro/intro_03_04_d3006a024d3f
+    asset: {fileID: 8300000, guid: 771db894b2996412ea01b23712d1d062, type: 3}
+  - key: Audio/Host/intro/intro_03_05_8ad603324d25
+    asset: {fileID: 8300000, guid: 91c48a7e1d8d442bfae40ca23eaf0e77, type: 3}
+  - key: Audio/Host/intro/intro_03_06_5bae661e10f5
+    asset: {fileID: 8300000, guid: 9c9bd18f6973c488c91eb3c0236c7cfe, type: 3}
+  - key: Audio/Host/intro/intro_04_01_45e7253a7dde
+    asset: {fileID: 8300000, guid: 43370c3a33c0c49a1b51d619ec165333, type: 3}
+  - key: Audio/Host/intro/intro_04_02_b4734efe15c5
+    asset: {fileID: 8300000, guid: 0b6d04a199fb84150bfda28da60309f9, type: 3}
+  - key: Audio/Host/intro/intro_04_03_8c3d245972e1
+    asset: {fileID: 8300000, guid: 5b2c39facc57a4d5ea52125bfcacf5b0, type: 3}
+  - key: Audio/Host/intro/intro_04_04_c3e682ac8b74
+    asset: {fileID: 8300000, guid: 4cbe82ca5160b4dcdbb79cf28637a5ab, type: 3}
+  - key: Audio/Host/intro/intro_04_05_e979a249b9b7
+    asset: {fileID: 8300000, guid: 55d3b26c5841e44918d280c3d8b468ae, type: 3}
+  - key: Audio/Host/intro/intro_05_01_ca84a165c5b3
+    asset: {fileID: 8300000, guid: c2bad220d029b4086b19b9cbfe6a9215, type: 3}
+  - key: Audio/Host/intro/intro_05_01_f56c2f52af66
+    asset: {fileID: 8300000, guid: c1b65f105f2eb45d39262e50f149b538, type: 3}
+  - key: Audio/Host/intro/intro_05_03_87934ef4fcc9
+    asset: {fileID: 8300000, guid: 5e47c51516c4b431b8ec4ea219e7c2c2, type: 3}
   - key: Audio/Host/manifest.json
     asset: {fileID: 4900000, guid: 0bc6f273b49d1491e9c3be915eab019f, type: 3}
   - key: Audio/Host/questions/chemical-gold_229e19d5ceb9
@@ -407,6 +617,24 @@ MonoBehaviour:
     asset: {fileID: 8300000, guid: 51c138eb67c694362b7ac96fb038771d, type: 3}
   - key: Audio/Host/questions/triangle_28fdfd302bba
     asset: {fileID: 8300000, guid: fb7a9aee82ea44d278b5ac9628e25599, type: 3}
+  - key: Audio/Impostor/card_role_impostor
+    asset: {fileID: 8300000, guid: fd571360f095a4b0d8777a3300d115dd, type: 3}
+  - key: Audio/Impostor/impostor_role_reveal
+    asset: {fileID: 8300000, guid: 7d57aac2481bd4f62987fce1c4d195fa, type: 3}
+  - key: Audio/Impostor/mini_game_introduction
+    asset: {fileID: 8300000, guid: b46d060f8668f4fabb576f91cebd6ab7, type: 3}
+  - key: Audio/Impostor/page_turn
+    asset: {fileID: 8300000, guid: deeceef16cc78415499a2dd5896d3098, type: 3}
+  - key: Audio/Impostor/vote_sent
+    asset: {fileID: 8300000, guid: 8bd9664103ff54ef1ab779b05005baa5, type: 3}
+  - key: Audio/Impostor/vote_started
+    asset: {fileID: 8300000, guid: fc485ec66f96f497fa7b4ea7f3e9187d, type: 3}
+  - key: Audio/Impostor/voting_closed
+    asset: {fileID: 8300000, guid: 2a97aa91661c34c21b04612f4f38a7c9, type: 3}
+  - key: Audio/Impostor/wooden_stumb_hit
+    asset: {fileID: 8300000, guid: 18af1cd29cea342229a28f32bf878f7c, type: 3}
+  - key: Audio/Impostor/writing_words_on_paper_theimpostor
+    asset: {fileID: 8300000, guid: 58f0c21eb1a824d0b976ca415b8167a5, type: 3}
   - key: Audio/Quiz/clock_ticks
     asset: {fileID: 8300000, guid: 612183fb13e9a420595e8a397caa42a1, type: 3}
   - key: Audio/Quiz/music1
@@ -417,6 +645,8 @@ MonoBehaviour:
     asset: {fileID: 8300000, guid: a9fc398dc570e4f7ea089cbb70736f3b, type: 3}
   - key: Audio/Ui/hover_button
     asset: {fileID: 8300000, guid: 70c69dd45495343e08cde5d0c85b688c, type: 3}
+  - key: Data/intro_ru.json
+    asset: {fileID: 4900000, guid: 230f86145ea9f49ac9c38acc3cb0360b, type: 3}
   - key: Fonts/BebasNeue-Regular
     asset: {fileID: 12800000, guid: 58575cdbb7d004077a788912506332e6, type: 3}
   - key: Fonts/Creepster-OFL.txt

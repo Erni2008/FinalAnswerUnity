@@ -114,9 +114,18 @@ namespace FinalAnswer.Quiz
             var answering = phase == QuizPhases.Answering && context.Room.State == ConnectionState.Online;
             var locked = phase == QuizPhases.Revealing || phase == QuizPhases.Results || phase == QuizPhases.GameFinished;
             audio.Phase(answering, locked, System.Math.Max(0, timeline.ClockElapsed), timeline.ClockRemaining);
+            if (timeline.RevealShown) audio.Event(timeline.Key, AnyCorrect() ? "correct_answer" : "wrong_answer");
+            if (phase == QuizPhases.GameFinished) { audio.Event(quiz.GameId, "results"); audio.Event(quiz.GameId, "winner"); }
             audio.Update(delta);
 
             SendReadyBarrier(serverNow);
+        }
+
+        bool AnyCorrect()
+        {
+            if (!(snapshot.Raw["results"] is Newtonsoft.Json.Linq.JArray rows)) return false;
+            foreach (var row in rows) if (row.Value<bool?>("isCorrect") ?? false) return true;
+            return false;
         }
 
         /// <summary>NetworkRoundAdapter.synchronize: map the server's answer window onto the local timeline.</summary>

@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using FinalAnswer.UI;
-using Newtonsoft.Json.Linq;
 using UnityEngine;
 
 namespace FinalAnswer.Quiz
@@ -12,12 +11,11 @@ namespace FinalAnswer.Quiz
     /// </summary>
     public sealed class QuizAudio
     {
-        const float MusicLevel = .35f, TickLevel = .55f, LockLevel = .85f, VoiceLevel = 1f;
+        const float MusicLevel = .35f, TickLevel = .55f, LockLevel = .85f;
 
         readonly GameObject host;
         readonly AudioSource[] music = new AudioSource[2];
-        readonly AudioSource ticks, lockSource, voice;
-        readonly Dictionary<string, (AudioClip clip, float duration)> voices = new Dictionary<string, (AudioClip, float)>();
+        readonly AudioSource ticks, lockSource;
         string question = "";
         int requested = -1, current = -1, lastSelected = -1;
         float fade, duck = 1, duckRemaining;
@@ -33,8 +31,6 @@ namespace FinalAnswer.Quiz
             }
             ticks = Source(art.Clip("Audio/Quiz/clock_ticks"), true);
             lockSource = Source(art.Clip("Audio/Cages/door_lock_done"), false);
-            voice = Source(null, false);
-            LoadVoices(art);
         }
 
         AudioSource Source(AudioClip clip, bool loop)
@@ -47,29 +43,11 @@ namespace FinalAnswer.Quiz
             return source;
         }
 
-        void LoadVoices(ArtCatalog art)
-        {
-            try
-            {
-                var manifest = JObject.Parse(art.Text("Audio/Host/manifest.json").text);
-                if (!(manifest["questions"] is JObject questions)) return;
-                foreach (var pair in questions)
-                {
-                    if (!(pair.Value is JObject entry) || entry.Value<string>("status") != "ready") continue;
-                    var file = entry.Value<string>("file") ?? "";
-                    if (!file.StartsWith("questions/") || !file.EndsWith(".ogg")) continue;
-                    try { voices[pair.Key] = (art.Clip("Audio/Host/" + file.Substring(0, file.Length - 4)), entry.Value<float>("duration")); }
-                    catch (KeyNotFoundException) { /* optional line missing from this build */ }
-                }
-            }
-            catch (System.Exception error) { Debug.LogWarning("[Quiz] host voice manifest: " + error.Message); }
-        }
-
         static float Master => ShellAudio.Current == null || ShellAudio.Current.Muted ? 0 : ShellAudio.Current.Master;
         static float Sfx => ShellAudio.Current?.Sfx ?? 1;
 
         /// <summary>Recorded host line duration for the question, or 0 when none exists (typing-only presentation).</summary>
-        public float VoiceDuration(string questionId) => voices.TryGetValue(questionId, out var v) ? v.duration : 0;
+        public float VoiceDuration(string questionId) => HostVoice.Current?.Duration("questions", questionId) ?? 0;
 
         /// <summary>Starts a question: alternates the music bed and speaks the host line once per question key.</summary>
         public void Question(string key, string questionId, int number, bool speak)
@@ -80,13 +58,7 @@ namespace FinalAnswer.Quiz
             lastSelected = requested;
             answerSeen = locked = false;
             wanted = true;
-            voice.Stop();
-            if (speak && voices.TryGetValue(questionId, out var line) && line.clip != null)
-            {
-                voice.clip = line.clip;
-                voice.volume = VoiceLevel * Master * Sfx;
-                voice.Play();
-            }
+            if (speak) HostVoice.Current?.Play("questions", questionId);
         }
 
         /// <summary>lockedNow must come from the server closing answers, never from one player's submission.</summary>
@@ -100,7 +72,7 @@ namespace FinalAnswer.Quiz
                 wanted = false;
                 if (!locked && answerSeen) PlayLock();
                 locked = true;
-                voice.Stop();
+                if (HostVoice.Current != null && HostVoice.Current.Playing.StartsWith("questions:")) HostVoice.Current.Stop();
             }
             if (wantTicks && !ticking && ticks.clip != null)
             {
@@ -150,7 +122,15 @@ namespace FinalAnswer.Quiz
             wanted = false;
             ticking = false;
             ticks.Stop();
-            voice.Stop();
+            if (HostVoice.Current != null && HostVoice.Current.Playing.StartsWith("questions:")) HostVoice.Current.Stop();
+        }
+
+        /// <summary>Recorded event lines that the Java client shipped but never wired; played once per key.</summary>
+        readonly HashSet<string> spoken = new HashSet<string>();
+        public void Event(string key, string line)
+        {
+            if (HostVoice.Current == null || HostVoice.Current.Busy || !spoken.Add(key + ":" + line)) return;
+            HostVoice.Current.Play("events", line);
         }
 
         public void Dispose()

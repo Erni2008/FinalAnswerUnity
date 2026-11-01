@@ -1,0 +1,305 @@
+{
+  "introId": "final_answer_intro_v1",
+  "language": "ru",
+  "targetDurationSeconds": 74,
+  "maximumDurationSeconds": 80,
+  "fadeStart": 4,
+  "fadeDuration": 5,
+  "exitFade": 0.7,
+  "mix": {
+    "host": 1,
+    "ambience": 0.45,
+    "sfx": 0.35,
+    "music": 0.45
+  },
+  "scenes": [
+    {
+      "id": "darkness",
+      "start": 0,
+      "end": 4,
+      "lines": [],
+      "directions": []
+    },
+    {
+      "id": "awakening",
+      "start": 4,
+      "end": 9,
+      "lines": [],
+      "directions": []
+    },
+    {
+      "id": "greeting",
+      "start": 9,
+      "end": 23,
+      "emotion": "SARCASTIC",
+      "lines": [
+        {
+          "id": "intro_01_01",
+          "text": "О, ну наконец-то!",
+          "pauseAfter": 0.25,
+          "subtitleText": "О, ну наконец-то!"
+        },
+        {
+          "id": "intro_01_02",
+          "text": "Проснулись, мои хорошие?",
+          "pauseAfter": 0.65,
+          "subtitleText": "Проснулись, мои хорошие?"
+        },
+        {
+          "id": "intro_01_03",
+          "text": "А я уж начал переживать.",
+          "pauseAfter": 0.2,
+          "subtitleText": "А я уж начал переживать."
+        },
+        {
+          "id": "intro_01_04",
+          "text": "Вы только посмотрите на себя… Сидите такие тихие, такие сладкие…",
+          "pauseAfter": 0.25,
+          "subtitleText": "Вы только посмотрите на себя… Сидите такие тихие, такие сладкие…"
+        },
+        {
+          "id": "intro_01_05",
+          "text": "Прямо загляденье!",
+          "pauseAfter": 0.15,
+          "subtitleText": "Прямо загляденье!"
+        }
+      ],
+      "directions": [
+        {
+          "after": "intro_01_02",
+          "type": "quiet_laugh",
+          "file": "sounds/intro/host_quiet_laugh.wav"
+        }
+      ]
+    },
+    {
+      "id": "hunter",
+      "start": 23,
+      "end": 38,
+      "emotion": "DRAMATIC",
+      "lines": [
+        {
+          "id": "intro_02_01",
+          "text": "Точно.",
+          "subtitleText": "Точно.",
+          "emotion": "NEUTRAL",
+          "pauseAfter": 0.25,
+          "audioTailSeconds": 0.18
+        },
+        {
+          "id": "intro_02_01b",
+          "text": "Где же мои манеры?",
+          "subtitleText": "Где же мои манеры?",
+          "emotion": "SARCASTIC",
+          "pauseAfter": 0.2,
+          "audioTailSeconds": 0.18,
+          "generation": {
+            "seed": 3,
+            "temperature": 0.8
+          }
+        },
+        {
+          "id": "intro_02_02",
+          "text": "Я — охотник на паранормальные явления.",
+          "pauseAfter": 0.15,
+          "subtitleText": "Я — охотник на паранормальные явления."
+        },
+        {
+          "id": "intro_02_03",
+          "text": "Призраки, демоны, проклятые создания…",
+          "pauseAfter": 0.55,
+          "subtitleText": "Призраки, демоны, проклятые создания…"
+        },
+        {
+          "id": "intro_02_04",
+          "text": "Все вы — часть моей замечательной коллекции!",
+          "pauseAfter": 0.45,
+          "subtitleText": "Все вы — часть моей замечательной коллекции!"
+        },
+        {
+          "id": "intro_02_05",
+          "text": "И поверьте, поймать вас было непросто.",
+          "pauseAfter": 0.15,
+          "subtitleText": "И, поверьте, поймать вас было непросто."
+        }
+      ],
+      "directions": [
+        {
+          "after": "intro_02_04",
+          "type": "short_laugh",
+          "file": "sounds/intro/host_short_laugh.wav"
+        }
+      ]
+    },
+    {
+      "id": "offer",
+      "start": 38,
+      "end": 53,
+      "emotion": "SINISTER",
+      "lines": [
+        {
+          "id": "intro_03_01",
+          "text": "Но знаете… Мне стало немного скучно.",
+          "pauseAfter": 0.25,
+          "subtitleText": "Но, знаете, мне стало немного скучно."
+        },
+        {
+          "id": "intro_03_02",
+          "text": "Поэтому я решил устроить небольшое соревнование!",
+          "pauseAfter": 0.65,
+          "subtitleText": "Поэтому я решил устроить небольшое соревнование!"
+        },
+        {
+          "id": "intro_03_03",
+          "text": "Победитель получит свободу.",
+          "pauseAfter": 0.3,
+          "subtitleText": "Победитель получит свободу."
+        },
+        {
+          "id": "intro_03_04",
+          "text": "Да! Один из вас действительно сможет выбраться отсюда!",
+          "pauseAfter": 0.45,
+          "subtitleText": "Да! Один из вас действительно сможет выбраться отсюда!"
+        },
+        {
+          "id": "intro_03_05",
+          "text": "А остальные…",
+          "pauseAfter": 0.8,
+          "subtitleText": "А остальные…"
+        },
+        {
+          "id": "intro_03_06",
+          "text": "Ну, не будем о грустном!",
+          "pauseAfter": 0.15,
+          "subtitleText": "Ну, не будем о грустном!"
+        }
+      ],
+      "directions": [
+        {
+          "after": "intro_03_05",
+          "type": "quiet_laugh",
+          "file": "sounds/intro/host_quiet_laugh.wav"
+        }
+      ]
+    },
+    {
+      "id": "rules",
+      "start": 53,
+      "end": 68,
+      "emotion": "DRAMATIC",
+      "lines": [
+        {
+          "id": "intro_04_01",
+          "text": "Правила просты!",
+          "pauseAfter": 0.25,
+          "subtitleText": "Правила просты!"
+        },
+        {
+          "id": "intro_04_02",
+          "text": "Я задаю вопросы — вы отвечаете.",
+          "pauseAfter": 0.15,
+          "subtitleText": "Я задаю вопросы — вы отвечаете."
+        },
+        {
+          "id": "intro_04_03",
+          "text": "За правильные ответы получаете преимущество.",
+          "pauseAfter": 0.15,
+          "subtitleText": "За правильные ответы получаете преимущество."
+        },
+        {
+          "id": "intro_04_04",
+          "text": "А за неправильные…",
+          "pauseAfter": 0.7,
+          "subtitleText": "А за неправильные…"
+        },
+        {
+          "id": "intro_04_05",
+          "text": "Вас ждут мои особенные испытания!",
+          "pauseAfter": 0.5,
+          "subtitleText": "Вас ждут мои особенные испытания!"
+        }
+      ],
+      "directions": [
+        {
+          "after": "intro_04_05",
+          "type": "sinister_laugh",
+          "file": "sounds/intro/host_sinister_laugh.wav"
+        }
+      ]
+    },
+    {
+      "id": "show_begins",
+      "start": 68,
+      "end": 74,
+      "emotion": "EXCITED",
+      "lines": [
+        {
+          "id": "intro_05_01",
+          "text": "Итак, мои драгоценные экспонаты!",
+          "pauseAfter": 1.2,
+          "subtitleText": "Итак, мои драгоценные экспонаты!",
+          "audioTailSeconds": 0.18
+        },
+        {
+          "id": "intro_05_03",
+          "text": "Первый вопрос!",
+          "pauseAfter": 0.1,
+          "subtitleText": "Первый вопрос!"
+        }
+      ],
+      "directions": []
+    }
+  ],
+  "cues": [
+    {
+      "id": "chain",
+      "at": 0.7,
+      "file": "sounds/cages/runtime/chain_cage.wav",
+      "category": "CINEMATIC_SFX",
+      "gain": 0.15
+    },
+    {
+      "id": "metal_impact",
+      "at": 2.8,
+      "file": "sounds/intro/distant_metal_impact.wav",
+      "category": "CINEMATIC_SFX",
+      "gain": 0.3
+    },
+    {
+      "id": "footsteps",
+      "at": 4,
+      "file": "sounds/intro/distant_footsteps.wav",
+      "category": "CINEMATIC_SFX",
+      "gain": 0.3
+    },
+    {
+      "id": "metal_tool",
+      "at": 23,
+      "file": "sounds/intro/metal_tool.wav",
+      "category": "CINEMATIC_SFX",
+      "gain": 0.25
+    },
+    {
+      "id": "mechanical_click",
+      "at": 38,
+      "file": "sounds/intro/mechanical_click.wav",
+      "category": "CINEMATIC_SFX",
+      "gain": 0.25
+    },
+    {
+      "id": "clock",
+      "at": 53,
+      "until": 68,
+      "file": "sounds/questions/clock_ticks.wav",
+      "category": "CINEMATIC_SFX",
+      "gain": 0.22
+    },
+    {
+      "id": "show_sting",
+      "at": 68,
+      "file": "sounds/intro/show_sting.ogg",
+      "category": "MUSIC",
+      "gain": 0.45
+    }
+  ]
+}
