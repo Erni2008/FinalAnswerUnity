@@ -1,0 +1,195 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aebb1db61e537493cb04cbde237296fb, type: 3}
+  m_Name: AudioCatalog
+  m_EditorClassIdentifier: FA.Runtime::FinalAnswer.AudioCatalog
+  cues:
+  - id: BUTTON_PRESS
+    clip: {fileID: 8300000, guid: f257d5397b8784133902b5e84bfa315e, type: 3}
+    gain: 0.65
+    priority: 2
+    throttleMs: 60
+  - id: SMALL_BUTTON_CLICK
+    clip: {fileID: 8300000, guid: 33f7324df5e6948a6982941526ba297c, type: 3}
+    gain: 0.45
+    priority: 2
+    throttleMs: 45
+  - id: LEVER_MOVE
+    clip: {fileID: 8300000, guid: db63498f2c3af485b876facfb654d666, type: 3}
+    gain: 0.55
+    priority: 2
+    throttleMs: 100
+  - id: ROTARY_STEP
+    clip: {fileID: 8300000, guid: ab906ab6dd63a4e0eaede258142ee1d5, type: 3}
+    gain: 0.45
+    priority: 2
+    throttleMs: 65
+  - id: HATCH_OPEN
+    clip: {fileID: 8300000, guid: f5afd32b1116e446787b967bf4dbe863, type: 3}
+    gain: 0.6
+    priority: 2
+    throttleMs: 200
+  - id: METAL_CREAK
+    clip: {fileID: 8300000, guid: 6d1a59747e6a84721b4ccceeca56ac03, type: 3}
+    gain: 0.18
+    priority: 0
+    throttleMs: 18000
+  - id: METAL_CRACK
+    clip: {fileID: 8300000, guid: ce15b969a49af474386d2ff8a8fd44aa, type: 3}
+    gain: 0.24
+    priority: 0
+    throttleMs: 25000
+  - id: ANSWER_CORRECT
+    clip: {fileID: 8300000, guid: 2cf9870f5892e4eb9ba97cce7e7bc5d3, type: 3}
+    gain: 0.6
+    priority: 3
+    throttleMs: 0
+  - id: ANSWER_WRONG
+    clip: {fileID: 8300000, guid: be9964afa35c04488a1e43634372d876, type: 3}
+    gain: 0.6
+    priority: 3
+    throttleMs: 0
+  - id: VICTORY
+    clip: {fileID: 8300000, guid: 070603c743cbf41b2be41dccdc27e727, type: 3}
+    gain: 0.7
+    priority: 4
+    throttleMs: 0
+  - id: CIRCUIT_ROTATE
+    clip: {fileID: 8300000, guid: b6365fee51fb64d20aef427732068d69, type: 3}
+    gain: 0.75
+    priority: 2
+    throttleMs: 75
+  - id: CIRCUIT_FAILED
+    clip: {fileID: 8300000, guid: deb3772a351d34322a8b638eaa78527a, type: 3}
+    gain: 0.75
+    priority: 2
+    throttleMs: 0
+  - id: CIRCUIT_COMPLETE
+    clip: {fileID: 8300000, guid: 679b4ad06acb6498a8962f61106fa853, type: 3}
+    gain: 0.85
+    priority: 2
+    throttleMs: 0
+  - id: MACHINE_SHUTDOWN
+    clip: {fileID: 8300000, guid: 062e235d7e66b4116a76522b68d98319, type: 3}
+    gain: 0.6
+    priority: 3
+    throttleMs: 0
+  - id: MEMORY_NOTE_RED
+    clip: {fileID: 8300000, guid: 8632945c26af14be1897c33944400045, type: 3}
+    gain: 0.5
+    priority: 2
+    throttleMs: 0
+  - id: MEMORY_NOTE_GREEN
+    clip: {fileID: 8300000, guid: 4578b67d48e2e42afa28ef5f9330107d, type: 3}
+    gain: 0.5
+    priority: 2
+    throttleMs: 0
+  - id: MEMORY_NOTE_BLUE
+    clip: {fileID: 8300000, guid: 8d04e1f951ed440a193640c4a8e36fc6, type: 3}
+    gain: 0.5
+    priority: 2
+    throttleMs: 0
+  - id: MEMORY_NOTE_YELLOW
+    clip: {fileID: 8300000, guid: f3310728a92b949d29ee67aa80bd2a19, type: 3}
+    gain: 0.5
+    priority: 2
+    throttleMs: 0
+  - id: QUESTION_TYPING
+    clip: {fileID: 8300000, guid: 1e1558b73f1ac4305aa65a7d30f6ec75, type: 3}
+    gain: 0.2
+    priority: 1
+    throttleMs: 0
+  - id: QUESTION_TYPING_ALT
+    clip: {fileID: 8300000, guid: 4cb3c63ca53134382b6c221fc5a77497, type: 3}
+    gain: 0.2
+    priority: 1
+    throttleMs: 0
+  - id: CONFIRM
+    clip: {fileID: 8300000, guid: 116d87d9c9cf643b98fd27f19d597cbe, type: 3}
+    gain: 0.5
+    priority: 2
+    throttleMs: 60
+  - id: SYMBOL_WRONG
+    clip: {fileID: 8300000, guid: 5a6bce3826b904256a51701cc8e6f39d, type: 3}
+    gain: 0.6
+    priority: 3
+    throttleMs: 0
+  - id: HATCH_CLOSE
+    clip: {fileID: 8300000, guid: fc33d868016404468bc4779c731092b1, type: 3}
+    gain: 0.55
+    priority: 2
+    throttleMs: 100
+  - id: SYMBOL_CLICK
+    clip: {fileID: 8300000, guid: 45495761f75dc490ab3a4d6cdb26aab9, type: 3}
+    gain: 0.4
+    priority: 2
+    throttleMs: 45
+  - id: SYMBOL_APPEAR
+    clip: {fileID: 8300000, guid: a2c1cfee5ee73420998b515614504105, type: 3}
+    gain: 0.3
+    priority: 1
+    throttleMs: 80
+  - id: SCREEN_TRANSITION
+    clip: {fileID: 8300000, guid: 9fad37e8635704057abc0e60ee7bbfe5, type: 3}
+    gain: 0.35
+    priority: 1
+    throttleMs: 100
+  - id: PRESS_RED
+    clip: {fileID: 8300000, guid: 00e8329b7b08142a3b40bb5d3fa328dd, type: 3}
+    gain: 0.8
+    priority: 3
+    throttleMs: 0
+  - id: PRESS_GREEN
+    clip: {fileID: 8300000, guid: 2b44f942b5e3c4b1e9af7055c188f27c, type: 3}
+    gain: 0.8
+    priority: 3
+    throttleMs: 0
+  - id: PRESS_BLUE
+    clip: {fileID: 8300000, guid: 68c57d1fd0abd42599afb037cc6cb81c, type: 3}
+    gain: 0.8
+    priority: 3
+    throttleMs: 0
+  - id: PRESS_YELLOW
+    clip: {fileID: 8300000, guid: 950cb78b4c3df47488f68c0052c3068c, type: 3}
+    gain: 0.8
+    priority: 3
+    throttleMs: 0
+  - id: CURSED_SHOT
+    clip: {fileID: 8300000, guid: e9aa0a713e64f452b8dade16ffdd3a58, type: 3}
+    gain: 0.7
+    priority: 3
+    throttleMs: 100
+  - id: IMPOSTOR_PAGE
+    clip: {fileID: 8300000, guid: e4407cbecdae64f61a5d64cbc854cfe3, type: 3}
+    gain: 0.7
+    priority: 2
+    throttleMs: 100
+  - id: IMPOSTOR_STAMP
+    clip: {fileID: 8300000, guid: 6b7116e1962514192a2a72bc13e982a6, type: 3}
+    gain: 0.7
+    priority: 2
+    throttleMs: 100
+  - id: IMPOSTOR_VOTE_OPEN
+    clip: {fileID: 8300000, guid: 0ecbf326c63344b24b594462448e1e7b, type: 3}
+    gain: 0.7
+    priority: 2
+    throttleMs: 100
+  - id: IMPOSTOR_VOTE_CLOSED
+    clip: {fileID: 8300000, guid: 5a4b03f4560d64c02b073e9e8c254917, type: 3}
+    gain: 0.7
+    priority: 2
+    throttleMs: 100
+  - id: IMPOSTOR_ROLE
+    clip: {fileID: 8300000, guid: d3826be36c53c4c0f9dd92fc51e175e7, type: 3}
+    gain: 0.7
+    priority: 2
+    throttleMs: 100

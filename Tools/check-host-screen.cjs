@@ -1,0 +1,7 @@
+const fs=require('fs'),path=require('path'),{spawn}=require('child_process'),{randomUUID}=require('crypto'),assert=require('assert/strict');
+const project=path.resolve(__dirname,'..'),folder=path.join(project,'Artifacts/host-screen-smoke'),signal=path.join(folder,'room.json');fs.mkdirSync(folder,{recursive:true});for(const f of [signal,path.join(folder,'result.json')])try{fs.unlinkSync(f);}catch(e){if(e.code!=='ENOENT')throw e;}
+fs.writeFileSync(signal+'.control.json',JSON.stringify({id:randomUUID(),mode:'auto',manualPlayer:0,answers:'mixed',action:''}));
+const log=fs.openSync(path.join(folder,'bots.log'),'w'),bots=spawn(process.execPath,[path.join(__dirname,'manual-qa-phones.cjs'),signal],{env:{...process.env,FA_QA_HEADLESS:'1'},stdio:['ignore',log,log]});
+const app=spawn('/usr/bin/open',['-W','-n','-a',path.join(project,'Builds/macOS/FinalAnswerUnity.app'),'--args','-fa-host-smoke','-fa-host-artifacts',folder,'-screen-fullscreen','0','-screen-width','1600','-screen-height','1000','-logFile',path.join(folder,'player.log')]);
+const timeout=setTimeout(()=>{console.error('Host smoke timeout');app.kill('SIGTERM');bots.kill('SIGTERM');process.exitCode=1;},150000);
+app.once('exit',code=>{clearTimeout(timeout);bots.kill('SIGTERM');try{assert.equal(code,0);const r=JSON.parse(fs.readFileSync(path.join(folder,'result.json')));assert(r.actualHostUiCreateAndStart&&r.quizCursedQuizCompleted);console.log('NATIVE_HOST_SCREEN_OK: real room creation, lobby, 3 web players, complete game');}catch(e){console.error(e.message);process.exitCode=1;}});

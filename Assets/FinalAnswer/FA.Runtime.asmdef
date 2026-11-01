@@ -1,0 +1,9 @@
+{
+  "name": "FA.Runtime",
+  "rootNamespace": "FinalAnswer",
+  "references": [
+    "Unity.InputSystem",
+    "Unity.TextMeshPro",
+    "Unity.ugui"
+  ]
+}

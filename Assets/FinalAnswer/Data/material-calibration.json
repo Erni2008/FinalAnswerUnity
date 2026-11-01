@@ -1,0 +1,14 @@
+{
+  "light:Material.001": "light_MR_0.png",
+  "door:Material.001": "door_MR_0.png",
+  "level_handler:Material.001": "level_handler_MR_0.png",
+  "computer:Material.001": "computer_MR_0.png",
+  "button:Material.001": "button_MR_0.png",
+  "box_final:Material.001": "box_final_MR_0.png",
+  "hole_final:Material.001": "hole_final_MR_0.png",
+  "code_display:Material.001": "code_display_MR_0.png",
+  "secret_hole:Material.001": "secret_hole_MR_0.png",
+  "animal_panel:Material.001": "animal_panel_MR_0.png",
+  "lever:Material.001": "lever_MR_0.png",
+  "adjuster:Material.001": "adjuster_MR_0.png"
+}

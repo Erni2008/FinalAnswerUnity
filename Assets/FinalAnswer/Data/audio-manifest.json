@@ -1,0 +1,433 @@
+{
+  "version": 1,
+  "notes": {
+    "source": "1 to 4 sound(appearing sequence).wav",
+    "sourceDuration": 0.24095238095238095,
+    "method": "User-approved pitch variants of a single pulse; not four extracted original tones",
+    "variants": [
+      {
+        "file": "memory_note_red.wav",
+        "pitch": 1,
+        "duration": 0.24095238095238095
+      },
+      {
+        "file": "memory_note_green.wav",
+        "pitch": 1.2599210498948732,
+        "duration": 0.19122448979591836
+      },
+      {
+        "file": "memory_note_blue.wav",
+        "pitch": 1.4983070768766815,
+        "duration": 0.16081632653061226
+      },
+      {
+        "file": "memory_note_yellow.wav",
+        "pitch": 2,
+        "duration": 0.12047619047619047
+      }
+    ]
+  },
+  "originals": [
+    {
+      "file": "1 to 4 sound(appearing sequence).wav",
+      "sha256": "1c795dad3ac60cec5b85b7af401c878e83980dbabf5d816a97aa6a5808671ef4",
+      "bytes": 85316
+    },
+    {
+      "file": "Success2.wav",
+      "sha256": "1849b05094e44369aea5121ced2b764004c0eb7060a7c767067c8e5472731f6e",
+      "bytes": 192078
+    },
+    {
+      "file": "adjuster.wav",
+      "sha256": "5922ebfd61888c2bce359cfd878da4bcee498e1c7cf812d2e6843a70536c1a69",
+      "bytes": 192130
+    },
+    {
+      "file": "button_pressed.wav",
+      "sha256": "a21a29bc6c4a1c5ade319721a4f3e99c62fc9051ca87544a222e8364cd68ce5a",
+      "bytes": 87456
+    },
+    {
+      "file": "confirm_button.wav",
+      "sha256": "ef820d8bd813032d9382cae8a0fa572b1017ed5b52e04aac1ee3ed9398dfdf38",
+      "bytes": 93486
+    },
+    {
+      "file": "door_open.wav",
+      "sha256": "fe39eef243a7d4dc5fcfe873ffd68f10cea2feb5d4b1b44d79e602d00f3e955a",
+      "bytes": 70682
+    },
+    {
+      "file": "electrical_circuit_done.wav",
+      "sha256": "e864beb2833ff97c4ba6b95553d0f4c2b3573986789b63a6917b4336efcd0258",
+      "bytes": 384078
+    },
+    {
+      "file": "failed.circuit.wav",
+      "sha256": "52fb60c62aca42d3d81829caf27e4f8228890d6e560409b4dc08726cc9936d43",
+      "bytes": 576078
+    },
+    {
+      "file": "lever.wav",
+      "sha256": "b8a95e748b0340d3d81e204cd8306db065d5eacd63341807cf8cad1ab999de9f",
+      "bytes": 749476
+    },
+    {
+      "file": "machine_shutdown .wav",
+      "sha256": "b924e9e4641aba692a6d2891a3c0810d24d087464ce569fd09fb2f89cf22f972",
+      "bytes": 401322
+    },
+    {
+      "file": "metal_DOOR_CLOSE.wav",
+      "sha256": "5bc27f91f4e5bd63470883ba51870279faf3efa83fd130057177eba27dd81799",
+      "bytes": 131886
+    },
+    {
+      "file": "metal_cracking.wav",
+      "sha256": "1856a2a7d632a0ea8bc9a5738e964b6a7fd456dbe26ac09c498a4cc6668ddc72",
+      "bytes": 210438
+    },
+    {
+      "file": "question_typing.wav",
+      "sha256": "2a73891443fdd6f197b85ea6ecef33f228fa6e20d5e867ad1f2b864b5e2edb9d",
+      "bytes": 960078
+    },
+    {
+      "file": "questiontyping2.wav",
+      "sha256": "f2032a77ec0c6618466ca6dca151b0d2bb6714c744c52f2b9602e2c4938e7eb6",
+      "bytes": 1340358
+    },
+    {
+      "file": "second_metal_cracking.wav",
+      "sha256": "26b4e0d15679738b2f737b46695e1b1aed0d623f80033abece2042b9c9b62610",
+      "bytes": 301794
+    },
+    {
+      "file": "small_button_click.wav",
+      "sha256": "44eb7d92579a93620d8d753152412895a521c44452189389868c18a71277c240",
+      "bytes": 113124
+    },
+    {
+      "file": "success.mp3",
+      "sha256": "0753b98651369402f4cc92bbf132e5345e8232a3e3ef3ae7747c20f03af92693",
+      "bytes": 77321
+    },
+    {
+      "file": "success.wav",
+      "sha256": "10afe814b6d2a97dfaeca722e1708a664596e1bda3117d1577d79d48a8f06841",
+      "bytes": 341070
+    },
+    {
+      "file": "symbol_appear.wav",
+      "sha256": "ff6ee72b753b3f36e44ed70348895abf2ec2bde87302f1caefcb8541e1799179",
+      "bytes": 93486
+    },
+    {
+      "file": "symbol_clicked.wav",
+      "sha256": "74e566b93a7ff0c40dc04b5151e6eea3eedace9f8a75f0683966a352aba36bbf",
+      "bytes": 8544
+    },
+    {
+      "file": "transition_screen.wav",
+      "sha256": "4130e9ee84da78e389aabff7dd863dca6a1ecbc0e24a27cc1177c4e5f9c3906f",
+      "bytes": 116526
+    },
+    {
+      "file": "wires1.wav",
+      "sha256": "b12b3a2c9ff5187c4b2012fca15aa9e36c49842893df496ed767c881bc8c482a",
+      "bytes": 192078
+    },
+    {
+      "file": "wrong_answer.wav",
+      "sha256": "9d3e50c5c2a9e44918f3bd1b1a0ff83d087d04f3459d141807798ed0abe07e53",
+      "bytes": 265336
+    },
+    {
+      "file": "wrong_symbol_chosen.wav",
+      "sha256": "9fb6a7cbdedbcfc580cd3e143533db36185e2b61bf068c2fd77d392473d721ef",
+      "bytes": 116482
+    }
+  ],
+  "cues": [
+    {
+      "id": "BUTTON_PRESS",
+      "file": "button_pressed.wav",
+      "durationMs": 607,
+      "volume": 0.65,
+      "priority": 2,
+      "throttleMs": 60,
+      "stream": false
+    },
+    {
+      "id": "SMALL_BUTTON_CLICK",
+      "file": "small_button_click.wav",
+      "durationMs": 641,
+      "volume": 0.45,
+      "priority": 2,
+      "throttleMs": 45,
+      "stream": false
+    },
+    {
+      "id": "LEVER_MOVE",
+      "file": "lever.wav",
+      "durationMs": 976,
+      "volume": 0.55,
+      "priority": 2,
+      "throttleMs": 100,
+      "stream": false
+    },
+    {
+      "id": "ROTARY_STEP",
+      "file": "adjuster.wav",
+      "durationMs": 1000,
+      "volume": 0.45,
+      "priority": 2,
+      "throttleMs": 65,
+      "stream": false
+    },
+    {
+      "id": "HATCH_OPEN",
+      "file": "door_open.wav",
+      "durationMs": 400,
+      "volume": 0.6,
+      "priority": 2,
+      "throttleMs": 200,
+      "stream": false
+    },
+    {
+      "id": "METAL_CREAK",
+      "file": "second_metal_cracking.wav",
+      "durationMs": 3143,
+      "volume": 0.18,
+      "priority": 0,
+      "throttleMs": 18000,
+      "stream": false
+    },
+    {
+      "id": "METAL_CRACK",
+      "file": "metal_cracking.wav",
+      "durationMs": 2192,
+      "volume": 0.24,
+      "priority": 0,
+      "throttleMs": 25000,
+      "stream": false
+    },
+    {
+      "id": "ANSWER_CORRECT",
+      "file": "Success2.wav",
+      "durationMs": 1000,
+      "volume": 0.6,
+      "priority": 3,
+      "throttleMs": 0,
+      "stream": false
+    },
+    {
+      "id": "ANSWER_WRONG",
+      "file": "wrong_answer.wav",
+      "durationMs": 1000,
+      "volume": 0.6,
+      "priority": 3,
+      "throttleMs": 0,
+      "stream": false
+    },
+    {
+      "id": "VICTORY",
+      "file": "success.mp3",
+      "durationMs": 0,
+      "volume": 0.7,
+      "priority": 4,
+      "throttleMs": 0,
+      "stream": true
+    },
+    {
+      "id": "CIRCUIT_ROTATE",
+      "file": "wires1.wav",
+      "durationMs": 1000,
+      "volume": 0.75,
+      "priority": 2,
+      "throttleMs": 75,
+      "stream": false
+    },
+    {
+      "id": "CIRCUIT_FAILED",
+      "file": "failed.circuit.wav",
+      "durationMs": 3000,
+      "volume": 0.75,
+      "priority": 2,
+      "throttleMs": 0,
+      "stream": false
+    },
+    {
+      "id": "CIRCUIT_COMPLETE",
+      "file": "electrical_circuit_done.wav",
+      "durationMs": 2000,
+      "volume": 0.85,
+      "priority": 2,
+      "throttleMs": 0,
+      "stream": false
+    },
+    {
+      "id": "MACHINE_SHUTDOWN",
+      "file": "machine_shutdown .wav",
+      "durationMs": 2090,
+      "volume": 0.6,
+      "priority": 3,
+      "throttleMs": 0,
+      "stream": false
+    },
+    {
+      "id": "MEMORY_NOTE_RED",
+      "file": "memory_note_red.wav",
+      "durationMs": 241,
+      "volume": 0.5,
+      "priority": 2,
+      "throttleMs": 0,
+      "stream": false
+    },
+    {
+      "id": "MEMORY_NOTE_GREEN",
+      "file": "memory_note_green.wav",
+      "durationMs": 191,
+      "volume": 0.5,
+      "priority": 2,
+      "throttleMs": 0,
+      "stream": false
+    },
+    {
+      "id": "MEMORY_NOTE_BLUE",
+      "file": "memory_note_blue.wav",
+      "durationMs": 161,
+      "volume": 0.5,
+      "priority": 2,
+      "throttleMs": 0,
+      "stream": false
+    },
+    {
+      "id": "MEMORY_NOTE_YELLOW",
+      "file": "memory_note_yellow.wav",
+      "durationMs": 120,
+      "volume": 0.5,
+      "priority": 2,
+      "throttleMs": 0,
+      "stream": false
+    },
+    {
+      "id": "QUESTION_TYPING",
+      "file": "question_typing.wav",
+      "durationMs": 5000,
+      "volume": 0.2,
+      "priority": 1,
+      "throttleMs": 0,
+      "stream": false
+    },
+    {
+      "id": "QUESTION_TYPING_ALT",
+      "file": "questiontyping2.wav",
+      "durationMs": 7598,
+      "volume": 0.2,
+      "priority": 1,
+      "throttleMs": 0,
+      "stream": false
+    },
+    {
+      "id": "CONFIRM",
+      "file": "confirm_button.wav",
+      "durationMs": 486,
+      "volume": 0.5,
+      "priority": 2,
+      "throttleMs": 60,
+      "stream": false
+    },
+    {
+      "id": "SYMBOL_WRONG",
+      "file": "wrong_symbol_chosen.wav",
+      "durationMs": 1318,
+      "volume": 0.6,
+      "priority": 3,
+      "throttleMs": 0,
+      "stream": false
+    },
+    {
+      "id": "HATCH_CLOSE",
+      "file": "metal_DOOR_CLOSE.wav",
+      "durationMs": 686,
+      "volume": 0.55,
+      "priority": 2,
+      "throttleMs": 100,
+      "stream": false
+    },
+    {
+      "id": "SYMBOL_CLICK",
+      "file": "symbol_clicked.wav",
+      "durationMs": 48,
+      "volume": 0.4,
+      "priority": 2,
+      "throttleMs": 45,
+      "stream": false
+    },
+    {
+      "id": "SYMBOL_APPEAR",
+      "file": "symbol_appear.wav",
+      "durationMs": 486,
+      "volume": 0.3,
+      "priority": 1,
+      "throttleMs": 80,
+      "stream": false
+    },
+    {
+      "id": "SCREEN_TRANSITION",
+      "file": "transition_screen.wav",
+      "durationMs": 606,
+      "volume": 0.35,
+      "priority": 1,
+      "throttleMs": 100,
+      "stream": false
+    },
+    {
+      "id": "PRESS_RED",
+      "file": "events/PRESS_RED_3a14213442b9.ogg",
+      "url": "/last-command-3d/voice/PRESS_RED",
+      "durationMs": 1200,
+      "volume": 0.8,
+      "priority": 3,
+      "throttleMs": 0,
+      "stream": false,
+      "voice": true
+    },
+    {
+      "id": "PRESS_GREEN",
+      "file": "events/PRESS_GREEN_e77c0fa43838.ogg",
+      "url": "/last-command-3d/voice/PRESS_GREEN",
+      "durationMs": 1120,
+      "volume": 0.8,
+      "priority": 3,
+      "throttleMs": 0,
+      "stream": false,
+      "voice": true
+    },
+    {
+      "id": "PRESS_BLUE",
+      "file": "events/PRESS_BLUE_f58f620baaf1.ogg",
+      "url": "/last-command-3d/voice/PRESS_BLUE",
+      "durationMs": 1120,
+      "volume": 0.8,
+      "priority": 3,
+      "throttleMs": 0,
+      "stream": false,
+      "voice": true
+    },
+    {
+      "id": "PRESS_YELLOW",
+      "file": "events/PRESS_YELLOW_9875d80b4b27.ogg",
+      "url": "/last-command-3d/voice/PRESS_YELLOW",
+      "durationMs": 1120,
+      "volume": 0.8,
+      "priority": 3,
+      "throttleMs": 0,
+      "stream": false,
+      "voice": true
+    }
+  ],
+  "voiceId": "final_answer_host_ru_v1"
+}

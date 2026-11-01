@@ -1,0 +1,11 @@
+{
+  "name": "final-answer-unity-browser-checks",
+  "private": true,
+  "scripts": {
+    "install-browser": "node install-browser.cjs",
+    "check:phones": "node check-browser-controllers.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.64.1"
+  }
+}

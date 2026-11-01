@@ -1,0 +1,17 @@
+{
+  "name": "FA.Tests.PlayMode",
+  "references": [
+    "FA.Runtime",
+    "UnityEngine.TestRunner",
+    "Unity.TextMeshPro",
+    "Unity.ugui"
+  ],
+  "overrideReferences": true,
+  "precompiledReferences": [
+    "nunit.framework.dll",
+    "Newtonsoft.Json.dll"
+  ],
+  "defineConstraints": [
+    "UNITY_INCLUDE_TESTS"
+  ]
+}

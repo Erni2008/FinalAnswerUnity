@@ -1,0 +1,15 @@
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Ll]ogs/
+UserSettings/
+Builds/
+Recordings/
+.vs/
+*.csproj
+*.sln
+.DS_Store
+Artifacts/
+node_modules/
+
+.browsers/

@@ -1,0 +1,50 @@
+{
+  "enabled": true,
+  "exposure": 1.12,
+  "body": {
+    "coverage": 0.22,
+    "relief": 0.95,
+    "roughness": 0.36
+  },
+  "base": {
+    "coverage": 0.14,
+    "relief": 0.85,
+    "roughness": 0.32
+  },
+  "cap": {
+    "coverage": 0.08,
+    "relief": 1.05,
+    "roughness": 0.32
+  },
+  "floor": {
+    "coverage": 0.25,
+    "relief": 0.55,
+    "roughness": 0.9
+  },
+  "lighting": {
+    "ambient": 0.16,
+    "shadowBias": 0.0025,
+    "shadowSpan": 3.1,
+    "shadowDepth": 5,
+    "keyDirection": {
+      "x": -0.55,
+      "y": -0.76,
+      "z": -0.4
+    },
+    "keyColor": [
+      2.55,
+      2.45,
+      2.25
+    ],
+    "fillColor": [
+      0.36,
+      0.44,
+      0.56
+    ],
+    "rimColor": [
+      0.55,
+      0.65,
+      0.78
+    ]
+  }
+}

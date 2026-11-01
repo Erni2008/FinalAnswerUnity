@@ -1,0 +1,23 @@
+using NUnit.Framework;
+using Newtonsoft.Json.Linq;
+using UnityEngine;
+namespace FinalAnswer.Tests {
+ public sealed class ContractTests {
+  [Test]public void PressureDisplayRespectsPublicScaleOffsetAndUnit(){Assert.AreEqual("4.0 бар",InteractiveScreen.GaugeText(JObject.Parse("{\"value\":40,\"scale\":0.1,\"unit\":\"бар\",\"decimals\":1}")));Assert.AreEqual("10.4 мА",InteractiveScreen.GaugeText(JObject.Parse("{\"value\":40,\"scale\":0.16,\"offset\":4,\"unit\":\"мА\",\"decimals\":1}")));}
+  [Test]public void PublicCircuitReachabilityDoesNotInventPowerAcrossDisconnectedContact(){Assert.AreEqual(7,CircuitPresentation.Powered(new[]{10,10,10,0,0,0,0,0,0}));Assert.AreEqual(1,CircuitPresentation.Powered(new[]{8,10,10,0,0,0,0,0,0}));}
+  [Test]public void ResumeDeadlineShiftDoesNotRepeatValidatedAnswer(){var r=new RoundManager();int count=0;r.Validated+=_=>count++;var p=Panel("a","");p["testRound"]["nextAt"]=123;p["testRound"]["feedback"]="COMMAND ACCEPTED";r.Apply(p);p["testRound"]["nextAt"]=999;r.Apply(p);Assert.AreEqual(1,count);}
+  sealed class ProbeGame:IMiniGame {public string Id=>"same";public int Enters,Exits;public void Enter(){Enters++;}public void Exit(){Exits++;}public void Apply(JObject s){}}
+  [Test]public void SceneReloadReplacesPreviousModuleInstanceWithSameId(){var manager=new MiniGameManager();var a=new ProbeGame();var b=new ProbeGame();manager.Register(a);manager.Activate("same");manager.Register(b);manager.Activate("same");Assert.AreEqual(1,a.Exits);Assert.AreEqual(1,b.Enters);Assert.AreSame(b,manager.Active);}
+  [Test]public void NumericEditingPreservesServerConstraints(){string s="";s=NumberInputPreview.Apply(s,"-");s=NumberInputPreview.Apply(s,"2");Assert.AreEqual("-2",s);Assert.AreEqual("-2",NumberInputPreview.Apply(s,"-"));for(int i=0;i<20;i++)s=NumberInputPreview.Apply(s,"3");Assert.AreEqual(9,s.Length);Assert.AreEqual(8,NumberInputPreview.Apply(s,"DELETE").Length);Assert.AreEqual("",NumberInputPreview.Apply(s,"CLEAR"));}
+  static JObject Panel(string task,string input)=>JObject.Parse("{\"sessionId\":\"s\",\"testRound\":{\"taskId\":\""+task+"\",\"status\":\"PLAYING\",\"touchscreen\":{\"kind\":\"number\",\"input\":\""+input+"\"}}}");
+  [Test]public void NumericBurstAcknowledgesPrefixAndRebasesLaterKeys(){var p=new NumberInputPreview();p.Snapshot(Panel("a",""),"");p.Queue("1","1");p.Queue("2","2");p.Queue("3","3");p.Snapshot(Panel("a","1"),"1");Assert.AreEqual("123",p.Value);Assert.AreEqual(2,p.PendingCount);p.Snapshot(Panel("a","123"),"3");Assert.AreEqual(0,p.PendingCount);Assert.AreEqual("123",p.Value);}
+  [Test]public void BroadcastDoesNotOverwritePendingProjection(){var p=new NumberInputPreview();p.Snapshot(Panel("a",""),"");p.Queue("a","4");p.Snapshot(Panel("a",""),"");Assert.AreEqual("4",p.Value);}
+  [Test]public void TaskReplacementDropsPendingInput(){var p=new NumberInputPreview();p.Snapshot(Panel("a",""),"");p.Queue("a","4");p.Snapshot(Panel("b",""),"");Assert.AreEqual("",p.Value);Assert.AreEqual(0,p.PendingCount);}
+  [Test]public void PendingQueueIsBounded(){var p=new NumberInputPreview();for(int i=0;i<100;i++)p.Queue(i.ToString(),"DELETE");Assert.AreEqual(64,p.PendingCount);}
+  [Test]public void SnapshotRejectsOldRevisionButAcceptsEqualAckState(){var s=new SnapshotStore();Assert.IsTrue(s.Apply(JObject.Parse("{\"roomId\":\"r\",\"revision\":2}")));Assert.IsFalse(s.Apply(JObject.Parse("{\"roomId\":\"r\",\"revision\":1}")));Assert.IsTrue(s.Apply(JObject.Parse("{\"roomId\":\"r\",\"revision\":2}")));}
+  [Test]public void DifferentRoomAllowsLowerRevision(){var s=new SnapshotStore();s.Apply(JObject.Parse("{\"roomId\":\"r\",\"revision\":50}"));Assert.IsTrue(s.Apply(JObject.Parse("{\"roomId\":\"new\",\"revision\":1}")));}
+  [Test]public void SourceBasisMatchesImporterXReflection(){Assert.AreEqual(new Vector3(-1,2,3),MachineController.SourceVector(JObject.Parse("{\"x\":1,\"y\":2,\"z\":3}")));var q=MachineController.SourceRotation(JObject.Parse("{\"y\":90}"));Assert.Less(Vector3.Distance(q*Vector3.forward,Vector3.left),.001f);}
+  [Test]public void PlayerSnapshotUsesAuthoritativeRoster(){var p=new PlayerManager();p.Apply(JObject.Parse("{\"players\":[{\"id\":\"a\",\"name\":\"A\",\"connectionStatus\":\"ONLINE\",\"score\":100}]}"));Assert.AreEqual(1,p.Players.Count);Assert.AreEqual(100,p.Players[0].Score);Assert.IsTrue(p.Players[0].Online);}
+  [Test]public void RepeatedVerdictSnapshotEmitsOnce(){var r=new RoundManager();int count=0;r.Validated+=_=>count++;var p=Panel("a","");p["testRound"]["nextAt"]=123;p["testRound"]["feedback"]="COMMAND ACCEPTED";r.Apply(p);r.Apply((JObject)p.DeepClone());Assert.AreEqual(1,count);}
+ }
+}

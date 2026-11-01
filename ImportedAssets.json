@@ -1,0 +1,338 @@
+{
+  "sourceProject": "/Users/erni/Documents/FinalAnswer",
+  "profile": "medium",
+  "files": [
+    {
+      "source": "assets/models/last_command/medium/light.glb",
+      "unity": "Assets/FinalAnswer/Art/Models/light.glb",
+      "sha256": "22ba18212a01f268f4fd3f1a6627aaa239707e8e6d6fffa5e2de5c15c9f95a0d"
+    },
+    {
+      "source": "assets/models/last_command/medium/door.glb",
+      "unity": "Assets/FinalAnswer/Art/Models/door.glb",
+      "sha256": "c3cac28c2897a441a1581fc8f3e81db1a39075c9020561d5a23810690783cec1"
+    },
+    {
+      "source": "assets/models/last_command/medium/level_handler.glb",
+      "unity": "Assets/FinalAnswer/Art/Models/level_handler.glb",
+      "sha256": "7d7c0554eb78c605ede7124891ed0eb8812ebfbdc503376c60ec9548444bf149"
+    },
+    {
+      "source": "assets/models/last_command/medium/computer.glb",
+      "unity": "Assets/FinalAnswer/Art/Models/computer.glb",
+      "sha256": "2d70f7896f5f873aa8701fb98478e3b0589a5b78304a6657655c859eda5fa5e9"
+    },
+    {
+      "source": "assets/models/last_command/medium/button.glb",
+      "unity": "Assets/FinalAnswer/Art/Models/button.glb",
+      "sha256": "ee9abb4ce43e5efef306ab4b4a9e00ff195d01ca969a35c1ea776b9e3fe60174"
+    },
+    {
+      "source": "assets/models/last_command/medium/box_final.glb",
+      "unity": "Assets/FinalAnswer/Art/Models/box_final.glb",
+      "sha256": "c9724bd7ca399cb72e0a479ed7dc9388e66f02fb446f0227e8fed6c8247c1fe0"
+    },
+    {
+      "source": "assets/models/last_command/medium/hole_final.glb",
+      "unity": "Assets/FinalAnswer/Art/Models/hole_final.glb",
+      "sha256": "cf85adf3be2691b8e954796e145d2f7b47f930a096e18bf530268919e2b257ed"
+    },
+    {
+      "source": "assets/models/last_command/medium/code_display.glb",
+      "unity": "Assets/FinalAnswer/Art/Models/code_display.glb",
+      "sha256": "3c9c1735ac646d2c20b7f842cd72a7c5074047cb5a39b62ac4a94c709877bc83"
+    },
+    {
+      "source": "assets/models/last_command/medium/secret_hole.glb",
+      "unity": "Assets/FinalAnswer/Art/Models/secret_hole.glb",
+      "sha256": "0962ecb84cc14635734641a2bc4f381df198b760a491e4d7603e8427f9a73778"
+    },
+    {
+      "source": "assets/models/last_command/medium/animal_panel.glb",
+      "unity": "Assets/FinalAnswer/Art/Models/animal_panel.glb",
+      "sha256": "025a677d3394ce338d1a8511b2efd17c3390cf5bbdfe070e7d4cb558d47b9039"
+    },
+    {
+      "source": "assets/models/last_command/medium/lever.glb",
+      "unity": "Assets/FinalAnswer/Art/Models/lever.glb",
+      "sha256": "f2e9a8066204f5fa794d9e390c3e62b932bbe4885a704526f40f8555b41b1569"
+    },
+    {
+      "source": "assets/models/last_command/medium/adjuster.glb",
+      "unity": "Assets/FinalAnswer/Art/Models/adjuster.glb",
+      "sha256": "7ebe40ea5d127367af7ed7691be0140e166e08d26c05097d5a57391550e8dc30"
+    },
+    {
+      "source": "assets/sounds/last_command/runtime/button_pressed.wav",
+      "unity": "Assets/FinalAnswer/Audio/Clips/button_pressed.wav",
+      "sha256": "9d6b2c7cdf9bf84acecbed088c3e95fdff1c4e89f46e068a2796c2f8c7314132"
+    },
+    {
+      "source": "assets/sounds/last_command/runtime/small_button_click.wav",
+      "unity": "Assets/FinalAnswer/Audio/Clips/small_button_click.wav",
+      "sha256": "a339c4ba87e4b7be4ea05aa7a2b2cc8a90cb3948ef9ca511079c3b10befd9e24"
+    },
+    {
+      "source": "assets/sounds/last_command/runtime/lever.wav",
+      "unity": "Assets/FinalAnswer/Audio/Clips/lever.wav",
+      "sha256": "500302d39effb07b190cc6531b1b225df8fae3622204860665d7e7c79904565e"
+    },
+    {
+      "source": "assets/sounds/last_command/runtime/adjuster.wav",
+      "unity": "Assets/FinalAnswer/Audio/Clips/adjuster.wav",
+      "sha256": "76eef2ec887acde9ca85242b253a05f25c200821fe443d8f6d3a245d5f06b017"
+    },
+    {
+      "source": "assets/sounds/last_command/runtime/door_open.wav",
+      "unity": "Assets/FinalAnswer/Audio/Clips/door_open.wav",
+      "sha256": "91d6e479daba5f02d1e1d5b51230dae6f6e39f985bcc3bdd89bdc860324fa054"
+    },
+    {
+      "source": "assets/sounds/last_command/runtime/second_metal_cracking.wav",
+      "unity": "Assets/FinalAnswer/Audio/Clips/second_metal_cracking.wav",
+      "sha256": "26b4e0d15679738b2f737b46695e1b1aed0d623f80033abece2042b9c9b62610"
+    },
+    {
+      "source": "assets/sounds/last_command/runtime/metal_cracking.wav",
+      "unity": "Assets/FinalAnswer/Audio/Clips/metal_cracking.wav",
+      "sha256": "1856a2a7d632a0ea8bc9a5738e964b6a7fd456dbe26ac09c498a4cc6668ddc72"
+    },
+    {
+      "source": "assets/sounds/last_command/runtime/Success2.wav",
+      "unity": "Assets/FinalAnswer/Audio/Clips/Success2.wav",
+      "sha256": "085829b804b7b82df925471798cf9b15b6d3199d2c955fa26534a4c30d7aef5f"
+    },
+    {
+      "source": "assets/sounds/last_command/runtime/wrong_answer.wav",
+      "unity": "Assets/FinalAnswer/Audio/Clips/wrong_answer.wav",
+      "sha256": "1d3da8fdf854c8e38528e8f2ad09eaa67704a3893b20ae261aaeaec5cb28ae49"
+    },
+    {
+      "source": "assets/sounds/last_command/runtime/success.mp3",
+      "unity": "Assets/FinalAnswer/Audio/Clips/success.mp3",
+      "sha256": "0753b98651369402f4cc92bbf132e5345e8232a3e3ef3ae7747c20f03af92693"
+    },
+    {
+      "source": "assets/sounds/last_command/runtime/wires1.wav",
+      "unity": "Assets/FinalAnswer/Audio/Clips/wires1.wav",
+      "sha256": "c990f792991986160963c20145c7ff23692f5780fe42c5719fa0dc6c381999dd"
+    },
+    {
+      "source": "assets/sounds/last_command/runtime/failed.circuit.wav",
+      "unity": "Assets/FinalAnswer/Audio/Clips/failed.circuit.wav",
+      "sha256": "263e9c2eddeebc041b617cd023e414cb565b1f950b9deba61cc255e640f07d45"
+    },
+    {
+      "source": "assets/sounds/last_command/runtime/electrical_circuit_done.wav",
+      "unity": "Assets/FinalAnswer/Audio/Clips/electrical_circuit_done.wav",
+      "sha256": "6df3615b8e57a3bb89acd6e581894374718a2565095a7da2aa3ba674b6afc7df"
+    },
+    {
+      "source": "assets/sounds/last_command/runtime/machine_shutdown .wav",
+      "unity": "Assets/FinalAnswer/Audio/Clips/machine_shutdown .wav",
+      "sha256": "620c5bc0dd1aa97722d01dc29245ff22691297a0220316a61d53442ff2bca8f9"
+    },
+    {
+      "source": "assets/sounds/last_command/runtime/memory_note_red.wav",
+      "unity": "Assets/FinalAnswer/Audio/Clips/memory_note_red.wav",
+      "sha256": "787c1b60df74e61fcfadcf1cab606609f8d7f1f6972353364974e6ef804d0fdd"
+    },
+    {
+      "source": "assets/sounds/last_command/runtime/memory_note_green.wav",
+      "unity": "Assets/FinalAnswer/Audio/Clips/memory_note_green.wav",
+      "sha256": "fd18c7557f40340ecf26ac87c972338eb5eb7fedc257eb3ed043dbda5994af24"
+    },
+    {
+      "source": "assets/sounds/last_command/runtime/memory_note_blue.wav",
+      "unity": "Assets/FinalAnswer/Audio/Clips/memory_note_blue.wav",
+      "sha256": "8b96853dd1e648b9fb32b88295b2fd07e9d031efc201d6667684ce31a0090188"
+    },
+    {
+      "source": "assets/sounds/last_command/runtime/memory_note_yellow.wav",
+      "unity": "Assets/FinalAnswer/Audio/Clips/memory_note_yellow.wav",
+      "sha256": "92ba3252763cc49b78124ecf7273b9e67d86f2e604a55f477dae04b2e93a7c34"
+    },
+    {
+      "source": "assets/sounds/last_command/runtime/question_typing.wav",
+      "unity": "Assets/FinalAnswer/Audio/Clips/question_typing.wav",
+      "sha256": "c26fb1529b9c3eb6dd876d9a8218562c6e92f5d50fa27ca4644da180ba363f34"
+    },
+    {
+      "source": "assets/sounds/last_command/runtime/questiontyping2.wav",
+      "unity": "Assets/FinalAnswer/Audio/Clips/questiontyping2.wav",
+      "sha256": "dce7b1b57c7ac97c2b9c9e9f603b38bf652d155a59a245f04aa0625e5b02ca31"
+    },
+    {
+      "source": "assets/sounds/last_command/runtime/confirm_button.wav",
+      "unity": "Assets/FinalAnswer/Audio/Clips/confirm_button.wav",
+      "sha256": "2d553379dd40d88913c49c87cee32104188d00b8a06d5b7f9155d8b556a31c58"
+    },
+    {
+      "source": "assets/sounds/last_command/runtime/wrong_symbol_chosen.wav",
+      "unity": "Assets/FinalAnswer/Audio/Clips/wrong_symbol_chosen.wav",
+      "sha256": "fa0b7839743786be1901d728ac5d6e19f05913d16414cc8bf5c87bb3d45108be"
+    },
+    {
+      "source": "assets/sounds/last_command/runtime/metal_DOOR_CLOSE.wav",
+      "unity": "Assets/FinalAnswer/Audio/Clips/metal_DOOR_CLOSE.wav",
+      "sha256": "74c6acaa5b3707a2aa7ce1bf9ffe4c5f25d6aff1623f389a78226089c5115264"
+    },
+    {
+      "source": "assets/sounds/last_command/runtime/symbol_clicked.wav",
+      "unity": "Assets/FinalAnswer/Audio/Clips/symbol_clicked.wav",
+      "sha256": "ff6670ff3dbb9903156997806c12588cdd162935f058a748245e5da741a73004"
+    },
+    {
+      "source": "assets/sounds/last_command/runtime/symbol_appear.wav",
+      "unity": "Assets/FinalAnswer/Audio/Clips/symbol_appear.wav",
+      "sha256": "20a19dee90039aac550b51ab85522f81028053a9c2f0f1fefa9f1d2e11f088ff"
+    },
+    {
+      "source": "assets/sounds/last_command/runtime/transition_screen.wav",
+      "unity": "Assets/FinalAnswer/Audio/Clips/transition_screen.wav",
+      "sha256": "59f5e191b6875f6c99fea8abab5a6fc70e9fbeac5264aebb40378e319f9476b6"
+    },
+    {
+      "source": "assets/audio/host/ru/events/PRESS_RED_3a14213442b9.ogg",
+      "unity": "Assets/FinalAnswer/Audio/Voice/PRESS_RED_3a14213442b9.ogg",
+      "sha256": "f64971feaf2a92032333e68247337e6b4f79164e11a0c5840f15a57664a4b423"
+    },
+    {
+      "source": "assets/audio/host/ru/events/PRESS_GREEN_e77c0fa43838.ogg",
+      "unity": "Assets/FinalAnswer/Audio/Voice/PRESS_GREEN_e77c0fa43838.ogg",
+      "sha256": "2e89922f7d327b68544bd9935d3f5db6b4daa7614c3142b43fd134d82ac2c212"
+    },
+    {
+      "source": "assets/audio/host/ru/events/PRESS_BLUE_f58f620baaf1.ogg",
+      "unity": "Assets/FinalAnswer/Audio/Voice/PRESS_BLUE_f58f620baaf1.ogg",
+      "sha256": "d1f49a8f05adf80c2661edb746ff25308f9f7bdad2962645be15222662013edf"
+    },
+    {
+      "source": "assets/audio/host/ru/events/PRESS_YELLOW_9875d80b4b27.ogg",
+      "unity": "Assets/FinalAnswer/Audio/Voice/PRESS_YELLOW_9875d80b4b27.ogg",
+      "sha256": "2c6d65525f034296d462631149816cdd7fcc2d16a22e490b04aa82f910fd513b"
+    },
+    {
+      "source": "assets/models/last_command/assembly.json",
+      "unity": "Assets/FinalAnswer/Data/assembly.json",
+      "sha256": "9c14d669384dd3e3c9c57f1838ce9b11ab66d3b9772f0e4df85e9a06a7e5bc48"
+    },
+    {
+      "source": "assets/models/last_command/panel.json",
+      "unity": "Assets/FinalAnswer/Data/panel.json",
+      "sha256": "25134c2d4a54cc97c6245f49d8976c4233608007a5154f2d78e47175d7851a2b"
+    },
+    {
+      "source": "assets/models/last_command/mechanisms.json",
+      "unity": "Assets/FinalAnswer/Data/mechanisms.json",
+      "sha256": "81d9a6c13baa61a1b33be8f5db46bb41a45ee6bb0f84693b1cd59fcca5f58378"
+    },
+    {
+      "source": "assets/models/last_command/surface.json",
+      "unity": "Assets/FinalAnswer/Data/surface.json",
+      "sha256": "144edb8955682b4b4ae36a50bf24363dbe76616126e5ec97afe659e10350d197"
+    },
+    {
+      "source": "assets/models/last_command/hole1.png",
+      "unity": "Assets/FinalAnswer/Art/Textures/hole1.png",
+      "sha256": "21906ca196c4d9b7bd750c668f906edd86b07f6f2fff10e4af01c2b7da7a5445"
+    },
+    {
+      "source": "assets/models/last_command/panel_lamps.png",
+      "unity": "Assets/FinalAnswer/Art/Textures/panel_lamps.png",
+      "sha256": "592a9844c3c0a8db1cbe01c747625d2ad8603e0cc63d17dad64ef1acf0dff89f"
+    },
+    {
+      "source": "assets/ui/fonts/NotoSans-Regular.ttf",
+      "unity": "Assets/FinalAnswer/Fonts/NotoSans-Regular.ttf",
+      "sha256": "b85c38ecea8a7cfb39c24e395a4007474fa5a4fc864f6ee33309eb4948d232d5"
+    },
+    {
+      "source": "assets/cursed_boxes/intact.glb",
+      "unity": "Assets/FinalAnswer/Art/CursedBoxes/intact.glb",
+      "sha256": "801681836973f60c13f41eeb147b306ee9810be18bb42ba0c3e5db90345c8f54"
+    },
+    {
+      "source": "assets/cursed_boxes/destroyed.glb",
+      "unity": "Assets/FinalAnswer/Art/CursedBoxes/destroyed.glb",
+      "sha256": "3dddf1ec563e90cae5d8afbbb8371f8261bd4b525d22479bfab0adbd38bc363c"
+    },
+    {
+      "source": "assets/impostor/backgrounds/background1.png",
+      "unity": "Assets/FinalAnswer/Art/Impostor/background1.png",
+      "sha256": "de4ca3208cbd3db4ee9dca75c1e89e37a07d7a590fe00fbf476b1bf4f08a3b47"
+    },
+    {
+      "source": "assets/sounds/cursed_boxes/runtime/shotgun_shoot_done.wav",
+      "unity": "Assets/FinalAnswer/Audio/OtherGames/shotgun_shoot_done.wav",
+      "sha256": "31353e354da330da397aec39f0b57b4cbe40a8cf25e33ffcb7dd3282f791498a"
+    },
+    {
+      "source": "assets/sounds/impostor/page_turn.wav",
+      "unity": "Assets/FinalAnswer/Audio/OtherGames/page_turn.wav",
+      "sha256": "51a4ac20804bdcfdcaaf9a45bb0f842aed8da5e727f684c8da89287e2f938015"
+    },
+    {
+      "source": "assets/sounds/impostor/wooden_stumb_hit.wav",
+      "unity": "Assets/FinalAnswer/Audio/OtherGames/wooden_stumb_hit.wav",
+      "sha256": "860438bc033d796ec7bf86303eea0969375e6216988b74423f1918e52fd35875"
+    },
+    {
+      "source": "assets/sounds/impostor/vote_started.wav",
+      "unity": "Assets/FinalAnswer/Audio/OtherGames/vote_started.wav",
+      "sha256": "d4c2cd89be30e14c64b3c4fcc93a3b2ceb4436fde60e557c43d8b236b61c32b0"
+    },
+    {
+      "source": "assets/sounds/impostor/voting_closed.wav",
+      "unity": "Assets/FinalAnswer/Audio/OtherGames/voting_closed.wav",
+      "sha256": "1cfc7f48b67f557200e9cd4abcdc1a4e5a69f68e13d51d8df7c73435c1e10014"
+    },
+    {
+      "source": "assets/sounds/impostor/impostor_role_reveal.wav",
+      "unity": "Assets/FinalAnswer/Audio/OtherGames/impostor_role_reveal.wav",
+      "sha256": "0f4512da245cffdbfd9b4d6f9ff90dde801b3934b12bdb9cc9df0b0f9c46e486"
+    },
+    {
+      "source": "assets/cursed_boxes/survivors/skeleton.png",
+      "unity": "Assets/FinalAnswer/Art/CursedBoxes/skeleton.png",
+      "sha256": "2301952c4798d312d4fe522de0df61771b81c9b69f6c7e1eb21794eb390afd3a"
+    },
+    {
+      "source": "assets/cursed_boxes/survivors/ghost.png",
+      "unity": "Assets/FinalAnswer/Art/CursedBoxes/ghost.png",
+      "sha256": "0c0f542c38ddd91e2d0539ad9986f5acd07ce7936df81ab91d1114cb69f8d2bf"
+    },
+    {
+      "source": "assets/cursed_boxes/survivors/dracula.png",
+      "unity": "Assets/FinalAnswer/Art/CursedBoxes/dracula.png",
+      "sha256": "fba481cf59b199dca500fe6387dc5c5ff7c824f5b3732e92fb41efaca463dc9d"
+    },
+    {
+      "source": "assets/cursed_boxes/survivors/pumpkin.png",
+      "unity": "Assets/FinalAnswer/Art/CursedBoxes/pumpkin.png",
+      "sha256": "3730cfb53ef90a2f3e91aae00798dfec83ef005690ebfa939e49a58b92d188d3"
+    },
+    {
+      "source": "assets/cursed_boxes/survivors/plague_doctor.png",
+      "unity": "Assets/FinalAnswer/Art/CursedBoxes/plague_doctor.png",
+      "sha256": "cffae44d003cecafc08f77e5d2f08e5e4f7b0708c481e8a3255bdea7bf6e32ff"
+    },
+    {
+      "source": "assets/backgrounds/play/questions_01_02/01.1.png",
+      "unity": "Assets/FinalAnswer/Art/Stages/quiz.png",
+      "sha256": "53d16fb6ea9071cd7833883ce5c50f6939846597292bef85598b563d016ffab0"
+    },
+    {
+      "source": "assets/backgrounds/main_screen_background.png",
+      "unity": "Assets/FinalAnswer/Art/Stages/lobby.png",
+      "sha256": "1ae5039b40fb98af1f07ed5cdc065e4581a9aabeab981681f33502fbc4d33ab0"
+    },
+    {
+      "source": "assets/cursed_boxes/backgrounds/background1.png",
+      "unity": "Assets/FinalAnswer/Art/Stages/cursed.png",
+      "sha256": "e65bdf6f2113adb72d7bff5aac0fe893fdcf8e8c5fb226fec133528c88f9fac9"
+    }
+  ],
+  "font": "assets/ui/fonts/NotoSans-Regular.ttf",
+  "note": "Original GLB/audio bytes preserved. Derived button and roughness textures live separately."
+}
