@@ -7,7 +7,7 @@ namespace FinalAnswer.Application
     /// <summary>HTTP form API of the Java RoomServer. Callbacks are invoked on the Unity main thread.</summary>
     public interface IRoomApi
     {
-        void Health(string baseUrl, Action<bool> done);
+        void Health(string baseUrl, Action<Domain.ServerHealth> done);
         void CreateRoom(string baseUrl, IReadOnlyDictionary<string, string> form, Action<RoomSnapshot> created, Action<string> failed);
         void Leave(string baseUrl, string roomCode, string token, Action done);
         /// <summary>POST /rooms/{code}/join as a phone member (developer bots).</summary>
@@ -56,7 +56,8 @@ namespace FinalAnswer.Application
         bool IsAvailable { get; }
         bool IsRunning { get; }
         string Status { get; }
-        void Start(int port);
+        /// <summary>developerBuild: build the current server from source first and enable Last Command debug commands.</summary>
+        void Start(int port, bool developerBuild = false);
         void Stop();
     }
 }

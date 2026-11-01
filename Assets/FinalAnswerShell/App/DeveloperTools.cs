@@ -100,12 +100,12 @@ namespace FinalAnswer.App
             UiKit.Size(hint.gameObject, height: 64);
 
             var gameStep = new Stepper(UiKit.Field(panel, "Игра"), 0, GameTitles.Length - 1, (int)game, i => GameTitles[i], wrap: true);
-            var botsStep = new Stepper(UiKit.Field(panel, "Ботов-игроков"), 1, 7, botCount);
+            var botsStep = new Stepper(UiKit.Field(panel, "Ботов-игроков (0 = свой телефон)"), 0, 7, botCount);
             gameStep.Changed += i =>
             {
                 game = (SandboxGame)i;
                 if (game == SandboxGame.Impostor && (botCount < 3 || botCount > 4)) botsStep.Set(3);
-                if (game != SandboxGame.Impostor && game != SandboxGame.LobbyOnly && botCount < 2) botsStep.Set(2);
+                if (game != SandboxGame.Impostor && game != SandboxGame.LobbyOnly && game != SandboxGame.LastCommand && botCount < 2) botsStep.Set(2);
             };
             botsStep.Changed += v => botCount = v;
             var answers = new Stepper(UiKit.Field(panel, "Ответы ботов"), 0, 2, (int)answerMode,
@@ -180,7 +180,7 @@ namespace FinalAnswer.App
                 default: game = SandboxGame.Quiz; break;
             }
             var b = Array.IndexOf(args, "-fa-bots");
-            if (b >= 0 && b + 1 < args.Length && int.TryParse(args[b + 1], out var n)) botCount = Mathf.Clamp(n, 1, 7);
+            if (b >= 0 && b + 1 < args.Length && int.TryParse(args[b + 1], out var n)) botCount = Mathf.Clamp(n, 0, 7);
             var server = Array.IndexOf(args, "-fa-server");
             if (server >= 0 && server + 1 < args.Length) manager.UseServer(args[server + 1]);
             Launch();
@@ -189,18 +189,18 @@ namespace FinalAnswer.App
         void Launch()
         {
             if (game == SandboxGame.Impostor && (botCount < 3 || botCount > 4)) { SandboxStatus("THE IMPOSTOR: нужно 3 или 4 бота", Theme.Bad); return; }
-            if (game != SandboxGame.LobbyOnly && game != SandboxGame.Impostor && botCount < 2) { SandboxStatus("Серверу нужно минимум 2 игрока", Theme.Bad); return; }
+            if (game != SandboxGame.LobbyOnly && game != SandboxGame.Impostor && game != SandboxGame.LastCommand && botCount < 2) { SandboxStatus("Серверу нужно минимум 2 игрока", Theme.Bad); return; }
             manager.LeaveRoom();
             Dispose();
             SandboxStatus("Проверка сервера…", Theme.Warning);
             manager.EnsureServer(ok =>
             {
-                if (!ok) { SandboxStatus("Сервер недоступен: " + manager.ServerUrl + "\n" + manager.LocalServer.Status, Theme.Bad); return; }
+                if (!ok) { SandboxStatus(manager.ServerProblem.Length > 0 ? manager.ServerProblem : "Сервер недоступен: " + manager.ServerUrl + "\n" + manager.LocalServer.Status, Theme.Bad); return; }
                 var url = manager.ServerUrl;
                 var settings = new RoomSettings
                 {
                     Name = "DEV · " + GameTitles[(int)game],
-                    MaxPlayers = Mathf.Clamp(botCount, 2, 8),
+                    MaxPlayers = Mathf.Clamp(botCount + 1, 2, 8), // room for the developer's own phone
                     QuestionCount = questionCount,
                     GameMode = GameModes.All[modeIndex].Id,
                 };
@@ -217,7 +217,8 @@ namespace FinalAnswer.App
                         bots.Add(bot);
                         bot.Join(error => Write("bot join failed: " + error));
                     }
-                    pendingStart = game == SandboxGame.LobbyOnly ? (SandboxGame?)null : game;
+                    // 0 bots (Last Command): the developer joins with a real phone and starts from the lobby.
+                    pendingStart = game == SandboxGame.LobbyOnly || botCount == 0 ? (SandboxGame?)null : game;
                     startDelay = 0;
                     if (sandboxPanel != null) ToggleSandbox();
                 }, error => SandboxStatus("Комната не создана: " + error, Theme.Bad));
@@ -226,6 +227,7 @@ namespace FinalAnswer.App
 
         /// <summary>Waits until every bot is ONLINE (and the cages have closed) before sending the host start command.</summary>
         float endAfter = -1, lastCommandTime;
+        int lastCommandCycles;
 
         /// <summary>`-fa-end-after &lt;seconds&gt;`: the host ends Last Command by itself (checks the return to the lobby).</summary>
         void AutoEndLastCommand(float delta)
@@ -237,6 +239,15 @@ namespace FinalAnswer.App
                 endAfter = i >= 0 && i + 1 < args.Length && float.TryParse(args[i + 1], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var v) ? v : 0;
             }
             var panel = manager.Room.Snapshots.Current?.LastCommand;
+            if (endAfter > 0 && panel == null && lastCommandTime > 0)
+            {
+                // `-fa-cycles N`: relaunch from the lobby until N sessions ran (checks repeated scene transitions).
+                lastCommandCycles++;
+                var c = Array.IndexOf(Environment.GetCommandLineArgs(), "-fa-cycles");
+                var cycles = c >= 0 && int.TryParse(Environment.GetCommandLineArgs()[c + 1], out var n) ? n : 1;
+                Write("Last Command session " + lastCommandCycles + "/" + cycles + " ended");
+                if (lastCommandCycles < cycles) { pendingStart = SandboxGame.LastCommand; startDelay = 0; }
+            }
             if (endAfter <= 0 || panel == null) { lastCommandTime = 0; return; }
             lastCommandTime += delta;
             if (lastCommandTime < endAfter || lastCommandTime - delta >= endAfter) return;

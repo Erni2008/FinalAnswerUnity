@@ -80,5 +80,15 @@ namespace FinalAnswer.Tests.EditMode
             }
             Assert.IsTrue(code[8, code.Size - 8], "dark module");
         }
+
+        [Test]
+        public void ServerHealthRejectsOutdatedLastCommandServers()
+        {
+            Assert.AreEqual(ServerStatus.Outdated, ServerHealth.Parse("{\"status\":\"ok\"}").Status, "pre-race server");
+            Assert.AreEqual(ServerStatus.Unreachable, ServerHealth.Parse("<html>").Status);
+            var current = ServerHealth.Parse("{\"status\":\"ok\",\"protocol\":1,\"lastCommand\":{\"engine\":\"race\",\"solo\":true,\"debug\":true}}");
+            Assert.IsTrue(current.Compatible);
+            Assert.IsTrue(current.LastCommandDebug);
+        }
     }
 }

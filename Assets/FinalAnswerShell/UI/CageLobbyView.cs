@@ -379,7 +379,8 @@ namespace FinalAnswer.UI
             var locked = starting || pendingStart;
             play.interactable = !locked && ready;
             cursed.interactable = !locked && ready;
-            lastCommand.interactable = !locked && ready;
+            // THE LAST COMMAND also runs with a single phone: the machine then mirrors that player's terminal.
+            lastCommand.interactable = !locked && snapshot.IsHost && snapshot.Players.Count >= 1 && online == snapshot.Players.Count && snapshot.HostConnected;
             impostor.interactable = !locked && snapshot.IsHost && (online == 3 || online == 4) && online == snapshot.Players.Count;
             var notice = snapshot.HostConnected ? texts.Get("network.connected") : texts.Get("network.connecting");
             if (snapshot.IsHost && !locked && !ready) notice += " · " + texts.Error(snapshot.Players.Count < 2 ? "NOT_ENOUGH_PLAYERS" : "PLAYER_OFFLINE");

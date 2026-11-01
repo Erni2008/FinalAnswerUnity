@@ -27,6 +27,7 @@ namespace FinalAnswer.Contracts
         // Last Command
         public const string StartLastCommand = "START_LAST_COMMAND";
         public const string EndLastCommand = "END_LAST_COMMAND";
+        public const string LastCommandAction = "LAST_COMMAND_ACTION";
 
         // Cursed Boxes (host milestones)
         public const string StartCursedBoxes = "START_CURSED_BOXES";

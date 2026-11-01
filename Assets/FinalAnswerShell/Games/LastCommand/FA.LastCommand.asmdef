@@ -7,7 +7,8 @@
     "FA.Application",
     "FA.UI",
     "FA.Runtime",
-    "UnityEngine.UI"
+    "UnityEngine.UI",
+    "Unity.InputSystem"
   ],
   "noEngineReferences": false,
   "autoReferenced": false,

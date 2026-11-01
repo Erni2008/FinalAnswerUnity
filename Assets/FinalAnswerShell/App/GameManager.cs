@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using FinalAnswer.Application;
 using FinalAnswer.Contracts;
+using FinalAnswer.Domain;
 using FinalAnswer.CursedBoxes;
 using FinalAnswer.Infrastructure;
 using FinalAnswer.PendingModules;
@@ -58,7 +59,17 @@ namespace FinalAnswer.App
 
         public AppState State => state;
         public RoomManager Room => room;
-        public string ServerUrl => settings.ServerUrl;
+        /// <summary>Configured server, or for this run only the developer server that replaced an outdated one.</summary>
+        public string ServerUrl => sessionServer ?? settings.ServerUrl;
+        /// <summary>Why the last server check failed (outdated protocol, port conflict …); empty when fine.</summary>
+        public string ServerProblem { get; private set; } = "";
+        /// <summary>The connected server accepts host-only Last Command DEBUG commands.</summary>
+        public bool ServerDebug { get; private set; }
+        string sessionServer;
+        bool restartLastCommand;
+
+        /// <summary>Developer server port (FA_DEV_PORT, default 18180). Never 8080, so a stale server there is left alone.</summary>
+        public static int DevServerPort => int.TryParse(Environment.GetEnvironmentVariable("FA_DEV_PORT"), out var port) && port > 0 && port < 65536 ? port : 18180;
         public LocalServerProcessHost LocalServer => localServer;
         public IGameModule ActiveModule => module;
         public event Action<string> Log;
@@ -176,7 +187,7 @@ namespace FinalAnswer.App
         public bool HasDraft => draft != null;
 
         /// <summary>Overrides the server address for this run only (not saved).</summary>
-        public void UseServer(string url) => settings.ServerUrl = url.TrimEnd('/');
+        public void UseServer(string url) { settings.ServerUrl = url.TrimEnd('/'); sessionServer = null; }
 
         void OpenGenerationCode()
         {
@@ -208,10 +219,10 @@ namespace FinalAnswer.App
                 {
                     generating = false;
                     codeView.SetBusy(false, false);
-                    codeView.SetStatus(texts.Get("error.server_unavailable") + (localServer.Status.Length > 0 ? "\n" + localServer.Status : ""));
+                    codeView.SetStatus(ServerProblem.Length > 0 ? ServerProblem : texts.Get("error.server_unavailable") + (localServer.Status.Length > 0 ? "\n" + localServer.Status : ""));
                     return;
                 }
-                var url = settings.ServerUrl;
+                var url = ServerUrl;
                 api.CreateRoom(url, pendingSettings.ToForm(), created =>
                 {
                     if (version != requestVersion || codeView == null) { api.Leave(url, created.RoomCode, created.Token, null); return; }
@@ -363,6 +374,7 @@ namespace FinalAnswer.App
             {
                 if (state != AppState.Lobby || lobby == null) ShowLobby();
                 else lobby.Apply(snapshot, room.ServerNow);
+                if (restartLastCommand) { restartLastCommand = false; StartLastCommand(); } // developer "restart" from the machine
                 SyncIntro(snapshot);
                 return;
             }
@@ -387,7 +399,7 @@ namespace FinalAnswer.App
                 case ModuleKind.Quiz: module = new QuizModule(screens); break;
                 case ModuleKind.CursedBoxes: module = new CursedBoxesModule(screens); break;
                 case ModuleKind.Impostor: module = new Impostor.ImpostorModule(screens); break;
-                case ModuleKind.LastCommand: module = new LastCommandHost.LastCommandModule(screens); break;
+                case ModuleKind.LastCommand: module = new LastCommandHost.LastCommandModule(screens, () => restartLastCommand = true); break;
                 default: module = new PendingModule(screens, kind); break;
             }
             module.Enter(new ModuleContext(room, clock), snapshot);
@@ -509,25 +521,58 @@ namespace FinalAnswer.App
 
         // ---------------- Server availability ----------------
 
-        /// <summary>Health check; when the configured server is this machine and the repo build exists, start it and wait.</summary>
+        /// <summary>
+        /// Health + protocol check. A compatible server is used as is. An outdated one is never connected to: release
+        /// builds report it; developer builds on this machine switch (for this run) to the current server on
+        /// <see cref="DevServerPort"/>, building and starting it from ../FinalAnswer when nothing answers there.
+        /// </summary>
         public void EnsureServer(Action<bool> done)
         {
-            var url = settings.ServerUrl;
-            api.Health(url, ok =>
+            var url = ServerUrl;
+            api.Health(url, health =>
             {
-                if (ok) { done(true); return; }
-                if (!Uri.TryCreate(url, UriKind.Absolute, out var uri) || !(uri.IsLoopback || uri.Host == "localhost") || !localServer.IsAvailable)
+                if (Accept(url, health)) { done(true); return; }
+                var loopback = Uri.TryCreate(url, UriKind.Absolute, out var uri) && (uri.IsLoopback || uri.Host == "localhost");
+                var local = loopback && localServer.IsAvailable;
+                if (health.Status == ServerStatus.Outdated)
                 {
-                    done(false);
+                    ServerProblem = "Сервер " + url + " устарел: в нём нет актуального THE LAST COMMAND (race/solo). "
+                        + "Перезапустите его из текущего кода (tools/unity/run_dev_server.sh) или укажите другой адрес в SETTINGS.";
+                    Debug.LogWarning("[Server] " + ServerProblem + " (" + health.Detail + ")");
+                    if (!loopback || !DeveloperTools.Enabled) { done(false); return; }
+                    var dev = "http://127.0.0.1:" + DevServerPort;
+                    api.Health(dev, devHealth =>
+                    {
+                        if (Accept(dev, devHealth)) { sessionServer = dev; done(true); return; }
+                        if (devHealth.Status == ServerStatus.Outdated) { ServerProblem += "\nНа порту " + DevServerPort + " тоже старый сервер."; done(false); return; }
+                        if (!localServer.IsAvailable) { ServerProblem += "\nЗапустите актуальный сервер: tools/unity/run_dev_server.sh (порт " + DevServerPort + ")."; done(false); return; }
+                        sessionServer = dev;
+                        StartLocal(DevServerPort, done);
+                    });
                     return;
                 }
-                if (!localServer.IsRunning) localServer.Start(uri.IsDefaultPort ? 8080 : uri.Port);
-                if (!localServer.IsRunning) { done(false); return; }
-                Log?.Invoke("local Java server starting…");
-                serverWaiter = done;
-                serverWaitTimeout = 40;
-                serverPoll = .5f;
+                if (!local) { ServerProblem = "Сервер недоступен: " + url; done(false); return; }
+                StartLocal(uri.IsDefaultPort ? 8080 : uri.Port, done);
             });
+        }
+
+        bool Accept(string url, ServerHealth health)
+        {
+            if (!health.Compatible) return false;
+            ServerProblem = "";
+            ServerDebug = health.LastCommandDebug;
+            Debug.Log("[Server] " + url + " compatible" + (health.LastCommandDebug ? ", Last Command debug enabled" : ""));
+            return true;
+        }
+
+        void StartLocal(int port, Action<bool> done)
+        {
+            if (!localServer.IsRunning) localServer.Start(port, DeveloperTools.Enabled);
+            if (!localServer.IsRunning) { ServerProblem = localServer.Status; done(false); return; }
+            Log?.Invoke("local Java server starting on " + port + "…");
+            serverWaiter = done;
+            serverWaitTimeout = DeveloperTools.Enabled ? 180 : 40; // the developer launcher compiles the server first
+            serverPoll = .5f;
         }
 
         void PollServer(float delta)
@@ -538,10 +583,11 @@ namespace FinalAnswer.App
             if (serverPoll > 0) return;
             serverPoll = .5f;
             var waiter = serverWaiter;
-            if (serverWaitTimeout <= 0 || !localServer.IsRunning) { serverWaiter = null; waiter(false); return; }
-            api.Health(settings.ServerUrl, ok =>
+            if (serverWaitTimeout <= 0 || !localServer.IsRunning) { serverWaiter = null; ServerProblem = localServer.Status; waiter(false); return; }
+            var url = ServerUrl;
+            api.Health(url, health =>
             {
-                if (!ok || serverWaiter != waiter) return;
+                if (serverWaiter != waiter || !Accept(url, health)) return;
                 serverWaiter = null;
                 Log?.Invoke("local Java server ready");
                 waiter(true);

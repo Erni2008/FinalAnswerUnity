@@ -30,7 +30,10 @@ namespace FinalAnswer.Infrastructure
         public bool IsRunning => process != null && !process.HasExited;
         public string Status { get; private set; } = "";
 
-        public void Start(int port)
+        /// <summary>tools/unity/run_dev_server.sh: installDist from the current sources, then run with debug enabled.</summary>
+        public string DevLauncherPath => Path.Combine(repositoryRoot ?? "", "tools", "unity", "run_dev_server.sh");
+
+        public void Start(int port, bool developerBuild = false)
         {
             if (IsRunning) return;
             if (!IsAvailable)
@@ -44,7 +47,9 @@ namespace FinalAnswer.Infrastructure
                 Status = "Порт " + port + " занят другим процессом";
                 return;
             }
-            var info = new ProcessStartInfo(LauncherPath, port.ToString(System.Globalization.CultureInfo.InvariantCulture))
+            var dev = developerBuild && File.Exists(DevLauncherPath);
+            var info = new ProcessStartInfo(dev ? "/bin/sh" : LauncherPath,
+                (dev ? "\"" + DevLauncherPath + "\" " : "") + port.ToString(System.Globalization.CultureInfo.InvariantCulture))
             {
                 WorkingDirectory = repositoryRoot,
                 UseShellExecute = false,
@@ -59,7 +64,8 @@ namespace FinalAnswer.Infrastructure
                 process.ErrorDataReceived += (_, __) => { };
                 process.BeginOutputReadLine();
                 process.BeginErrorReadLine();
-                Status = "Сервер запускается…";
+                Status = dev ? "Сборка и запуск актуального сервера (порт " + port + ")…" : "Сервер запускается…";
+                UnityEngine.Debug.Log("[Server] local process started: " + info.FileName + " " + info.Arguments);
             }
             catch (Exception error)
             {

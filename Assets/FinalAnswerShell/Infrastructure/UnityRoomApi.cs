@@ -11,15 +11,17 @@ namespace FinalAnswer.Infrastructure
     {
         const int TimeoutSeconds = 5;
 
-        public void Health(string baseUrl, Action<bool> done)
+        public void Health(string baseUrl, Action<Domain.ServerHealth> done)
         {
             var request = UnityWebRequest.Get(baseUrl.TrimEnd('/') + "/health");
             request.timeout = 2;
             request.SendWebRequest().completed += _ =>
             {
-                var ok = request.result == UnityWebRequest.Result.Success && request.downloadHandler.text.Contains("\"ok\"");
+                var health = request.result == UnityWebRequest.Result.Success
+                    ? Domain.ServerHealth.Parse(request.downloadHandler.text)
+                    : new Domain.ServerHealth(Domain.ServerStatus.Unreachable, false, request.error);
                 request.Dispose();
-                done(ok);
+                done(health);
             };
         }
 
