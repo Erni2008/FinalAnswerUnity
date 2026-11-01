@@ -387,6 +387,7 @@ namespace FinalAnswer.App
                 case ModuleKind.Quiz: module = new QuizModule(screens); break;
                 case ModuleKind.CursedBoxes: module = new CursedBoxesModule(screens); break;
                 case ModuleKind.Impostor: module = new Impostor.ImpostorModule(screens); break;
+                case ModuleKind.LastCommand: module = new LastCommandHost.LastCommandModule(screens); break;
                 default: module = new PendingModule(screens, kind); break;
             }
             module.Enter(new ModuleContext(room, clock), snapshot);

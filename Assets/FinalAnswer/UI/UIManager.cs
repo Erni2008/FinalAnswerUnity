@@ -69,6 +69,7 @@ namespace FinalAnswer
   public void SetGame(GameKind value){selected=value;Refresh(current);}
   public void SetLobbyBackground(Texture texture){if(!texture)return;if(!lobbyArt){var rect=UIFactory.Rect("Original host lobby art",lobby.transform,0,0,1600,896);rect.SetAsFirstSibling();lobbyArt=rect.gameObject.AddComponent<RawImage>();lobbyArt.raycastTarget=false;}lobbyArt.texture=texture;lobbyArt.color=new Color(.40f,.40f,.40f,1);}
   public void SetMachine(MachineController value)=>machine=value;
+  public void SetHosted()=>root.SetActive(false);
   public void SetConnection(string value){connection.text=value;}
   public void Notify(string value){notice.text=value;server.gameObject.SetActive(false);notice.gameObject.SetActive(true);}
   public void Tick(){notice.gameObject.SetActive(!server.gameObject.activeSelf);bool qa=ManualQa.Requested||app.GetComponent<ManualQa>();auditionButton.SetActive(qa);foreach(var control in machineControls)control.SetActive(selected==GameKind.LastCommand&&!LobbyVisible);}

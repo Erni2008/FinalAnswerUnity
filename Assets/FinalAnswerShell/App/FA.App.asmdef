@@ -12,7 +12,8 @@
     "FA.PendingModules",
     "UnityEngine.UI",
     "Unity.InputSystem",
-    "FA.Impostor"
+    "FA.Impostor",
+    "FA.LastCommand"
   ],
   "noEngineReferences": false,
   "autoReferenced": true,

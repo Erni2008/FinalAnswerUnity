@@ -12,7 +12,7 @@ namespace FinalAnswer.Infrastructure
     /// <summary>
     /// Developer-only fake phone. Joins over the unchanged phone HTTP/WS API (exactly like web/app.js),
     /// sees only its own personal snapshot, and plays: quiz answers, Cursed Boxes hide/select/fire,
-    /// Impostor clue/suspicion/final vote. Last Command terminals stay idle (they are personal and optional).
+    /// Impostor clue/suspicion/final vote, Last Command terminal readiness, clock sync and random touches.
     /// Never used by production flows.
     /// </summary>
     public sealed class DevPhoneBot
@@ -144,6 +144,34 @@ namespace FinalAnswer.Infrastructure
             if (s["cursedBoxes"] is JObject cursed) Cursed(cursed);
             else Quiz(s);
             if (s["impostor"] is JObject impostor) Impostor(impostor, s.Value<string>("selfId") ?? "");
+            if (s["lastCommand"] is JObject panel) LastCommand(panel);
+        }
+
+        /// <summary>What web/last-command.js does on every snapshot, plus one random touch per task (Random mode).</summary>
+        void LastCommand(JObject panel)
+        {
+            var session = panel.Value<string>("sessionId");
+            var round = panel["testRound"] as JObject;
+            if (round == null || !(round.Value<bool?>("expanded") ?? false)) return;
+            var task = round.Value<string>("taskId") ?? "";
+            void Touch(string action, string value) => Send("LAST_COMMAND_ACTION", new JObject
+            {
+                ["sessionId"] = session, ["taskId"] = task, ["element"] = "TOUCH_PANEL", ["action"] = action, ["value"] = value
+            });
+            if (round.Value<bool?>("awaitingReady") ?? false) Once("lc-ready:" + session + ":" + task, 300, () => Touch("CLIENT_READY", ""));
+            var challenge = panel.Value<string>("clockChallenge") ?? "";
+            if (challenge.Length > 0) Once("lc-clock:" + challenge, 0, () => Touch("CLOCK_SYNC", challenge));
+            if (AnswerMode == BotAnswerMode.Silent || round.Value<string>("status") != "PLAYING" || (round.Value<bool?>("paused") ?? false)
+                || (round.Value<long?>("nextAt") ?? 0) > 0) return;
+            var screen = round["touchscreen"] as JObject;
+            var options = screen?["options"] as JArray;
+            var physical = screen?.Value<bool?>("physicalSelector") ?? false;
+            Once("lc-touch:" + session + ":" + task, 2500, () =>
+            {
+                if (options == null || options.Count == 0) { Touch("CONFIRM", ""); return; }
+                var index = AnswerMode == BotAnswerMode.First ? 0 : Dice.Next(options.Count);
+                Touch(physical ? "SELECT_PHYSICAL" : "SELECT", physical ? options[index].ToString() : index.ToString());
+            });
         }
 
         void Quiz(JObject s)

@@ -5,6 +5,7 @@ using FinalAnswer.Application;
 using FinalAnswer.Contracts;
 using FinalAnswer.Infrastructure;
 using FinalAnswer.UI;
+using Newtonsoft.Json.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -67,6 +68,7 @@ namespace FinalAnswer.App
             foreach (var bot in bots) bot.Tick();
             PeriodicShots(delta);
             AutoStart(delta);
+            AutoEndLastCommand(delta);
             if (debugPanel != null && debugPanel.gameObject.activeSelf) RenderDebug();
         }
 
@@ -157,7 +159,9 @@ namespace FinalAnswer.App
             shotTimer += delta;
             if (shotTimer < shotEvery) return;
             shotTimer = 0;
-            var phase = manager.Room.Snapshots.Current?.CursedBoxes?.Value<string>("phase") ?? manager.Room.Snapshots.Current?.Impostor?.Value<string>("phase") ?? manager.Room.Snapshots.Current?.Phase ?? "menu";
+            var current = manager.Room.Snapshots.Current;
+            var phase = current?.CursedBoxes?.Value<string>("phase") ?? current?.Impostor?.Value<string>("phase")
+                ?? (current?.LastCommand?["testRound"] as JObject)?.Value<string>("taskType")?.Insert(0, "LC_") ?? current?.Phase ?? "menu";
             ScreenCapture.CaptureScreenshot(System.IO.Path.Combine(shotDir, (++shotIndex).ToString("000") + "_" + phase + ".png"));
         }
 
@@ -221,6 +225,27 @@ namespace FinalAnswer.App
         }
 
         /// <summary>Waits until every bot is ONLINE (and the cages have closed) before sending the host start command.</summary>
+        float endAfter = -1, lastCommandTime;
+
+        /// <summary>`-fa-end-after &lt;seconds&gt;`: the host ends Last Command by itself (checks the return to the lobby).</summary>
+        void AutoEndLastCommand(float delta)
+        {
+            if (endAfter < 0)
+            {
+                var args = Environment.GetCommandLineArgs();
+                var i = Array.IndexOf(args, "-fa-end-after");
+                endAfter = i >= 0 && i + 1 < args.Length && float.TryParse(args[i + 1], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var v) ? v : 0;
+            }
+            var panel = manager.Room.Snapshots.Current?.LastCommand;
+            if (endAfter <= 0 || panel == null) { lastCommandTime = 0; return; }
+            lastCommandTime += delta;
+            if (lastCommandTime < endAfter || lastCommandTime - delta >= endAfter) return;
+            var payload = manager.Room.RoomPayload();
+            payload["sessionId"] = panel.Value<string>("sessionId");
+            manager.Room.Send(MessageTypes.EndLastCommand, payload);
+            Write("→ END_LAST_COMMAND (-fa-end-after)");
+        }
+
         void AutoStart(float delta)
         {
             if (pendingStart == null) return;
