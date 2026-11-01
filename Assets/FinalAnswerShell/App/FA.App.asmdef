@@ -1,0 +1,22 @@
+{
+  "name": "FA.App",
+  "rootNamespace": "FinalAnswer.App",
+  "references": [
+    "FA.Contracts",
+    "FA.Domain",
+    "FA.Application",
+    "FA.Infrastructure",
+    "FA.UI",
+    "FA.Quiz",
+    "FA.CursedBoxes",
+    "FA.PendingModules",
+    "UnityEngine.UI",
+    "Unity.InputSystem"
+  ],
+  "noEngineReferences": false,
+  "autoReferenced": true,
+  "overrideReferences": true,
+  "precompiledReferences": [
+    "Newtonsoft.Json.dll"
+  ]
+}

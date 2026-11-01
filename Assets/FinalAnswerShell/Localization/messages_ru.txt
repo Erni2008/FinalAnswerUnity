@@ -1,0 +1,154 @@
+mode.standard.name=СТАНДАРТНЫЙ
+mode.standard.description=Игроки отвечают на вопросы викторины. Неправильные ответы отправляют игроков в смертельные мини-игры. Выбывшие становятся призраками, но продолжают участвовать. Последний выживший побеждает в финальном испытании на побег.
+
+mode.deadline.name=ДЕДЛАЙН
+mode.deadline.description=Ускоренная версия стандартного режима: меньше времени на ответы, меньше вопросов, более быстрые мини-игры и короткая игровая сессия.
+
+mode.every_man_for_himself.name=КАЖДЫЙ САМ ЗА СЕБЯ
+mode.every_man_for_himself.description=Каждый борется за собственное выживание. Никаких союзов и командной работы. В некоторых испытаниях можно мешать соперникам. Каждое решение влияет на личное выживание. Победитель только один.
+
+mode.trust_no_one.name=НИКОМУ НЕ ВЕРЬ
+mode.trust_no_one.description=Временные союзы, тайные цели и предательства. Игроки могут обманывать друг друга или приносить других в жертву. Выбирай, кому доверять.
+
+mode.house_rules.name=ПРАВИЛА ДОМА
+mode.house_rules.description=Случайные модификаторы раундов и неожиданные испытания от ведущего. Время на ответы и условия мини-игр могут меняться. Призраки иногда вмешиваются в игру живых.
+
+ui.close=ЗАКРЫТЬ
+
+settings.title=НАСТРОЙКИ
+settings.subtitle=Устройся поудобнее. Дом подождёт.
+settings.language_section=ЯЗЫК
+settings.language=Язык интерфейса
+settings.language_hint=Выбери удобный язык интерфейса.
+settings.display_section=ИЗОБРАЖЕНИЕ
+settings.fullscreen=Полный экран
+settings.resolution=Разрешение окна
+settings.native_resolution=В полном экране используется разрешение монитора.
+settings.vsync=Вертикальная синхронизация
+settings.vsync_hint=Убирает разрывы изображения. Может ограничивать FPS частотой монитора.
+settings.fps=Ограничение FPS
+settings.unlimited=Без ограничений
+settings.comfort_section=КОМФОРТ
+settings.reduced_motion=Уменьшение движения
+settings.motion_hint=Отключает покачивание окон, смену освещения фонов и анимацию свечей.
+settings.apply=ПРИМЕНИТЬ
+settings.cancel=НАЗАД
+settings.reset=ПО УМОЛЧАНИЮ
+settings.pending=Настройки сохраняются после нажатия «Применить».
+settings.saved=Настройки сохранены.
+settings.failed=Не удалось применить настройки. Предыдущие параметры восстановлены.
+settings.keep_title=СОХРАНИТЬ ПАРАМЕТРЫ ЭКРАНА?
+settings.keep_countdown=Возврат прежних параметров через {0} сек.
+settings.keep=СОХРАНИТЬ
+settings.revert=ВЕРНУТЬ
+settings.reverted=Изменения экрана отменены.
+ui.ok=ОК
+ui.cancel=ОТМЕНА
+lobby.title=ЛОББИ КОМНАТЫ
+lobby.leave=ВЫЙТИ ИЗ КОМНАТЫ
+lobby.join_title=ВОЙТИ В КОМНАТУ
+lobby.join=ВОЙТИ
+lobby.code=КОД КОМНАТЫ
+lobby.player_name=Твоё имя
+lobby.password=Пароль (необязательно)
+lobby.player_name_required=Введи своё имя.
+lobby.connecting=Подключение...
+lobby.players=ИГРОКОВ
+lobby.host=ВЕДУЩИЙ
+lobby.waiting=Ожидание игроков...
+lobby.required_title=НУЖНА КОМНАТА
+lobby.required=Сначала создай комнату.
+room.name_placeholder=Введи название комнаты
+room.password_placeholder=Необязательно
+room.name_required=Введи название комнаты для продолжения.
+code.generate_hint=Сгенерируй код для создания комнаты.
+code.settings_first=Сначала выбери настройки комнаты.
+code.preview_hint=Нажми GENERATE для просмотра кода. Для игры начни с CREATE ROOM.
+code.preview_ready=Пробный код. Для игры начни с CREATE ROOM.
+code.creating=Создание комнаты...
+code.ready=Комната готова. Нажми ОК, чтобы открыть лобби.
+error.server_unavailable=Сервер недоступен. Запусти его и попробуй снова.
+error.server_response=Неверный ответ сервера. Перезапусти сервер комнаты.
+error.room_missing=Комната не найдена или ведущий отключился.
+error.session_ended=Твой сеанс в комнате завершён.
+error.password=Неверный пароль комнаты.
+error.room_full=В комнате нет свободных мест.
+error.name_taken=Это имя игрока уже занято.
+error.code=Введи правильный код комнаты из шести символов.
+error.player_name=Имя игрока должно содержать от 1 до 24 символов.
+error.server_full=Сервер заполнен. Попробуй позже.
+error.room_name=Название комнаты должно содержать от 1 до 40 символов.
+error.password_length=Пароль слишком длинный.
+error.player_limit=Количество игроков должно быть от 2 до 8.
+error.game_mode=Неизвестный игровой режим.
+
+settings.on=ВКЛ.
+settings.off=ВЫКЛ.
+code.rerolling=Создаём новый код комнаты...
+error.reroll_host=Только ведущий может изменить код комнаты.
+error.reroll_players=Нельзя менять код после подключения игроков.
+play.question=ВОПРОС
+play.escape=ESC  /  ВЕРНУТЬСЯ В ЛОББИ
+play.next=SPACE  /  СЛЕДУЮЩИЙ ВОПРОС       ESC  /  ВЕРНУТЬСЯ В ЛОББИ
+play.remaining=ВРЕМЯ НА ОТВЕТ  /  {0} с
+play.correct=ПРАВИЛЬНЫЙ ОТВЕТ  /  {0}
+play.answering=R  /  ПОКАЗАТЬ ОТВЕТ       SPACE  /  ПРОПУСТИТЬ ВОПРОС       ESC  /  ЛОББИ
+play.paused=ПАУЗА  /  P ДЛЯ ПРОДОЛЖЕНИЯ
+
+network.need_players=Подключи минимум двух игроков перед запуском.
+network.host_only=Только ведущий может начать игру.
+network.started=Игра уже началась.
+network.connected=Подключено · игроки входят через браузер.
+network.connecting=Подключение…
+network.lost=Связь потеряна. Переподключение…
+network.retry=Не удалось подключиться. Нажми PLAY для повтора.
+network.rate=Слишком много запросов. Подожди немного.
+
+code.server_outdated=Сервер вернул устаревший код. Перезапусти сервер комнаты и нажми GENERATE ещё раз.
+
+network.player_offline=Игрок отключён. Нужно переподключиться или покинуть комнату перед запуском.
+network.character_taken=Этот персонаж уже занят другим игроком.
+
+lobby.start_game=НАЧАТЬ ИГРУ
+lobby.player_count=ИГРОКИ: {0} / {1}
+lobby.connected_count=НА СВЯЗИ: {0} / {1}
+lobby.ready_to_start=Все подключены. Можно начинать игру здесь.
+
+settings.audio_section=ЗВУК
+settings.master_volume=Общая громкость
+settings.music_volume=Громкость музыки
+settings.sfx_volume=Громкость эффектов
+
+# The Impostor — cinematic voting ceremony
+impostor.vote.kicker=ПОСЛЕДНИЙ ВЕРДИКТ
+impostor.vote.discussion=СОПОСТАВЬТЕ ПОДСКАЗКИ
+impostor.vote.discussion.detail=Все подсказки на столе. Обсудите, кто мог скрывать правду.
+impostor.vote.voting=ПОСЛЕДНИЙ ВЫБОР
+impostor.vote.voting.detail=Проголосуйте на своём телефоне. Принятый голос изменить нельзя.
+impostor.vote.sealed=ГОЛОСА ЗАПЕЧАТАНЫ
+impostor.vote.sealed.detail=Сейчас печати раскроют ваш выбор.
+impostor.vote.revealing=ВСКРЫВАЕМ ГОЛОСА
+impostor.vote.revealing.detail=Один голос — одна печать.
+impostor.vote.accused=ПРИГОВОР ВЫНЕСЕН!
+impostor.vote.accused.detail=Больше всего голосов получил игрок {0}.
+impostor.vote.identity=КТО СКРЫВАЛ ПРАВДУ?
+impostor.vote.identity.detail=Сейчас станет известно, кто был самозванцем.
+impostor.vote.tie=НИЧЬЯ!
+impostor.vote.tie.detail=Финальное голосование не выявило единого решения.
+impostor.vote.caught=САМОЗВАНЕЦ РАСКРЫТ!
+impostor.vote.caught.detail=Игрок {0} оказался самозванцем. Обман раскрыт.
+impostor.vote.innocent=РОКОВАЯ ОШИБКА!
+impostor.vote.innocent.detail=Игрок {0} получил больше всего голосов, но не был самозванцем.
+impostor.vote.escaped=САМОЗВАНЕЦ СКРЫЛСЯ
+impostor.vote.escaped.detail=Ваши голоса не раскрыли самозванца.
+impostor.vote.complete=ГОЛОСОВАНИЕ ЗАВЕРШЕНО
+impostor.vote.complete.detail=Принятые голоса показаны на столе.
+impostor.vote.imprints=ПЕЧАТЬ {0} ИЗ {1}
+impostor.vote.accepted=ПРИНЯТО ГОЛОСОВ: {0} / {1}
+impostor.vote.options=ЗВУК И СУБТИТРЫ
+impostor.vote.close=ЗАКРЫТЬ
+impostor.vote.no_votes=РЕШЕНИЕ НЕ ПРИНЯТО
+impostor.vote.no_votes.detail=Ни один голос не был подан. Подозреваемый не определён.
+impostor.vote.no_votes.card=ГОЛОСОВ НЕТ
+
+impostor.identity.role=ИМПОСТОР

@@ -1,0 +1,26 @@
+{
+  "name": "FA.Shell.Editor",
+  "rootNamespace": "FinalAnswer.Editor",
+  "references": [
+    "FA.Contracts",
+    "FA.Domain",
+    "FA.Application",
+    "FA.Infrastructure",
+    "FA.UI",
+    "FA.Quiz",
+    "FA.CursedBoxes",
+    "FA.App",
+    "UnityEngine.UI",
+    "Unity.RenderPipelines.Universal.Runtime",
+    "Unity.RenderPipelines.Core.Runtime"
+  ],
+  "noEngineReferences": false,
+  "autoReferenced": false,
+  "overrideReferences": true,
+  "precompiledReferences": [
+    "Newtonsoft.Json.dll"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ]
+}

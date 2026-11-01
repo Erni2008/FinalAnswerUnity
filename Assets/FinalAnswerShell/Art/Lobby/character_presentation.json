@@ -1,0 +1,98 @@
+{
+  "profiles": [
+    {
+      "id": "skeleton",
+      "scale": 1.18,
+      "pivotX": 174,
+      "pivotY": 68,
+      "x": 0,
+      "y": 4,
+      "brightness": 1,
+      "growAt": 1.5,
+      "growDuration": 0.95,
+      "cageExposure": 0.93,
+      "cageContrast": 1
+    },
+    {
+      "id": "ghost",
+      "scale": 1.065,
+      "pivotX": 174,
+      "pivotY": 151,
+      "x": 0,
+      "y": -1,
+      "brightness": 1,
+      "cageExposure": 0.93,
+      "cageContrast": 1
+    },
+    {
+      "id": "zombie",
+      "scale": 1.055,
+      "pivotX": 174,
+      "pivotY": 68,
+      "x": 0,
+      "y": -5,
+      "brightness": 0.86,
+      "cageExposure": 0.93,
+      "cageContrast": 1
+    },
+    {
+      "id": "dracula",
+      "scale": 1.075,
+      "pivotX": 174,
+      "pivotY": 68,
+      "x": 1,
+      "y": -5,
+      "brightness": 1,
+      "cageExposure": 0.93,
+      "cageContrast": 1
+    },
+    {
+      "id": "pumpkin",
+      "scale": 1.16,
+      "pivotX": 174,
+      "pivotY": 68,
+      "x": 0,
+      "y": -2,
+      "brightness": 1,
+      "cageExposure": 0.93,
+      "cageContrast": 1
+    },
+    {
+      "id": "plague_doctor",
+      "scale": 1.035,
+      "pivotX": 174,
+      "pivotY": 68,
+      "x": 0,
+      "y": -1,
+      "brightness": 1,
+      "exposure": 1.85,
+      "contrast": 1.18,
+      "cageExposure": 0.85,
+      "cageContrast": 1
+    },
+    {
+      "id": "voodoo",
+      "scale": 1.08,
+      "pivotX": 174,
+      "pivotY": 68,
+      "x": 2,
+      "y": 1,
+      "brightness": 1,
+      "cageExposure": 0.93,
+      "cageContrast": 1
+    },
+    {
+      "id": "puppeteer",
+      "scale": 1.07,
+      "pivotX": 174,
+      "pivotY": 68,
+      "x": 0,
+      "y": -8,
+      "brightness": 1,
+      "exposure": 1.9,
+      "contrast": 1.2,
+      "cageExposure": 1.6,
+      "cageContrast": 1.12
+    }
+  ]
+}

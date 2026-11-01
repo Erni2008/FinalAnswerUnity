@@ -1,0 +1,447 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97bea3ce1da75444cb49f78e65fe58dc, type: 3}
+  m_Name: ArtCatalog
+  m_EditorClassIdentifier: FA.UI::FinalAnswer.UI.ArtCatalog
+  entries:
+  - key: Art/CreateRoom/Buttons/button_hover
+    asset: {fileID: 2800000, guid: 8f1131f3b62504882b27ff7d3ce28b1a, type: 3}
+  - key: Art/CreateRoom/Buttons/button_pressed
+    asset: {fileID: 2800000, guid: d9e15692d588a49d3acc67edad5876a7, type: 3}
+  - key: Art/CreateRoom/Buttons/button_up
+    asset: {fileID: 2800000, guid: 7a2af58e572734ebb8dc5672fe875de1, type: 3}
+  - key: Art/CreateRoom/Buttons/cancel_button_hover
+    asset: {fileID: 2800000, guid: 388c921a424a64b23bd8465a49c6ff53, type: 3}
+  - key: Art/CreateRoom/Buttons/cancel_button_pressed
+    asset: {fileID: 2800000, guid: 574ab4a6daa764f0d81418bfe3983eb0, type: 3}
+  - key: Art/CreateRoom/Buttons/cancel_button_up
+    asset: {fileID: 2800000, guid: 7cb749d67f2054b6ca0a3843e755f7ad, type: 3}
+  - key: Art/CreateRoom/Buttons/create_buttongen_hover
+    asset: {fileID: 2800000, guid: 4b9e28ae2561842a99d1806f819903eb, type: 3}
+  - key: Art/CreateRoom/Buttons/create_buttongen_pressed
+    asset: {fileID: 2800000, guid: fafa2865bb02d4f27affdf25ca8e01f0, type: 3}
+  - key: Art/CreateRoom/Buttons/create_buttongen_up
+    asset: {fileID: 2800000, guid: fe8d6f6510d9a4a9caafa73c78ce56c3, type: 3}
+  - key: Art/CreateRoom/Buttons/info_hover
+    asset: {fileID: 2800000, guid: 19f0521ba71a1432cbcaf2461698ad94, type: 3}
+  - key: Art/CreateRoom/Buttons/info_pressed
+    asset: {fileID: 2800000, guid: df58f7c91a5714d32b9dfcf0a6c0ba28, type: 3}
+  - key: Art/CreateRoom/Buttons/info_up
+    asset: {fileID: 2800000, guid: 11917289a82ae4588a31a6e38403a4a7, type: 3}
+  - key: Art/CreateRoom/Buttons/next_hover
+    asset: {fileID: 2800000, guid: 5f1926eb698f34d6389851af8e598580, type: 3}
+  - key: Art/CreateRoom/Buttons/next_pressed
+    asset: {fileID: 2800000, guid: 7432e9caf285440ea8f3d7d038c8039c, type: 3}
+  - key: Art/CreateRoom/Buttons/next_up
+    asset: {fileID: 2800000, guid: 27b34e6730ce2492dbb1ca565d4b869a, type: 3}
+  - key: Art/CreateRoom/Buttons/previous_hover
+    asset: {fileID: 2800000, guid: ac14c7159fb6544fd9cc4242692806a2, type: 3}
+  - key: Art/CreateRoom/Buttons/previous_pressed
+    asset: {fileID: 2800000, guid: a96eb13fdbf0f4c4f8b692875591f9f4, type: 3}
+  - key: Art/CreateRoom/Buttons/previous_up
+    asset: {fileID: 2800000, guid: 619b4003fdaa84d4f9e6f75c78cd4895, type: 3}
+  - key: Art/CreateRoom/bright
+    asset: {fileID: 2800000, guid: f6c0384eb36994a01b9fac5a4851d40e, type: 3}
+  - key: Art/CreateRoom/dim
+    asset: {fileID: 2800000, guid: ea2f5a597979b4642abe4c66a86c90a7, type: 3}
+  - key: Art/CreateRoom/field
+    asset: {fileID: 2800000, guid: da66c65e4f16647d3aa31344c40013d6, type: 3}
+  - key: Art/CreateRoom/medium
+    asset: {fileID: 2800000, guid: a743d08017e4e4874be2bc90cfd0a06f, type: 3}
+  - key: Art/CreateRoom/options_main
+    asset: {fileID: 2800000, guid: 6569e7390484d4acdb63050d25ee8561, type: 3}
+  - key: Art/GenerationCode/Buttons/back
+    asset: {fileID: 2800000, guid: c5b1ff55441284d6a9557338bb7942ff, type: 3}
+  - key: Art/GenerationCode/Buttons/back_hover
+    asset: {fileID: 2800000, guid: 304aecc6c83d647119dfcbbeca2d78f9, type: 3}
+  - key: Art/GenerationCode/Buttons/generate_hover
+    asset: {fileID: 2800000, guid: 74cf49abc8b6d436eb2a898c051efb59, type: 3}
+  - key: Art/GenerationCode/Buttons/generate_pressed
+    asset: {fileID: 2800000, guid: 14fb06ebfb189429fb20bcacf43ca1f5, type: 3}
+  - key: Art/GenerationCode/Buttons/generate_up
+    asset: {fileID: 2800000, guid: 6c41d38a21b984e579a2909434c0fc03, type: 3}
+  - key: Art/GenerationCode/Buttons/reroll_hover
+    asset: {fileID: 2800000, guid: 4824f531d23744d28ae1461b2d9eb2ac, type: 3}
+  - key: Art/GenerationCode/Buttons/reroll_pressed
+    asset: {fileID: 2800000, guid: e1196d9fb85184459b4889c344efbc76, type: 3}
+  - key: Art/GenerationCode/Buttons/reroll_up
+    asset: {fileID: 2800000, guid: 5cb0ac7acd58543b3b27976553ae701f, type: 3}
+  - key: Art/GenerationCode/CodeField
+    asset: {fileID: 2800000, guid: 3dcc0ffde9964426fbb5e4ad960e002e, type: 3}
+  - key: Art/GenerationCode/stage2
+    asset: {fileID: 2800000, guid: f2185bd1e5eb24df1add49a9daf8bdb1, type: 3}
+  - key: Art/GenerationCode/stage3
+    asset: {fileID: 2800000, guid: f89300c09877448b697715374f7df339, type: 3}
+  - key: Art/Lobby/Cages/cage_bars
+    asset: {fileID: 2800000, guid: fc37fa532970546b695775212958b0a2, type: 3}
+  - key: Art/Lobby/Cages/cage_key
+    asset: {fileID: 2800000, guid: 5b5a0e8c93b5b41249f7857fd337bf22, type: 3}
+  - key: Art/Lobby/Cages/cage_open
+    asset: {fileID: 2800000, guid: 7f3a7e6ca072941ad91db17e9c34bc5d, type: 3}
+  - key: Art/Lobby/Cages/chain
+    asset: {fileID: 2800000, guid: ccf784b2b5425460ca95ead134cab5db, type: 3}
+  - key: Art/Lobby/Cages/chain_hook
+    asset: {fileID: 2800000, guid: 1b8ff57a360074eae8badaefe8a6d3b3, type: 3}
+  - key: Art/Lobby/Characters/dracula
+    asset: {fileID: 2800000, guid: abd7d6abcb05540dfae518ade4530d9b, type: 3}
+  - key: Art/Lobby/Characters/dracula.json
+    asset: {fileID: 4900000, guid: c8a4bac0128584e94849f366a692b585, type: 3}
+  - key: Art/Lobby/Characters/ghost
+    asset: {fileID: 2800000, guid: 6c0c1f520483846308dc5458cee45a0c, type: 3}
+  - key: Art/Lobby/Characters/ghost.json
+    asset: {fileID: 4900000, guid: 0ac4e337ee7174cdb87ad244e874bc0b, type: 3}
+  - key: Art/Lobby/Characters/plague_doctor
+    asset: {fileID: 2800000, guid: c6f1528f99ca94ce7987cc95591f0ea5, type: 3}
+  - key: Art/Lobby/Characters/plague_doctor.json
+    asset: {fileID: 4900000, guid: 3d4edc3ff5ddf4aba81a7f467561b27f, type: 3}
+  - key: Art/Lobby/Characters/pumpkin
+    asset: {fileID: 2800000, guid: f6a9e9b922b1e4dc99458fb9f8fc2eeb, type: 3}
+  - key: Art/Lobby/Characters/pumpkin.json
+    asset: {fileID: 4900000, guid: ad87b90bb104f4a78ba5c061145a70e5, type: 3}
+  - key: Art/Lobby/Characters/puppeteer
+    asset: {fileID: 2800000, guid: 92c36d4fe420649fc890caa3f33185f8, type: 3}
+  - key: Art/Lobby/Characters/puppeteer.json
+    asset: {fileID: 4900000, guid: b3c1627c9628a4eb295c0fd231a80032, type: 3}
+  - key: Art/Lobby/Characters/skeleton
+    asset: {fileID: 2800000, guid: 61f5d884ad860460aacae0b212a19a02, type: 3}
+  - key: Art/Lobby/Characters/skeleton.json
+    asset: {fileID: 4900000, guid: 8ed0f310cf1e34240a246698d4ef0c0d, type: 3}
+  - key: Art/Lobby/Characters/voodoo
+    asset: {fileID: 2800000, guid: 7cd76c085ab09487a8f60cef5b91447a, type: 3}
+  - key: Art/Lobby/Characters/voodoo.json
+    asset: {fileID: 4900000, guid: d653f079fcd784692aaafdbdd0e31fcd, type: 3}
+  - key: Art/Lobby/Characters/zombie
+    asset: {fileID: 2800000, guid: 7bfa8f13f760544eaad2b378acf43d00, type: 3}
+  - key: Art/Lobby/Characters/zombie.json
+    asset: {fileID: 4900000, guid: d403365d7f0c44c71839c5e5eaad8a59, type: 3}
+  - key: Art/Lobby/background_cages
+    asset: {fileID: 2800000, guid: f1a867d0da68b4795b5ab209c7196874, type: 3}
+  - key: Art/Lobby/character_presentation.json
+    asset: {fileID: 4900000, guid: 327c5419fcf1a4022b784309cb465a94, type: 3}
+  - key: Art/Menu/Buttons/create_room_hover
+    asset: {fileID: 2800000, guid: 2166b9afc00ee4b95b044be87087b848, type: 3}
+  - key: Art/Menu/Buttons/create_room_pressed
+    asset: {fileID: 2800000, guid: fe9d1b6e4c6434c59a5577a5cc97817a, type: 3}
+  - key: Art/Menu/Buttons/create_room_up
+    asset: {fileID: 2800000, guid: f2f01d11adb1e43d9b8843b91612aa47, type: 3}
+  - key: Art/Menu/Buttons/exit_hover
+    asset: {fileID: 2800000, guid: 59deaaf9d6baa4171be79b31e634bdc5, type: 3}
+  - key: Art/Menu/Buttons/exit_pressed
+    asset: {fileID: 2800000, guid: 2cf1e66375c47404499a0c0c82418840, type: 3}
+  - key: Art/Menu/Buttons/exit_up
+    asset: {fileID: 2800000, guid: 361d781c48a5d49f4b899c205041af4c, type: 3}
+  - key: Art/Menu/Buttons/generation_code_hover
+    asset: {fileID: 2800000, guid: b92fbe0f8ab5542ca9c8e6991b8abfc0, type: 3}
+  - key: Art/Menu/Buttons/generation_code_pressed
+    asset: {fileID: 2800000, guid: 1a939c83ec45844399e40fa0039981dd, type: 3}
+  - key: Art/Menu/Buttons/generation_code_up
+    asset: {fileID: 2800000, guid: 0604c1c6fe03a4e1bbc867f6da52a7af, type: 3}
+  - key: Art/Menu/Buttons/play_hover
+    asset: {fileID: 2800000, guid: ac0eacad8db2e47aab5c0f1d4e3c9013, type: 3}
+  - key: Art/Menu/Buttons/play_pressed
+    asset: {fileID: 2800000, guid: 0f7b0f9636b23443ebdc4db0c96cecbd, type: 3}
+  - key: Art/Menu/Buttons/play_up
+    asset: {fileID: 2800000, guid: a847a7bcf63ac45bf85c424dbff97582, type: 3}
+  - key: Art/Menu/Buttons/settings_hover
+    asset: {fileID: 2800000, guid: 7798e8a13eb204417a9899d37a45d4d7, type: 3}
+  - key: Art/Menu/Buttons/settings_pressed
+    asset: {fileID: 2800000, guid: 0e38d1c60abe74ff9ac7612f12f8df7d, type: 3}
+  - key: Art/Menu/Buttons/settings_up
+    asset: {fileID: 2800000, guid: 2a75b6a214a264a9f91513ccc9b86b3a, type: 3}
+  - key: Art/Menu/Candle/0001
+    asset: {fileID: 2800000, guid: 0d64da6063f324730ad2f91f5e65211a, type: 3}
+  - key: Art/Menu/Candle/0002
+    asset: {fileID: 2800000, guid: 220bb2a8a99524bffa66d150b3f21442, type: 3}
+  - key: Art/Menu/Candle/0003
+    asset: {fileID: 2800000, guid: f490c183c82354c98a466105b426f20b, type: 3}
+  - key: Art/Menu/Candle/0004
+    asset: {fileID: 2800000, guid: 041bd356fcbba4bcd9ba95daa0a52d82, type: 3}
+  - key: Art/Menu/Candle/0005
+    asset: {fileID: 2800000, guid: d121fd69e2aeb4433b10779c58ad7c77, type: 3}
+  - key: Art/Menu/Candle/0006
+    asset: {fileID: 2800000, guid: c01dd68a75a04493e98c9648eb2fd5a4, type: 3}
+  - key: Art/Menu/Candle/0007
+    asset: {fileID: 2800000, guid: c80c67c02668247ba9b2a1d8ab2ee1cc, type: 3}
+  - key: Art/Menu/Candle/0008
+    asset: {fileID: 2800000, guid: 4e1195ff379eb4db38eb55b2dab48073, type: 3}
+  - key: Art/Menu/Candle/0009
+    asset: {fileID: 2800000, guid: d7e99616757104743b02a3333ba18974, type: 3}
+  - key: Art/Menu/Candle/0010
+    asset: {fileID: 2800000, guid: c9da48651d6c54a9da76d192bcca69fc, type: 3}
+  - key: Art/Menu/Candle/0011
+    asset: {fileID: 2800000, guid: 4b18729953e124afea3366279ed374bc, type: 3}
+  - key: Art/Menu/Candle/0012
+    asset: {fileID: 2800000, guid: c896764ee8c8d4d2282cb11da2a74a08, type: 3}
+  - key: Art/Menu/Candle/0013
+    asset: {fileID: 2800000, guid: c637b8b3eccc74581aec53f415a96a84, type: 3}
+  - key: Art/Menu/Candle/0014
+    asset: {fileID: 2800000, guid: 57f3536e6e45749d98f6db610fed383f, type: 3}
+  - key: Art/Menu/Candle/0015
+    asset: {fileID: 2800000, guid: b184714087fb3483eb5c0aa74235c295, type: 3}
+  - key: Art/Menu/Candle/0016
+    asset: {fileID: 2800000, guid: 547f31b4901a64ec4b854315da5845c4, type: 3}
+  - key: Art/Menu/Candle/0017
+    asset: {fileID: 2800000, guid: 78b95fe65f8344b9b9085e4c491fee37, type: 3}
+  - key: Art/Menu/Candle/0018
+    asset: {fileID: 2800000, guid: 905c5db0ac1cb4c71baa6b511425fb33, type: 3}
+  - key: Art/Menu/Candle/0019
+    asset: {fileID: 2800000, guid: e22cf766f76ae4f61b87cf8b23bc549a, type: 3}
+  - key: Art/Menu/Candle/0020
+    asset: {fileID: 2800000, guid: 67879de9c95264de0ae3e4250a4e5e2a, type: 3}
+  - key: Art/Menu/Candle/0021
+    asset: {fileID: 2800000, guid: d715c241cdd994722b8d99bce837c5c7, type: 3}
+  - key: Art/Menu/Candle/0022
+    asset: {fileID: 2800000, guid: eae064ec1710f422ba968f618969e69b, type: 3}
+  - key: Art/Menu/Candle/0023
+    asset: {fileID: 2800000, guid: c23e3084f5a654e30bfa8e482525d2e3, type: 3}
+  - key: Art/Menu/Candle/0024
+    asset: {fileID: 2800000, guid: 496e13ee2dae6415ba084fa769fee049, type: 3}
+  - key: Art/Menu/Candle/0025
+    asset: {fileID: 2800000, guid: 856d56eb77ef1407195286ac0827704b, type: 3}
+  - key: Art/Menu/Candle/0026
+    asset: {fileID: 2800000, guid: e8010cfa59c68412d93c0cb0397bffd2, type: 3}
+  - key: Art/Menu/Candle/0027
+    asset: {fileID: 2800000, guid: 5fedfb1aad9cc449db8531fff5970c78, type: 3}
+  - key: Art/Menu/Candle/0028
+    asset: {fileID: 2800000, guid: 20e7a46414287411f89b664df0d5323c, type: 3}
+  - key: Art/Menu/Candle/0029
+    asset: {fileID: 2800000, guid: 1df3f8712c63049f3b44fbefe08d28a2, type: 3}
+  - key: Art/Menu/Candle/0030
+    asset: {fileID: 2800000, guid: cdb301aec0c4d47c189c8ec2a3f60b12, type: 3}
+  - key: Art/Menu/Candle/0031
+    asset: {fileID: 2800000, guid: 6a2f9130e0a654c37b6d42552096089f, type: 3}
+  - key: Art/Menu/Candle/0032
+    asset: {fileID: 2800000, guid: 01e90e1b3dc024c278f3000004deeab5, type: 3}
+  - key: Art/Menu/Candle/0033
+    asset: {fileID: 2800000, guid: 67f4aed4d03924a709ea61f8d5b6f7de, type: 3}
+  - key: Art/Menu/Candle/0034
+    asset: {fileID: 2800000, guid: f66a7aa8ad00545b1a29c7b5ea41371a, type: 3}
+  - key: Art/Menu/Candle/0035
+    asset: {fileID: 2800000, guid: dc0ca3cc26baf44708fce75878e645bf, type: 3}
+  - key: Art/Menu/Candle/0036
+    asset: {fileID: 2800000, guid: f0989cf1a35c94c89af5d99bb7e2ee01, type: 3}
+  - key: Art/Menu/Candle/0037
+    asset: {fileID: 2800000, guid: 0debf52965651461188c9f6514ae219a, type: 3}
+  - key: Art/Menu/Candle/0038
+    asset: {fileID: 2800000, guid: 0151efa733508480fa46cf7854d4e491, type: 3}
+  - key: Art/Menu/Candle/0039
+    asset: {fileID: 2800000, guid: 44348f799608f4522a9d1fd323edc907, type: 3}
+  - key: Art/Menu/Candle/0040
+    asset: {fileID: 2800000, guid: f25b0bab521ff4babaf426dca4381137, type: 3}
+  - key: Art/Menu/Candle/0041
+    asset: {fileID: 2800000, guid: f984b46c0e6b04cc0a44c06924c50c40, type: 3}
+  - key: Art/Menu/Candle/0042
+    asset: {fileID: 2800000, guid: 623731fdba90e462084cad84e99583a4, type: 3}
+  - key: Art/Menu/Candle/0043
+    asset: {fileID: 2800000, guid: 91e76e4761f7d4781b58d919c030e900, type: 3}
+  - key: Art/Menu/Candle/0044
+    asset: {fileID: 2800000, guid: f131f1fbd9f2f4c9f99500838e56dbd2, type: 3}
+  - key: Art/Menu/Candle/0045
+    asset: {fileID: 2800000, guid: bb8b1246415534f21b5f194081ef28b8, type: 3}
+  - key: Art/Menu/Candle/0046
+    asset: {fileID: 2800000, guid: 1028de84d5ea84e22aaca67ccbd472eb, type: 3}
+  - key: Art/Menu/Candle/0047
+    asset: {fileID: 2800000, guid: 0ab7a8518c8df4a2db2ccad727a4d1f6, type: 3}
+  - key: Art/Menu/Candle/0048
+    asset: {fileID: 2800000, guid: 9fc95a72c288e49a182a2bacc4d8fcba, type: 3}
+  - key: Art/Menu/Candle/0049
+    asset: {fileID: 2800000, guid: c9ec92448448449c6bff7fe304143d61, type: 3}
+  - key: Art/Menu/Candle/0050
+    asset: {fileID: 2800000, guid: 2a3a05fdefbae48d3bf558a1662217f4, type: 3}
+  - key: Art/Menu/Candle/0051
+    asset: {fileID: 2800000, guid: 6566459a8bc4544efbe5b5e543fbf45d, type: 3}
+  - key: Art/Menu/Candle/0052
+    asset: {fileID: 2800000, guid: d52fc996d371a48048ee03e2301034d4, type: 3}
+  - key: Art/Menu/Candle/0053
+    asset: {fileID: 2800000, guid: 35150e287f31c484c9698e7f1ecc4a52, type: 3}
+  - key: Art/Menu/Candle/0054
+    asset: {fileID: 2800000, guid: 1d1ab61b7c59841359525b01c11ee438, type: 3}
+  - key: Art/Menu/Candle/0055
+    asset: {fileID: 2800000, guid: 2efd70316c94a435c8679ac0e1245e22, type: 3}
+  - key: Art/Menu/Candle/0056
+    asset: {fileID: 2800000, guid: a09da07eed8144ce3ad68cd3d3ea506e, type: 3}
+  - key: Art/Menu/Candle/0057
+    asset: {fileID: 2800000, guid: 6c623e7ec38a14112bf2bf5d6822a3cd, type: 3}
+  - key: Art/Menu/Candle/0058
+    asset: {fileID: 2800000, guid: 840bddebbbe1e4855b2888e5d7e40336, type: 3}
+  - key: Art/Menu/Candle/0059
+    asset: {fileID: 2800000, guid: fec0685952b4c421d977165a418fbacf, type: 3}
+  - key: Art/Menu/Candle/0060
+    asset: {fileID: 2800000, guid: 62a19b931db284b32a8613593425289d, type: 3}
+  - key: Art/Menu/Candle/0061
+    asset: {fileID: 2800000, guid: 7f0a7c8a7e62344db90f66e09f485a0e, type: 3}
+  - key: Art/Menu/Candle/0062
+    asset: {fileID: 2800000, guid: efd3686aca01c4fb197f5256dcfb1cf4, type: 3}
+  - key: Art/Menu/Candle/0063
+    asset: {fileID: 2800000, guid: d079afe47b6ea413498288cf0a32b578, type: 3}
+  - key: Art/Menu/Candle/0064
+    asset: {fileID: 2800000, guid: bb323f5fbd9074615a79ed5e598ebcd6, type: 3}
+  - key: Art/Menu/Candle/0065
+    asset: {fileID: 2800000, guid: aada9fd1419414730969a84b0318e42c, type: 3}
+  - key: Art/Menu/Candle/0066
+    asset: {fileID: 2800000, guid: 420f539a3d6ea49f886b158437b896e4, type: 3}
+  - key: Art/Menu/Candle/0067
+    asset: {fileID: 2800000, guid: 63b72a6cd6bf344ba8ed707388641420, type: 3}
+  - key: Art/Menu/Candle/0068
+    asset: {fileID: 2800000, guid: 3c9897ceafca54a7fbe3279ad1ab5e9c, type: 3}
+  - key: Art/Menu/Candle/0069
+    asset: {fileID: 2800000, guid: 4f7d74ca0f92b458bae717d79c95b3a9, type: 3}
+  - key: Art/Menu/Candle/0070
+    asset: {fileID: 2800000, guid: 2df57a17addbe4c298b481e28fb9a7b6, type: 3}
+  - key: Art/Menu/Candle/0071
+    asset: {fileID: 2800000, guid: fe4ff523aab6848688a06ab05fe2e3dd, type: 3}
+  - key: Art/Menu/Candle/0072
+    asset: {fileID: 2800000, guid: 4954f44d7b4b94a348e5762b0d56ca70, type: 3}
+  - key: Art/Menu/Candle/0073
+    asset: {fileID: 2800000, guid: 1a767b408f26b474594dc2c2a810aae0, type: 3}
+  - key: Art/Menu/Candle/0074
+    asset: {fileID: 2800000, guid: 3d71eb51765984d808e348756120e36a, type: 3}
+  - key: Art/Menu/Candle/0075
+    asset: {fileID: 2800000, guid: ac176f69bedf54c7e99f863ed872c6c3, type: 3}
+  - key: Art/Menu/Candle/0076
+    asset: {fileID: 2800000, guid: f99a01418a8a342ec892bfacb0e1c13b, type: 3}
+  - key: Art/Menu/Candle/0077
+    asset: {fileID: 2800000, guid: 62ac813f7203e489ea9b7f32e8b5ca13, type: 3}
+  - key: Art/Menu/Candle/0078
+    asset: {fileID: 2800000, guid: 98eb792bdb11d418e8e2d092e5bc2d60, type: 3}
+  - key: Art/Menu/Candle/0079
+    asset: {fileID: 2800000, guid: 1b0531b0db28840f9aa50db5d4120bbf, type: 3}
+  - key: Art/Menu/Candle/0080
+    asset: {fileID: 2800000, guid: b760bbb4d9cd84bcfa3571fddaeb6cd8, type: 3}
+  - key: Art/Menu/Candle/0081
+    asset: {fileID: 2800000, guid: ef2233fdff2af42b6a473528ef08567d, type: 3}
+  - key: Art/Menu/Candle/0082
+    asset: {fileID: 2800000, guid: c6c6ce45e428f4895a0c30a0ca706fab, type: 3}
+  - key: Art/Menu/Candle/0083
+    asset: {fileID: 2800000, guid: d9d92d9209b354658813e7fcc206eada, type: 3}
+  - key: Art/Menu/Candle/0084
+    asset: {fileID: 2800000, guid: 3e38abe766bd940d5a73e79a4a83994b, type: 3}
+  - key: Art/Menu/Candle/0085
+    asset: {fileID: 2800000, guid: 71f706609927d41818605abfc6af4b44, type: 3}
+  - key: Art/Menu/Candle/0086
+    asset: {fileID: 2800000, guid: 75a477e50fd2c4fb5b581cb19852dfa8, type: 3}
+  - key: Art/Menu/Candle/0087
+    asset: {fileID: 2800000, guid: 91f4f66bd11ce476cb139bd41c7ecf07, type: 3}
+  - key: Art/Menu/Candle/0088
+    asset: {fileID: 2800000, guid: 267cc819aef2040019046ab1c0815871, type: 3}
+  - key: Art/Menu/Candle/0089
+    asset: {fileID: 2800000, guid: 82430c77f1d0641ab8d1950a468de26f, type: 3}
+  - key: Art/Menu/Candle/0090
+    asset: {fileID: 2800000, guid: 4608f9dc0ab4946669d40a7a7ca1adc5, type: 3}
+  - key: Art/Menu/Candle/0091
+    asset: {fileID: 2800000, guid: 22d5b90eb430144b781fa13273f28c92, type: 3}
+  - key: Art/Menu/Candle/0092
+    asset: {fileID: 2800000, guid: bb2de21095f41461da2f64b212e8ff67, type: 3}
+  - key: Art/Menu/Candle/0093
+    asset: {fileID: 2800000, guid: 25b234b46717441ceb896dadd71d524a, type: 3}
+  - key: Art/Menu/Candle/0094
+    asset: {fileID: 2800000, guid: d396db81b3fbc44e2b00f4f4c63c5db0, type: 3}
+  - key: Art/Menu/Candle/0095
+    asset: {fileID: 2800000, guid: c50a3a60309ab4c6a89d82ad21d4be07, type: 3}
+  - key: Art/Menu/Candle/0096
+    asset: {fileID: 2800000, guid: 489f5361a014e47d9a91013cd0874de7, type: 3}
+  - key: Art/Menu/Final_Answer
+    asset: {fileID: 2800000, guid: 5f7564ad4e2544d2bae020b54083b948, type: 3}
+  - key: Art/Menu/main_screen_background
+    asset: {fileID: 2800000, guid: 7e610f006fac846e093aa855c8933eac, type: 3}
+  - key: Art/Quiz/Clock/clock1
+    asset: {fileID: 2800000, guid: 1e21307be64984403906ff37b350344f, type: 3}
+  - key: Art/Quiz/Clock/clock10
+    asset: {fileID: 2800000, guid: 92abc1617dc494d5ca37c7b7279d9c32, type: 3}
+  - key: Art/Quiz/Clock/clock11
+    asset: {fileID: 2800000, guid: 4f5f81ad89fbc4634a8460fee8641612, type: 3}
+  - key: Art/Quiz/Clock/clock2
+    asset: {fileID: 2800000, guid: 863e2cae2762e4679855ca30619c72da, type: 3}
+  - key: Art/Quiz/Clock/clock4
+    asset: {fileID: 2800000, guid: ab3cdba26aabd44f99d0ae7a830e5992, type: 3}
+  - key: Art/Quiz/Clock/clock5
+    asset: {fileID: 2800000, guid: 65e75c8b6c4ac489d88024738e17342b, type: 3}
+  - key: Art/Quiz/Clock/clock6
+    asset: {fileID: 2800000, guid: af1dcdfc895204e3f9115de8d4e7d730, type: 3}
+  - key: Art/Quiz/Clock/clock8
+    asset: {fileID: 2800000, guid: 1d9751f4f61564f228b5635e409e6fea, type: 3}
+  - key: Art/Quiz/room
+    asset: {fileID: 2800000, guid: ebb4f8882a9204c13bab07ca062e6c1b, type: 3}
+  - key: Audio/Cages/chain_cage
+    asset: {fileID: 8300000, guid: 9f42cba2e897649f587cc5f20e06f3cf, type: 3}
+  - key: Audio/Cages/chain_cage2
+    asset: {fileID: 8300000, guid: a3bb39dbfb06243cba7ee638e9fa7d98, type: 3}
+  - key: Audio/Cages/door_lock_done
+    asset: {fileID: 8300000, guid: ae7449e49b52349bfb68a85830731f4b, type: 3}
+  - key: Audio/Cages/gate_closes
+    asset: {fileID: 8300000, guid: b83e2ce52e834419792dd228eed118d5, type: 3}
+  - key: Audio/Environment/creepy_basement
+    asset: {fileID: 8300000, guid: df196f8d0e0d4465898f963b040fb43e, type: 3}
+  - key: Audio/Host/manifest.json
+    asset: {fileID: 4900000, guid: 0bc6f273b49d1491e9c3be915eab019f, type: 3}
+  - key: Audio/Host/questions/chemical-gold_229e19d5ceb9
+    asset: {fileID: 8300000, guid: 037954984ec8b4cc09cdcb86146dd3d3, type: 3}
+  - key: Audio/Host/questions/chess-king_6bccb0d969a2
+    asset: {fileID: 8300000, guid: 6e2faa0f83ca44d76afb4dc54e55d2b9, type: 3}
+  - key: Audio/Host/questions/frankenstein_b694a524170a
+    asset: {fileID: 8300000, guid: da08da773e4654687ba22825dc88b475, type: 3}
+  - key: Audio/Host/questions/human-bones_16db8966df14
+    asset: {fileID: 8300000, guid: 4ce083c6de8e14a448b687387d5e9495, type: 3}
+  - key: Audio/Host/questions/light-year_d951721e04cc
+    asset: {fileID: 8300000, guid: 3625a5a73ce534f51a5e69b6ae0d7b1c, type: 3}
+  - key: Audio/Host/questions/ocean-deepest_26bec1009bcd
+    asset: {fileID: 8300000, guid: 3d01e529f264344e6a839409b4ea90eb, type: 3}
+  - key: Audio/Host/questions/octopus_b3892b5f7e83
+    asset: {fileID: 8300000, guid: 4440aa3ed78de4a6389de9e7158644f0, type: 3}
+  - key: Audio/Host/questions/raven-author_38ccc43ed2cd
+    asset: {fileID: 8300000, guid: 131f09418bf944221a84c3da9853e17e, type: 3}
+  - key: Audio/Host/questions/solar-largest_21b53323d0af
+    asset: {fileID: 8300000, guid: 5a7792b8e18f1499abddb91ca9894041, type: 3}
+  - key: Audio/Host/questions/sound-space_df8faa221674
+    asset: {fileID: 8300000, guid: 536fcb6e5044f450483cb127dd242742, type: 3}
+  - key: Audio/Host/questions/sunlight_f6be3881a9f5
+    asset: {fileID: 8300000, guid: 51c138eb67c694362b7ac96fb038771d, type: 3}
+  - key: Audio/Host/questions/triangle_28fdfd302bba
+    asset: {fileID: 8300000, guid: fb7a9aee82ea44d278b5ac9628e25599, type: 3}
+  - key: Audio/Quiz/clock_ticks
+    asset: {fileID: 8300000, guid: 612183fb13e9a420595e8a397caa42a1, type: 3}
+  - key: Audio/Quiz/music1
+    asset: {fileID: 8300000, guid: 7ec0664e91c9c4e3f9764306e3b5d066, type: 3}
+  - key: Audio/Quiz/music2
+    asset: {fileID: 8300000, guid: 85b15d11f1c9947b09c1a6fb9ff0600e, type: 3}
+  - key: Audio/Ui/button_press
+    asset: {fileID: 8300000, guid: a9fc398dc570e4f7ea089cbb70736f3b, type: 3}
+  - key: Audio/Ui/hover_button
+    asset: {fileID: 8300000, guid: 70c69dd45495343e08cde5d0c85b688c, type: 3}
+  - key: Fonts/BebasNeue-Regular
+    asset: {fileID: 12800000, guid: 58575cdbb7d004077a788912506332e6, type: 3}
+  - key: Fonts/Creepster-OFL.txt
+    asset: {fileID: 4900000, guid: 5bbcc21bc1eed4a2ea0d3376ab75af69, type: 3}
+  - key: Fonts/Creepster-Regular
+    asset: {fileID: 12800000, guid: f08301dd7afc74ca790437c5ace8855f, type: 3}
+  - key: Fonts/NotoSans-LICENSE.txt
+    asset: {fileID: 4900000, guid: 38742d032c24d41ec8f68b76553b3c45, type: 3}
+  - key: Fonts/NotoSans-Regular
+    asset: {fileID: 12800000, guid: 0823e2d5b051446938c7ff2102c38a09, type: 3}
+  - key: Fonts/NotoSans-SemiCondensedSemiBold
+    asset: {fileID: 12800000, guid: d6fda8b409b06498795a5b7e33514ad6, type: 3}
+  - key: Fonts/RoadRage-OFL.txt
+    asset: {fileID: 4900000, guid: e0ebf9a9fcfa34271a3edb64242d4d80, type: 3}
+  - key: Fonts/RoadRage-Regular
+    asset: {fileID: 12800000, guid: 254bc4543ebb24479bc18e86da040fa9, type: 3}
+  - key: Fonts/RubikWetPaint-OFL.txt
+    asset: {fileID: 4900000, guid: 2296fe968e92042eda2ce1f3c97e2ddd, type: 3}
+  - key: Fonts/RubikWetPaint-Regular
+    asset: {fileID: 12800000, guid: beafd5b3869794fb08e4770567813270, type: 3}
+  - key: Localization/messages_en.txt
+    asset: {fileID: 4900000, guid: ef166f8df555b4e9c9c7dc5438a40e47, type: 3}
+  - key: Localization/messages_ru.txt
+    asset: {fileID: 4900000, guid: 42dbb5002a9d74208b56fef1b894275e, type: 3}
+  - key: UI/Shaders/QuizRoom
+    asset: {fileID: 4800000, guid: 3bb99739c29084d8588db21fd502fd50, type: 3}
+  - key: UI/Shaders/UIAdditive
+    asset: {fileID: 4800000, guid: c836f0c2759c54a6b9b6fac4a1f6dfd9, type: 3}

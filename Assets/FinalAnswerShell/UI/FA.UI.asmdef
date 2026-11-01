@@ -1,0 +1,17 @@
+{
+  "name": "FA.UI",
+  "rootNamespace": "FinalAnswer.UI",
+  "references": [
+    "FA.Contracts",
+    "FA.Domain",
+    "FA.Application",
+    "UnityEngine.UI",
+    "Unity.InputSystem"
+  ],
+  "noEngineReferences": false,
+  "autoReferenced": false,
+  "overrideReferences": true,
+  "precompiledReferences": [
+    "Newtonsoft.Json.dll"
+  ]
+}

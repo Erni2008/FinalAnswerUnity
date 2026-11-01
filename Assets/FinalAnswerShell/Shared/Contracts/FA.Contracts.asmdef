@@ -1,0 +1,11 @@
+{
+  "name": "FA.Contracts",
+  "rootNamespace": "FinalAnswer.Contracts",
+  "references": [],
+  "noEngineReferences": true,
+  "autoReferenced": false,
+  "overrideReferences": true,
+  "precompiledReferences": [
+    "Newtonsoft.Json.dll"
+  ]
+}

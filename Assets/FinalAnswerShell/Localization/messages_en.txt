@@ -1,0 +1,154 @@
+mode.standard.name=STANDARD
+mode.standard.description=Players answer trivia questions. Incorrect answers send players into deadly mini-games. Eliminated players become ghosts but can continue participating. The last surviving player wins the final escape challenge.
+
+mode.deadline.name=DEADLINE
+mode.deadline.description=A faster version of Standard: shorter answer timers, fewer questions, faster mini-games and a shorter overall game.
+
+mode.every_man_for_himself.name=EVERY MAN FOR HIMSELF
+mode.every_man_for_himself.description=Compete individually for survival. No alliances or teamwork. Sabotage opponents during certain challenges. Every decision affects your survival, and only one player can win.
+
+mode.trust_no_one.name=TRUST NO ONE
+mode.trust_no_one.description=Form temporary alliances, pursue secret objectives and survive betrayal. Players may deceive or sacrifice each other. Choose carefully who to trust.
+
+mode.house_rules.name=HOUSE RULES
+mode.house_rules.description=Expect random round modifiers and unexpected host challenges. Timers and mini-game conditions can change. Ghosts may occasionally interfere with living players.
+
+ui.close=CLOSE
+
+settings.title=SETTINGS
+settings.subtitle=Make yourself comfortable. The house can wait.
+settings.language_section=LANGUAGE
+settings.language=Interface language
+settings.language_hint=Preview the interface in your preferred language.
+settings.display_section=DISPLAY
+settings.fullscreen=Fullscreen
+settings.resolution=Window resolution
+settings.native_resolution=Fullscreen uses your monitor’s native resolution.
+settings.vsync=Vertical sync
+settings.vsync_hint=Reduces screen tearing. May limit FPS to the monitor refresh rate.
+settings.fps=Frame rate limit
+settings.unlimited=Unlimited
+settings.comfort_section=COMFORT
+settings.reduced_motion=Reduced motion
+settings.motion_hint=Stops idle movement, background lighting transitions and animated candles.
+settings.apply=APPLY
+settings.cancel=BACK
+settings.reset=DEFAULTS
+settings.pending=Changes are saved when you select Apply.
+settings.saved=Settings saved.
+settings.failed=Could not apply settings. Your previous settings were restored.
+settings.keep_title=KEEP DISPLAY SETTINGS?
+settings.keep_countdown=Reverting in {0} seconds.
+settings.keep=KEEP
+settings.revert=REVERT
+settings.reverted=Display changes reverted.
+ui.ok=OK
+ui.cancel=CANCEL
+lobby.title=ROOM LOBBY
+lobby.leave=LEAVE ROOM
+lobby.join_title=JOIN ROOM
+lobby.join=JOIN
+lobby.code=ROOM CODE
+lobby.player_name=Your name
+lobby.password=Password (optional)
+lobby.player_name_required=Enter your player name.
+lobby.connecting=Connecting...
+lobby.players=PLAYERS
+lobby.host=HOST
+lobby.waiting=Waiting for players...
+lobby.required_title=ROOM REQUIRED
+lobby.required=Create a room first.
+room.name_placeholder=Enter room name
+room.password_placeholder=Optional
+room.name_required=Enter a room name to continue.
+code.generate_hint=Generate a code to create your room.
+code.settings_first=Choose room settings first.
+code.preview_hint=Press GENERATE to preview a code. To host, start with CREATE ROOM.
+code.preview_ready=Preview only. To host a game, start with CREATE ROOM.
+code.creating=Creating room...
+code.ready=Room ready. Press OK to open the lobby.
+error.server_unavailable=Cannot reach room server. Start it and try again.
+error.server_response=Unexpected server response. Restart the room server.
+error.room_missing=Room not found or host disconnected.
+error.session_ended=Your room session has ended.
+error.password=Incorrect room password.
+error.room_full=This room is full.
+error.name_taken=This player name is already in use.
+error.code=Enter a valid six-character room code.
+error.player_name=Player name must contain 1 to 24 characters.
+error.server_full=Server is full. Try again later.
+error.room_name=Room name must contain 1 to 40 characters.
+error.password_length=Password is too long.
+error.player_limit=Player limit must be 2 to 8.
+error.game_mode=Unknown game mode.
+
+settings.on=ON
+settings.off=OFF
+code.rerolling=Generating a new room code...
+error.reroll_host=Only the host can change the room code.
+error.reroll_players=Cannot change code after players have joined.
+play.question=QUESTION
+play.escape=ESC  /  RETURN TO LOBBY
+play.next=SPACE  /  NEXT QUESTION       ESC  /  RETURN TO LOBBY
+play.remaining=TIME TO ANSWER  /  {0}s
+play.correct=CORRECT ANSWER  /  {0}
+play.answering=R  /  REVEAL ANSWER       SPACE  /  SKIP QUESTION       ESC  /  LOBBY
+play.paused=PAUSED  /  P TO RESUME
+
+network.need_players=Connect at least two players before starting.
+network.host_only=Only the host can start the game.
+network.started=The game has already started.
+network.connected=Connected · players join through the browser.
+network.connecting=Connecting…
+network.lost=Connection lost. Reconnecting…
+network.retry=Reconnect failed. Press PLAY to retry.
+network.rate=Too many requests. Wait a moment.
+
+code.server_outdated=The server returned an outdated code. Restart the room server, then press GENERATE again.
+
+network.player_offline=A player is disconnected. Reconnect or leave the room before starting.
+network.character_taken=This character already belongs to another player.
+
+lobby.start_game=START GAME
+lobby.player_count=PLAYERS: {0} / {1}
+lobby.connected_count=CONNECTED: {0} / {1}
+lobby.ready_to_start=Everyone is connected. Start the game here.
+
+settings.audio_section=AUDIO
+settings.master_volume=Master volume
+settings.music_volume=Music volume
+settings.sfx_volume=Sound effects volume
+
+# The Impostor — cinematic voting ceremony
+impostor.vote.kicker=THE FINAL VERDICT
+impostor.vote.discussion=FOLLOW THE EVIDENCE
+impostor.vote.discussion.detail=Every clue is on the table. Discuss who could be hiding the truth.
+impostor.vote.voting=ONE FINAL CHOICE
+impostor.vote.voting.detail=Cast your private vote on your phone. Your first accepted vote is final.
+impostor.vote.sealed=THE VOTES ARE SEALED
+impostor.vote.sealed.detail=The ink will reveal your decision.
+impostor.vote.revealing=BREAKING THE SEAL
+impostor.vote.revealing.detail=One vote. One imprint. Nothing more, nothing less.
+impostor.vote.accused=THE VERDICT IS IN!
+impostor.vote.accused.detail=The most votes were cast against {0}.
+impostor.vote.identity=WHO HID THE TRUTH?
+impostor.vote.identity.detail=The true identity is about to be revealed.
+impostor.vote.tie=A TIE!
+impostor.vote.tie.detail=The final vote did not produce a single decision.
+impostor.vote.caught=THE IMPOSTOR IS EXPOSED!
+impostor.vote.caught.detail={0} was the impostor. The deception has been exposed.
+impostor.vote.innocent=A FATAL MISTAKE!
+impostor.vote.innocent.detail={0} received the most votes, but was not the impostor.
+impostor.vote.escaped=THE IMPOSTOR ESCAPED
+impostor.vote.escaped.detail=Your votes did not expose the impostor.
+impostor.vote.complete=THE VOTE IS COMPLETE
+impostor.vote.complete.detail=The accepted votes are shown on the table.
+impostor.vote.imprints=IMPRINT {0} OF {1}
+impostor.vote.accepted=SEALED VOTES: {0} / {1}
+impostor.vote.options=SOUND & SUBTITLES
+impostor.vote.close=CLOSE
+impostor.vote.no_votes=NO VERDICT WAS REACHED
+impostor.vote.no_votes.detail=No votes were cast. No one was selected.
+impostor.vote.no_votes.card=NO VOTES
+
+impostor.identity.role=THE IMPOSTOR

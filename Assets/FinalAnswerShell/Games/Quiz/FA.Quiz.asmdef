@@ -1,0 +1,17 @@
+{
+  "name": "FA.Quiz",
+  "rootNamespace": "FinalAnswer.Quiz",
+  "references": [
+    "FA.Contracts",
+    "FA.Domain",
+    "FA.Application",
+    "FA.UI",
+    "UnityEngine.UI"
+  ],
+  "noEngineReferences": false,
+  "autoReferenced": false,
+  "overrideReferences": true,
+  "precompiledReferences": [
+    "Newtonsoft.Json.dll"
+  ]
+}

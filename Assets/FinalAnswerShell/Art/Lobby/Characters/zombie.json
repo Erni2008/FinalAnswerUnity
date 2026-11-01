@@ -1,0 +1,12 @@
+{
+  "id": "zombie",
+  "frameWidth": 210,
+  "frameHeight": 245,
+  "columns": 15,
+  "rows": 12,
+  "fps": 20,
+  "introFrames": 52,
+  "totalFrames": 172,
+  "clip": [108.0, 62.0, 140.0, 163.0],
+  "source": "core/ui/lobby/cages (Java rig, phase 0)"
+}

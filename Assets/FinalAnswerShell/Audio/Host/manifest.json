@@ -1,0 +1,508 @@
+{
+  "version": 1,
+  "language": "ru",
+  "voiceId": "final_answer_host_ru_v1",
+  "profileHash": "98c26cd09938bd8c25fe01564241fab66c2e08f32d10c79b4d3003ae6c8e545b",
+  "questions": {
+    "chemical-gold": {
+      "file": "questions/chemical-gold_229e19d5ceb9.ogg",
+      "status": "ready",
+      "hash": "229e19d5ceb935690a677b8a949a7af0afdd22d715f273f8c9c97cb8a769e399",
+      "duration": 2.719958,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    },
+    "chess-king": {
+      "file": "questions/chess-king_6bccb0d969a2.ogg",
+      "status": "ready",
+      "hash": "6bccb0d969a2b525d6d069b0a4efbd2d505c8986de6427f5244aeb40d232a103",
+      "duration": 3.839958,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    },
+    "frankenstein": {
+      "file": "questions/frankenstein_b694a524170a.ogg",
+      "status": "ready",
+      "hash": "b694a524170a3acf9a7ac061330ce0ac2de533ffb89a8b7a651d06412ae79e9c",
+      "duration": 2.079958,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    },
+    "human-bones": {
+      "file": "questions/human-bones_16db8966df14.ogg",
+      "status": "ready",
+      "hash": "16db8966df143014997c4a1efcca1db15f759e00c724ec27b79dd4a21ee22272",
+      "duration": 3.599958,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    },
+    "light-year": {
+      "file": "questions/light-year_d951721e04cc.ogg",
+      "status": "ready",
+      "hash": "d951721e04cc714ae89d181d4055080277b3f951763bdb10720ab4cc990bceec",
+      "duration": 3.999958,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    },
+    "ocean-deepest": {
+      "file": "questions/ocean-deepest_26bec1009bcd.ogg",
+      "status": "ready",
+      "hash": "26bec1009bcdd1403192a3db8635760377df77123d96d47e6ad5eb96519854f2",
+      "duration": 3.599958,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    },
+    "octopus": {
+      "file": "questions/octopus_b3892b5f7e83.ogg",
+      "status": "ready",
+      "hash": "b3892b5f7e83a230f2c927c4f6a18f8abbdbfbd38cdff01086d1d05a2cb43578",
+      "duration": 1.679958,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    },
+    "raven-author": {
+      "file": "questions/raven-author_38ccc43ed2cd.ogg",
+      "status": "ready",
+      "hash": "38ccc43ed2cda6e9d35d12a18ba3190c9fc3f4386bcfe8a3be7bca1b3804ac3f",
+      "duration": 1.919958,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    },
+    "solar-largest": {
+      "file": "questions/solar-largest_21b53323d0af.ogg",
+      "status": "ready",
+      "hash": "21b53323d0af7890147df642f96181e52761f5df02ed9111e1cd33d863402f48",
+      "duration": 3.519958,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    },
+    "sound-space": {
+      "file": "questions/sound-space_df8faa221674.ogg",
+      "status": "ready",
+      "hash": "df8faa221674ce15323165259b02efc3022f772ec46f946d5cf2e0daef28453b",
+      "duration": 2.799958,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    },
+    "sunlight": {
+      "file": "questions/sunlight_f6be3881a9f5.ogg",
+      "status": "ready",
+      "hash": "f6be3881a9f5b371fdf111654d688ae3bea28e2215681b64fa51a93ce9b3f4a9",
+      "duration": 2.719958,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    },
+    "triangle": {
+      "file": "questions/triangle_28fdfd302bba.ogg",
+      "status": "ready",
+      "hash": "28fdfd302bbaf022cce9ce22374a63609f5c152fc3bbcb3dc18384ac7e265500",
+      "duration": 4.719958,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    }
+  },
+  "events": {
+    "PRESS_BLUE": {
+      "file": "events/PRESS_BLUE_f58f620baaf1.ogg",
+      "status": "ready",
+      "hash": "f58f620baaf118626ba5bc0ac425f147b2f6677f46d9acd6e089f861d33f3d8e",
+      "duration": 1.119958,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    },
+    "PRESS_GREEN": {
+      "file": "events/PRESS_GREEN_e77c0fa43838.ogg",
+      "status": "ready",
+      "hash": "e77c0fa438389c9b9f99e51b79f4a2493b638a3b9ac3c50485f5bf9b08468d56",
+      "duration": 1.119958,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    },
+    "PRESS_RED": {
+      "file": "events/PRESS_RED_3a14213442b9.ogg",
+      "status": "ready",
+      "hash": "3a14213442b9bbd209d7b282618c666f410556b8f010df7ca61398fb5b4c9074",
+      "duration": 1.199958,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    },
+    "PRESS_YELLOW": {
+      "file": "events/PRESS_YELLOW_9875d80b4b27.ogg",
+      "status": "ready",
+      "hash": "9875d80b4b273b69c1f20770bdcfec91113f2c749c67a362b59b3a51ede0ceb0",
+      "duration": 1.119958,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    },
+    "correct_answer": {
+      "file": "events/correct_answer_f8f1dc119454.ogg",
+      "status": "ready",
+      "hash": "f8f1dc11945482dabc87ee826af2ae2c15ecfb9ad1aa87dcf05834871956857c",
+      "duration": 3.039958,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    },
+    "cursed_boxes_intro": {
+      "file": "events/cursed_boxes_intro_c2c7aafafe22.ogg",
+      "status": "ready",
+      "hash": "c2c7aafafe221f2633c4391ff8f860cdfa2440e8a1bf610784d26289d449005d",
+      "duration": 4.479958,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    },
+    "impostor_discussion": {
+      "file": "events/impostor_discussion_abaea70ded6f.ogg",
+      "status": "ready",
+      "hash": "abaea70ded6ffcdb41a850037e0473168ee3e15fb13862bc331666b678ac9bf6",
+      "duration": 4.159958,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    },
+    "impostor_final_voting": {
+      "file": "events/impostor_final_voting_cd3156757b9c.ogg",
+      "status": "ready",
+      "hash": "cd3156757b9c4d77246ac3b599e9ca0c02280250205c6c50de265e49364af169",
+      "duration": 3.599958,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    },
+    "impostor_intro": {
+      "file": "events/impostor_intro_c05744fee536.ogg",
+      "status": "ready",
+      "hash": "c05744fee5360a4d9ee13c24d6287b887eb5786e5395999b6f1d1d5804d99366",
+      "duration": 8.639958,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    },
+    "impostor_outcome_caught": {
+      "file": "events/impostor_outcome_caught_b7e3d09d526d.ogg",
+      "status": "ready",
+      "hash": "b7e3d09d526dfcdec500117f4fe2229e3c51c5dfe9158fbead513c17492bfc4d",
+      "duration": 3.359958,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    },
+    "impostor_outcome_escaped": {
+      "file": "events/impostor_outcome_escaped_a7d2c82b91d8.ogg",
+      "status": "ready",
+      "hash": "a7d2c82b91d8deb7cfa670f6d527552d5f1da40b6e19fb0ba04e633a17901968",
+      "duration": 5.199958,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    },
+    "impostor_round_1": {
+      "file": "events/impostor_round_1_cc84afec2f6e.ogg",
+      "status": "ready",
+      "hash": "cc84afec2f6e84dda56e6091bfeb4a624027b1266a4c1e04dd5fe13809328895",
+      "duration": 5.647542,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    },
+    "impostor_round_2": {
+      "file": "events/impostor_round_2_d6360889b727.ogg",
+      "status": "ready",
+      "hash": "d6360889b72715ce905e5c146e2e4096fc674f79208af2b6879fb33f5f4afb7a",
+      "duration": 4.079958,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    },
+    "impostor_round_3": {
+      "file": "events/impostor_round_3_1f3ef5059215.ogg",
+      "status": "ready",
+      "hash": "1f3ef505921549a971286f00255c8d506f0c67688038a54ff47135f98877a020",
+      "duration": 3.839958,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    },
+    "impostor_round_deadline": {
+      "file": "events/impostor_round_deadline_4ccf8776af6a.ogg",
+      "status": "ready",
+      "hash": "4ccf8776af6ac92c891ea8adf5ef5c22f65b6c05140333fb12360f85189cffbb",
+      "duration": 1.759958,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    },
+    "impostor_suspicion": {
+      "file": "events/impostor_suspicion_229d19d499d4.ogg",
+      "status": "ready",
+      "hash": "229d19d499d473696531a1f86854c4e49b146613510da7cc090d3454da3dfc56",
+      "duration": 3.098167,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    },
+    "impostor_vote_intro_1": {
+      "file": "events/impostor_vote_intro_1_4053a174764d.ogg",
+      "status": "ready",
+      "hash": "4053a174764d8ff3ad811b1ffa819fdc9eba0be3be135ea6e5223f9edec7f3df",
+      "duration": 1.359958,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    },
+    "impostor_vote_intro_2": {
+      "file": "events/impostor_vote_intro_2_90cd4dc5940a.ogg",
+      "status": "ready",
+      "hash": "90cd4dc5940a7b608cc5afea7fc17bd8a6d074db6bdda92e722d9cc29015fb16",
+      "duration": 1.919958,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    },
+    "impostor_vote_no_votes": {
+      "file": "events/impostor_vote_no_votes_ccbfa33940ab.ogg",
+      "status": "ready",
+      "hash": "ccbfa33940abefd4db36f8527902423b7cab8168b7518e7e99c898723cac805b",
+      "duration": 5.039958,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    },
+    "impostor_vote_reveal_intro": {
+      "file": "events/impostor_vote_reveal_intro_32ef8e4d8330.ogg",
+      "status": "ready",
+      "hash": "32ef8e4d8330f449c87337786db4678dafb0409fa4fe79d2553a00ee31a153b7",
+      "duration": 4.239958,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    },
+    "impostor_vote_tie": {
+      "file": "events/impostor_vote_tie_918288aad564.ogg",
+      "status": "ready",
+      "hash": "918288aad5647899fbf7bba0b72c13e2fbbdfc7822b21dcd3ea94854852ecee1",
+      "duration": 4.719958,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    },
+    "results": {
+      "file": "events/results_8b9981a46c97.ogg",
+      "status": "ready",
+      "hash": "8b9981a46c97484e38604c0ce17fe01f11ad3a0938433e155c68f324165e6465",
+      "duration": 1.759958,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    },
+    "round_start": {
+      "file": "events/round_start_c929786acd81.ogg",
+      "status": "ready",
+      "hash": "c929786acd815c38dd9620a6f79a5b632f7e92db962e891385dc9642e327febc",
+      "duration": 4.319958,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    },
+    "voting_start": {
+      "file": "events/voting_start_30fe3fea41eb.ogg",
+      "status": "ready",
+      "hash": "30fe3fea41eb8f5c7ab76178848f485cc4ac4c99c45206d8f04ea61ec71e5172",
+      "duration": 3.439958,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    },
+    "winner": {
+      "file": "events/winner_5f9cebc85400.ogg",
+      "status": "ready",
+      "hash": "5f9cebc85400f74608fd55f770178e62adec8a5e8935a23e74511c2816c31dd4",
+      "duration": 4.133292,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    },
+    "wrong_answer": {
+      "file": "events/wrong_answer_a0926fd58d10.ogg",
+      "status": "ready",
+      "hash": "a0926fd58d1047a47a78f50994bf7d64fee7df3c70a642be19dba29c5af34646",
+      "duration": 3.599958,
+      "manualReview": "not_yet_reviewed",
+      "processingHash": null
+    }
+  },
+  "intro": {
+    "intro_01_01": {
+      "file": "intro/intro_01_01_611a7442ab73.ogg",
+      "status": "ready",
+      "hash": "9f76e51079d2e9c37d3486aa29bf44126ec4f4c1f76c80e1bd0068630e4d495d",
+      "duration": 1.677875,
+      "manualReview": "approved_by_user",
+      "processingHash": "5621142af605aff1628fb51b9c1f38407232c8a37a1dea7bf2259d966ee5aaf1"
+    },
+    "intro_01_02": {
+      "file": "intro/intro_01_02_80f46c1af79a.ogg",
+      "status": "ready",
+      "hash": "116fc8ea4a6ea916ab8dd1a7dedd73aee8cfa5604eeb78b27ef9e54afd168443",
+      "duration": 1.441042,
+      "manualReview": "approved_by_user",
+      "processingHash": "a6de46f3773841be3283b2af479d798156607eb7bee9efea2a319d732439f9d7"
+    },
+    "intro_01_03": {
+      "file": "intro/intro_01_03_6e6205d337dd.ogg",
+      "status": "ready",
+      "hash": "e6e11ebf9a4daaeda66490a7c605706ba67f41555957a435f6efc03964311e4c",
+      "duration": 1.673625,
+      "manualReview": "approved_by_user",
+      "processingHash": "b8397b06843dbb290133701cca6f0afa635f3ef2f2fa268917355d7e413b6ad5"
+    },
+    "intro_01_04": {
+      "file": "intro/intro_01_04_c2865f497a47.ogg",
+      "status": "ready",
+      "hash": "7ac6b1908174668d9671e4065e8d6b4108f31856bfdd892716fc1905232c02cd",
+      "duration": 5.109083,
+      "manualReview": "approved_by_user",
+      "processingHash": "bbc7992d7fa9f475b20b6ae6206bb0c6daefaf087294b50b954e2b45ebf47999"
+    },
+    "intro_01_05": {
+      "file": "intro/intro_01_05_cb480fd1961d.ogg",
+      "status": "ready",
+      "hash": "fac30993cbacc61c19b5e52918e7b63be125891ab0d60bd32a4ab2dc43d93376",
+      "duration": 1.511,
+      "manualReview": "approved_by_user",
+      "processingHash": "6c28f8581ed3e0ebeb2dff46ec3a36b9e44c2551b9b195626ae41577f0a1ae2e"
+    },
+    "intro_02_01": {
+      "file": "intro/intro_02_01_54e6fa51762b.ogg",
+      "status": "ready",
+      "hash": "54e6fa51762bf4afe2086c84a59307135b03a450a46df149ac9ccaabfb9929af",
+      "duration": 0.79925,
+      "manualReview": "approved_by_user",
+      "processingHash": "b9be8e7e620449f0b5d4d7bc39a377594f4efc940c4a533bb60c8af5a5a879c5"
+    },
+    "intro_02_01b": {
+      "file": "intro/intro_02_01b_7d1f3b9aee89.ogg",
+      "status": "ready",
+      "hash": "7d1f3b9aee8996c9bc05f67f384cc1d6e1df7493d4d13ad71e469473ace36649",
+      "duration": 1.5995,
+      "manualReview": "approved_by_user",
+      "processingHash": "f363b24ddf72a5ac7d23c9a6a945ce9ec4717ddf73bad7b06e7754f5cd1500e2"
+    },
+    "intro_02_02": {
+      "file": "intro/intro_02_02_2f9e6454445e.ogg",
+      "status": "ready",
+      "hash": "63b32f0e4470bb0c394970facfeeeb12b94d147d23e668af11882e362a2c1645",
+      "duration": 2.476625,
+      "manualReview": "approved_by_user",
+      "processingHash": "8ed7bdf658fcfad9f824c87aa49ebf86a62a44b92914296ebc4206acc76f42cc"
+    },
+    "intro_02_03": {
+      "file": "intro/intro_02_03_819502333c3d.ogg",
+      "status": "ready",
+      "hash": "3b296352e768092801a049cdb5705f47fb181c049cb25d896fa33f5d25c9005f",
+      "duration": 2.636792,
+      "manualReview": "approved_by_user",
+      "processingHash": "61bebe1530617d70e04bbce090cd2321383380f4610ce55fecb5439a9d53ed99"
+    },
+    "intro_02_04": {
+      "file": "intro/intro_02_04_bba477b8445f.ogg",
+      "status": "ready",
+      "hash": "0da3d57126b8bd52bbdd519e88e865e54f4cbf7df8c9b6204608f0652cc6826a",
+      "duration": 2.77875,
+      "manualReview": "approved_by_user",
+      "processingHash": "631445405c0e08c1b98cf46ce373397ae7274886b08379366801c689b9efa0e5"
+    },
+    "intro_02_05": {
+      "file": "intro/intro_02_05_c2b144bf8b67.ogg",
+      "status": "ready",
+      "hash": "1a144b43194f85cff6fce80bd1b62e857afff9963a7f339fe09c51b0ab5d40ea",
+      "duration": 2.633875,
+      "manualReview": "approved_by_user",
+      "processingHash": "8023a32cd413695374d97d49f3029603904b5aa25523de60d0320c9163ac2827"
+    },
+    "intro_03_01": {
+      "file": "intro/intro_03_01_be1f36f47ec3.ogg",
+      "status": "ready",
+      "hash": "0e6eaa05b94f06c6b75ca967a04382051987d3c6f3f4702ae7bf30c7ab51fcb0",
+      "duration": 3.519417,
+      "manualReview": "approved_by_user",
+      "processingHash": "92c50032267f33582e6f2b0166ff441db2a9f2271c8541b1036ba63189650f08"
+    },
+    "intro_03_02": {
+      "file": "intro/intro_03_02_baf0392929e7.ogg",
+      "status": "ready",
+      "hash": "e786865181ce26d3a4d2efadef2ccb0d366408be9801704f2818fe329384cfed",
+      "duration": 3.182833,
+      "manualReview": "approved_by_user",
+      "processingHash": "4793038e06df07560e4fdaa0c2b9acdce618795e0e8ce865d96a6cd901860130"
+    },
+    "intro_03_03": {
+      "file": "intro/intro_03_03_085fafecbae6.ogg",
+      "status": "ready",
+      "hash": "bb970412f967131aaa566738c15636170566548454b2e910d4677ab7330a72bb",
+      "duration": 1.594875,
+      "manualReview": "approved_by_user",
+      "processingHash": "89312eceaa54bee1b50b0c5e0a435a4358ad89dc7e79e8bf31c1aae2bd6a7ac4"
+    },
+    "intro_03_04": {
+      "file": "intro/intro_03_04_d3006a024d3f.ogg",
+      "status": "ready",
+      "hash": "442a8d92b166aae47e8ed5cdf606794ded38065555e0de94175ff57352c1c6ed",
+      "duration": 4.0495,
+      "manualReview": "approved_by_user",
+      "processingHash": "8ff4637fefa7c05e11bdad82b3eb248276580f10bb5a1fb00e6d4fad8ce83276"
+    },
+    "intro_03_05": {
+      "file": "intro/intro_03_05_8ad603324d25.ogg",
+      "status": "ready",
+      "hash": "c80397125733a98f61db52a7c6f26fc5241a378e7d50efddf866b03337b7f54d",
+      "duration": 1.120292,
+      "manualReview": "approved_by_user",
+      "processingHash": "9525fc15765760687a9421a656aaf90391e4a3116c35fc4134ac5c1a2117e66b"
+    },
+    "intro_03_06": {
+      "file": "intro/intro_03_06_5bae661e10f5.ogg",
+      "status": "ready",
+      "hash": "1ea1c9750898d6c25b025b3783ae35b0a37247dccf432d1248ce64dbd89e39db",
+      "duration": 1.674875,
+      "manualReview": "approved_by_user",
+      "processingHash": "6531023ad05f29f88e800a4bf5e5a9a6ef105ba9c9c7f673bb9457646d85ef65"
+    },
+    "intro_04_01": {
+      "file": "intro/intro_04_01_45e7253a7dde.ogg",
+      "status": "ready",
+      "hash": "417fe0010b98583ebde7f24501da08dc739a4d41bba4f48984dd4896fd2969ed",
+      "duration": 1.122125,
+      "manualReview": "approved_by_user",
+      "processingHash": "e1a07bd8bcdcb9a2144cb9c4eaecaff2d1c1b45c36719f766b24baa036e95d9c"
+    },
+    "intro_04_02": {
+      "file": "intro/intro_04_02_b4734efe15c5.ogg",
+      "status": "ready",
+      "hash": "7f3f8069d4ffafb578340fdac867fa8d9e5868a93ec3dfe39259dfd9ad9debe6",
+      "duration": 2.73025,
+      "manualReview": "approved_by_user",
+      "processingHash": "20c687a96a0ef852a1e104589417a006a03301b2bdf1367f0834429e6b01ad7c"
+    },
+    "intro_04_03": {
+      "file": "intro/intro_04_03_8c3d245972e1.ogg",
+      "status": "ready",
+      "hash": "3c6e35ecad59ebf679c8bf589809f327e40e66b12e5feaa0511167e9461de9d8",
+      "duration": 3.117125,
+      "manualReview": "approved_by_user",
+      "processingHash": "82b6ccc502f5ddba8abad06de2e221431caeb5c6bb4d4046091d09f043d7a0ee"
+    },
+    "intro_04_04": {
+      "file": "intro/intro_04_04_c3e682ac8b74.ogg",
+      "status": "ready",
+      "hash": "e8451f49885b6052ed12287fecab0c9c05003d0278afc2fc97031891081e9829",
+      "duration": 1.194458,
+      "manualReview": "approved_by_user",
+      "processingHash": "f8b4ef2e35c1e646fcb703ad66b89bcedf7943059dc71116eda7df45714ecb0c"
+    },
+    "intro_04_05": {
+      "file": "intro/intro_04_05_e979a249b9b7.ogg",
+      "status": "ready",
+      "hash": "9602c5f925597d7948a8ce1b835c986f5843411315b9e23f821b99ca102ba2c6",
+      "duration": 2.719583,
+      "manualReview": "approved_by_user",
+      "processingHash": "476307908a64f31854f514b1aa15da91ad3e84a90534ae2a089d8f5dba876692"
+    },
+    "intro_05_01": {
+      "file": "intro/intro_05_01_ca84a165c5b3.ogg",
+      "status": "ready",
+      "hash": "ca84a165c5b3bc94003728cb1245fd111598d3c7d0e5f31e78a2a47e083091b9",
+      "duration": 2.799167,
+      "manualReview": "approved_by_user",
+      "processingHash": "2868bfc7934ebed371123b6da3414ab16857071a4b1a01d66296da091b42f92d"
+    },
+    "intro_05_03": {
+      "file": "intro/intro_05_03_87934ef4fcc9.ogg",
+      "status": "ready",
+      "hash": "c583d5b49f599edc09fce3977104f9834cae5a6136cd4ef046335123ac98d109",
+      "duration": 1.128667,
+      "manualReview": "approved_by_user",
+      "processingHash": "a6d0bb5d7d1fa4f6cec8ccea216599455e614ebdd26f92d18abd557eaafe16ac"
+    }
+  }
+}

@@ -7,6 +7,21 @@
 
 Unity **6000.6.7f1 (Unity 6.6), Apple Silicon, URP 17.6.0**. Основная платформа — macOS arm64. Проект расположен отдельно от Java/libGDX; сервер и телефонный сайт остаются существующими.
 
+## Оболочка ведущего (Assets/FinalAnswerShell)
+
+Перенос Java/libGDX-интерфейса один к одному: главное меню, создание комнаты, код комнаты, лобби с клетками и
+персонажами, переход старта, полный экран вопроса (комната, печать вопроса, ответы, готические часы, персонажи,
+музыка/тиканье/замок/голос ведущего) и финальная таблица. Сцена `Assets/FinalAnswerShell/Scenes/Shell.unity` —
+первая в сборке; существующие `Bootstrap`/`GameHall`/`TheLastCommand` не изменены.
+
+- Отдельные сборки `FA.Contracts/Domain/Application/Infrastructure/UI/Quiz/CursedBoxes/App` (+ `FA.Shell.Editor`, `FA.Shell.Tests.EditMode`).
+- Меню **Final Answer Shell → Configure Project** (импорт, каталог ассетов, сцена — без изменения URP и Player Settings),
+  **Build macOS (Developer)** → `Builds/macOS-Shell-Dev/`.
+- **F1** — соло-тест с встроенными ботами-телефонами, **F3** — отладка; `-fa-solo quiz|cursed|impostor|lastcommand|lobby`,
+  `-fa-tour <папка>` — автоматический визуальный тур со скриншотами.
+- Персонажи клеток — флипбуки, запечённые из оригинального Java-кода (`FinalAnswer/tools/unity/bake_cage_characters.sh`).
+- Сервер ищется в соседней папке `../FinalAnswer` (или `FINAL_ANSWER_REPO`).
+
 ## Запуск
 
 Открыть эту папку в установленном Unity 6000.6.7f1 либо выполнить:
